@@ -1,7 +1,6 @@
-## Vim to Lua
+# My new neovim config (still in development)
 
-video tutorial - [part1](https://www.youtube.com/watch?v=ppMX4LHIuy4)
-[part2](https://www.youtube.com/watch?v=cAfPmPjxRQE)
+## Vim to Lua
 
 #### first step
 - create a new filed called .config/nvim/init.lua
