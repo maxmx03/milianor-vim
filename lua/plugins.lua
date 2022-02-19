@@ -38,11 +38,8 @@ packer.startup(
       {
         "kyazdani42/nvim-tree.lua",
         requires = {
-          "kyazdani42/nvim-web-devicons" -- optional, for file icon
-        },
-        config = function()
-          require "nvim-tree".setup {}
-        end
+          "kyazdani42/nvim-web-devicons"
+        }
       },
       {
         "onsails/lspkind-nvim",
@@ -52,7 +49,13 @@ packer.startup(
       "saadparwaiz1/cmp_luasnip",
       "rafamadriz/friendly-snippets",
       "folke/tokyonight.nvim",
-      "mhartington/formatter.nvim"
+      "mhartington/formatter.nvim",
+      {
+        "folke/which-key.nvim",
+        config = function()
+          require "which-key".setup {}
+        end
+      }
     }
   end
 )

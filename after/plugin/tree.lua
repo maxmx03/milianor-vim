@@ -1,3 +1,11 @@
+local success, tree = pcall(require, "nvim-tree")
+
+if not success then
+  return
+end
+
+tree.setup {}
+
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_highlight_opened_files = 1
@@ -49,10 +57,3 @@ vim.g.nvim_tree_icons = {
     symlink_open = ""
   }
 }
-
-local keymap = vim.api.nvim_set_keymap
-local opts = {noremap = true}
-
-keymap("n", "<C-n>", ":NvimTreeToggle<cr>", opts)
-keymap("n", "<leader>r", ":NvimTreeRefresh<cr>", opts)
-keymap("n", "<leader>n", ":NvimTreeFindFile<cr>", opts)
