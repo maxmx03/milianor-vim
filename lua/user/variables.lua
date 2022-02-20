@@ -1,3 +1,1 @@
-vim.cmd([[
-let g:python3_host_prog = expand("/usr/bin/python3")
-]])
+vim.g.python3_host_prog = "/usr/bin/python3"

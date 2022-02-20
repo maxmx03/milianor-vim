@@ -44,17 +44,21 @@ function M:formatters()
   end
 
   if client.resolved_capabilities.document_formatting then
-    vim.api.nvim_command [[augroup Format]]
-    vim.api.nvim_command [[autocmd! * <buffer>]]
-    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
-    vim.api.nvim_command [[augroup END]]
+    vim.cmd [[
+	  augroup Format
+	  autocmd! * <buffer>
+	  autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()
+	  augroup END
 
-    vim.api.nvim_command [[autocmd BufWritePost *.blade.php FormatWrite]]
+	  autocmd BufWritePost *.blade.php FormatWrite
+	]]
   else
-    vim.api.nvim_command [[augroup Format]]
-    vim.api.nvim_command [[autocmd! * <buffer>]]
-    vim.api.nvim_command [[autocmd BufWritePost <buffer> FormatWrite]]
-    vim.api.nvim_command [[augroup END]]
+    vim.cmd [[
+	  augroup Format
+	  autocmd! * <buffer>
+	  autocmd BufWritePost <buffer> FormatWrite
+	  augroup END
+	]]
   end
 end
 

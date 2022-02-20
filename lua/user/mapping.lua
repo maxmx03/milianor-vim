@@ -62,6 +62,13 @@ wk.register(
         ":ToggleTerm direction=float<cr>",
         "Open a terminal"
       }
+    },
+    c = {
+      name = "Code Action",
+      a = {
+        "<cmd>lua vim.lsp.buf.type_definition()<CR>",
+        "code action"
+      }
     }
   },
   {prefix = "<space>"}

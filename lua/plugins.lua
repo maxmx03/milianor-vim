@@ -22,6 +22,7 @@ packer.startup(
       "folke/tokyonight.nvim",
       "mhartington/formatter.nvim",
       "windwp/nvim-ts-autotag",
+      "glepnir/dashboard-nvim",
       {"iamcco/markdown-preview.nvim", run = "cd app && yarn install"},
       {
         "nvim-treesitter/nvim-treesitter",
@@ -47,56 +48,73 @@ packer.startup(
       },
       {
         "akinsho/flutter-tools.nvim",
-        requires = "nvim-lua/plenary.nvim",
-        config = function()
-          require "flutter-tools".setup()
-        end
+        requires = "nvim-lua/plenary.nvim"
       },
       {"akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons"},
       {
         "folke/which-key.nvim",
         config = function()
-          require "which-key".setup()
+          local success1, wk = pcall(require, "which-key")
+
+          if success1 then
+            wk.setup()
+          end
         end
       },
       {
         "ray-x/lsp_signature.nvim",
         config = function()
-          require "lsp_signature".setup()
+          local success2, lsp_signature = pcall(require, "lsp_signature")
+
+          if success2 then
+            lsp_signature.setup()
+          end
         end
       },
       {
         "norcalli/nvim-colorizer.lua",
         config = function()
-          require "colorizer".setup {
-            "html",
-            "javascript",
-            "javascriptreact",
-            "css",
-            "json",
-            "scss",
-            "toml",
-            "typescript",
-            "typescriptreact",
-            "vue",
-            "yaml"
-          }
+          local success3, colorizer = pcall(require, "colorizer")
+
+          if success3 then
+            colorizer.setup {
+              "html",
+              "javascript",
+              "javascriptreact",
+              "css",
+              "json",
+              "scss",
+              "toml",
+              "typescript",
+              "typescriptreact",
+              "vue",
+              "yaml"
+            }
+          end
         end
       },
       {
         "windwp/nvim-autopairs",
         config = function()
-          require("nvim-autopairs").setup(
-            {
-              disable_filetype = {"TelescopePrompt", "vim"}
-            }
-          )
+          local success4, autopairs = pcall(require, "nvim-autopairs")
+
+          if success4 then
+            autopairs.setup(
+              {
+                disable_filetype = {"TelescopePrompt", "vim"}
+              }
+            )
+          end
         end
       },
       {
         "akinsho/toggleterm.nvim",
         config = function()
-          require("toggleterm").setup()
+          local success5, toggleterm = pcall(require, "toggleterm")
+
+          if success5 then
+            toggleterm.setup()
+          end
         end
       }
     }
