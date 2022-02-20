@@ -9,9 +9,33 @@ local opts = {noremap = true}
 
 keymap("n", "<F2>", ":update<cr>", opts)
 keymap("n", "<F3>", ":quit<cr>", opts)
+keymap("t", "<esc>", [[<C-\><C-n>]], opts) -- exit the terminal
 
 wk.register(
   {
+    b = {
+      name = "Bufferline",
+      ["]"] = {
+        ":BufferLineCycleNext<cr>",
+        "Move to the next tab"
+      },
+      ["["] = {
+        ":BufferLineCyclePrev<CR>",
+        "Move to the previous tab"
+      },
+      ["x"] = {
+        ":BufferLinePickClose<CR>",
+        "Close the selected tab"
+      },
+      ["l"] = {
+        ":BufferLineCloseLeft<CR>",
+        "Close all the left tabs"
+      },
+      ["r"] = {
+        ":BufferLineCloseRight<CR>",
+        "Close all the right tab"
+      }
+    },
     f = {
       name = "Telescope",
       f = {
@@ -30,6 +54,13 @@ wk.register(
       n = {
         ":NvimTreeToggle<cr>",
         "Open Tree"
+      }
+    },
+    t = {
+      name = "Terminal",
+      t = {
+        ":ToggleTerm direction=float<cr>",
+        "Open a terminal"
       }
     }
   },

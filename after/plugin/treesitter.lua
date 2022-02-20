@@ -1,13 +1,32 @@
 require "nvim-treesitter.configs".setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
   ensure_installed = {
+    "bash",
+    "css",
+    "dart",
+    "fish",
+    "graphql",
+    "html",
+    "javascript",
+    "json",
     "lua",
-    "vim"
+    "php",
+    "python",
+    "prisma",
+    "rust",
+    "ruby",
+    "scss",
+    "typescript",
+    "tsx",
+    "toml",
+    "vim",
+    "vue",
+    "yaml"
   },
   -- Install languages synchronously (only applied to `ensure_installed`)
   sync_install = false,
   -- List of parsers to ignore installing
-  ignore_install = {"javascript"},
+  -- ignore_install = {},
   highlight = {
     -- `false` will disable the whole extension
     enable = true,
@@ -18,5 +37,8 @@ require "nvim-treesitter.configs".setup {
     -- Using this option may slow down your editor, and you may see some duplicate highlights.
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false
+  },
+  autotag = {
+    enable = true
   }
 }
