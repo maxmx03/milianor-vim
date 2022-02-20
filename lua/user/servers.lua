@@ -32,6 +32,8 @@ function M:setup(o)
     elseif language == 'graphql' and enabled then
       insert(servers, 'graphql')
       insert(servers, 'prismals')
+    elseif language == 'golang' and enabled then
+      insert(servers, 'gopls')
     end
   end
 
