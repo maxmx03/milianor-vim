@@ -3,12 +3,14 @@
 
 My neovim configuration for web and mobile development
 
-
-## Programming languages
+## Supported programming languages
 
 - css
+- golang
 - html
 - javacript
+- java
+- kotlin
 - lua
 - python
 - php
@@ -16,7 +18,6 @@ My neovim configuration for web and mobile development
 - rust
 - scss
 - typescript
-- react
 - vue
 
 ## Formatters
