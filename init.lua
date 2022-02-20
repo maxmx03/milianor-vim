@@ -1,8 +1,10 @@
+require "user.colors"
 require "user.settings"
 require "user.variables"
 require "user.mapping"
-require "user.colors"
 require "plugins"
+
+vim.notify("Welcome to Neovim!")
 
 vim.cmd(
   [[

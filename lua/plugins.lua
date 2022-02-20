@@ -24,6 +24,11 @@ packer.startup(
       "mhartington/formatter.nvim",
       "windwp/nvim-ts-autotag",
       "glepnir/dashboard-nvim",
+      "rcarriga/nvim-notify",
+      {
+        "weilbith/nvim-code-action-menu",
+        cmd = "CodeActionMenu"
+      },
       {"iamcco/markdown-preview.nvim", run = "cd app && yarn install"},
       {
         "nvim-treesitter/nvim-treesitter",
@@ -89,7 +94,8 @@ packer.startup(
               "typescript",
               "typescriptreact",
               "vue",
-              "yaml"
+              "yaml",
+              "vim"
             }
           end
         end
@@ -117,9 +123,6 @@ packer.startup(
             toggleterm.setup()
           end
         end
-      },
-      {
-        "rcarriga/nvim-notify"
       }
     }
   end
