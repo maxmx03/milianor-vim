@@ -1,6 +1,7 @@
 local success, packer = pcall(require, "packer")
 
 if not success then
+  vim.notify("error in plugins.lua", "error")
   return
 end
 
@@ -116,6 +117,9 @@ packer.startup(
             toggleterm.setup()
           end
         end
+      },
+      {
+        "rcarriga/nvim-notify"
       }
     }
   end

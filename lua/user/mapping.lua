@@ -1,6 +1,7 @@
 local success, wk = pcall(require, "which-key")
 
 if not success then
+  vim.notify("error in usermapping.lua", "error")
   return
 end
 

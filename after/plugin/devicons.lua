@@ -1,6 +1,7 @@
 local status, devicons = pcall(require, "nvim-web-devicons")
 
 if (not status) then
+  vim.notify("error in after/plugin/devicons.lua", "error")
   return
 end
 

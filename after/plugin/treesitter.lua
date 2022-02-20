@@ -1,4 +1,10 @@
-require "nvim-treesitter.configs".setup {
+local success, treesitter = pcall(require, "nvim-treesitter.configs")
+
+if not success then
+  vim.notify("error in after/plugin/treesitter.lua", "error")
+end
+
+treesitter.setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
   ensure_installed = {
     "bash",

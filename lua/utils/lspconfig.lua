@@ -1,6 +1,7 @@
 local status, lspsignature = pcall(require, "lsp_signature")
 
 if (not status) then
+  vim.notify("error in utils/lspconfig.lua", "error")
   return
 end
 

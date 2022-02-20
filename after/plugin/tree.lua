@@ -1,6 +1,7 @@
 local success, tree = pcall(require, "nvim-tree")
 
 if not success then
+  vim.notify("error in after/plugin/tree.lua", "error")
   return
 end
 

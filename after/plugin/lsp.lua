@@ -3,6 +3,7 @@ local config = require "utils.lspconfig"
 local s2, dartls = pcall(require, "flutter-tools")
 
 if (not s1) and (not s2) then
+  vim.notify("error after/plugin/in lsp.lua", "error")
   return
 end
 

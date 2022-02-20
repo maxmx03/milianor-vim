@@ -1,6 +1,7 @@
 local success, lualine = pcall(require, "lualine")
 
 if not success then
+  vim.notify("error in after/plugin/lualine.lua", "error")
   return
 end
 

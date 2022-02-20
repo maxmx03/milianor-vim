@@ -1,6 +1,7 @@
 local status, formatter = pcall(require, "formatter")
 
 if (not status) then
+  vim.notify("error in utils/Formatter.lua", "error")
   return
 end
 
