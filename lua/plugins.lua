@@ -22,6 +22,7 @@ packer.startup(
       "folke/tokyonight.nvim",
       "mhartington/formatter.nvim",
       "windwp/nvim-ts-autotag",
+      {"iamcco/markdown-preview.nvim", run = "cd app && yarn install"},
       {
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate"

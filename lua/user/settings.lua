@@ -7,7 +7,8 @@ vim.opt.si = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
-vim.opt.timeoutlen = 250
+vim.opt.timeoutlen = 250 -- for which-key
+vim.opt.completeopt = {"menu", "menuone", "noselect"} -- for cmp
 
 vim.cmd(
   [[

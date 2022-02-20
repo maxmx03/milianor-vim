@@ -1,10 +1,13 @@
-local s1, cmp = pcall(require, "cmp")
-local s2, luasnip = pcall(require, "luasnip")
-local s3, lspkind = pcall(require, "lspkind")
+local status1, luasnip = pcall(require, "luasnip")
+local status2, cmp = pcall(require, "cmp")
+local status3, lspkind = pcall(require, "lspkind")
+require("luasnip/loaders/from_vscode").lazy_load()
 
-if (not s1) and (not s2) and (not s3) then
+if (not status1) and (not status2) and (not status3) then
   return
 end
+
+-- vim.api.nvim_command [[set completeopt=menu,menuone,noselect ]]
 
 cmp.setup {
   snippet = {
@@ -23,12 +26,12 @@ cmp.setup {
         c = cmp.mapping.close()
       }
     ),
-    ["<CR>"] = cmp.mapping.confirm({select = true})
+    ["<CR>"] = cmp.mapping.confirm({select = false})
   },
   sources = cmp.config.sources(
     {
       {name = "nvim_lsp"},
-      {name = "luasnip"} -- For luasnip users.
+      {name = "luasnip"}
     },
     {
       {name = "buffer"}
@@ -39,7 +42,6 @@ cmp.setup {
   }
 }
 
--- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline(
   "/",
   {
@@ -49,7 +51,6 @@ cmp.setup.cmdline(
   }
 )
 
--- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline(
   ":",
   {
@@ -63,7 +64,3 @@ cmp.setup.cmdline(
     )
   }
 )
-
--- Setup lspconfig.
-local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
-return capabilities
