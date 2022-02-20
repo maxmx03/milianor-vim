@@ -10,6 +10,9 @@ local formatting = null_ls.builtins.formatting
 null_ls.setup({
   debug = false,
   sources = {
+    formatting.prettier,
+    formatting.rustfmt,
+    formatting.autopep8,
     formatting.stylua.with({
       extra_args = {
         '--indent-type=Spaces',
