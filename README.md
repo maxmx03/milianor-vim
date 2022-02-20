@@ -36,7 +36,9 @@ My neovim configuration for web and mobile development
 
 1. Install [Neovim](https://neovim.io/)
 
-2. Install dependencies
+2. Install [Packer](https://github.com/wbthomason/packer.nvim)
+
+3. Install dependencies
 
 javascript, php, vue, scss, css, json
 ```bash
