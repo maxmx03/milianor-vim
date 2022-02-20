@@ -26,12 +26,6 @@ My neovim configuration for web and mobile development
 - [rustfmt](https://github.com/rust-lang/rustfmt)
 
 
-
-## Licença
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-
 ## Instalation
 
 1. Install [Neovim](https://neovim.io/)
@@ -46,6 +40,11 @@ nvim
 :LspUpdate
 ```
 
+You need to install lua language server and rust manually [sumneko_lua](https://github.com/sumneko/lua-language-server/wiki/Build-and-Run)
+```bash
+rustup component add rust-src
+```
+
 then install
 ```bash
 npm i -g neovim
@@ -53,12 +52,6 @@ pip install pynvim
 ```
 
 check if is anything is mission, for example telescope needs some dependencies to be installed
-```bash
-nvim
-:checkhealth
-```
-
-check if is anything is mission
 ```bash
 nvim
 :checkhealth
@@ -90,6 +83,10 @@ nvim
 | `<space>tt` | `Open Terminal (press Esc and repeat the command to close the terminal)` | Terminal |
 | `<space>ca` | `Code Action` | LSP Code Action |
 
+
+## Licença
+
+[MIT](https://choosealicense.com/licenses/mit/)
 
 
 ## Authors
