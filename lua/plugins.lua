@@ -1,7 +1,20 @@
+local fn = vim.fn
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+
+if fn.empty(fn.glob(install_path)) > 0 then
+  packer_bootstrap = fn.system(
+    'git',
+    'clone',
+    '--depth',
+    '1',
+    'https://github.com/wbthomason/packer.nvim',
+    install_path
+  )
+end
+
 local success, packer = pcall(require, 'packer')
 
 if not success then
-  vim.notify('error in plugins.lua', 'error')
   return
 end
 
@@ -23,6 +36,7 @@ packer.startup(function()
     'windwp/nvim-ts-autotag',
     'glepnir/dashboard-nvim',
     'rcarriga/nvim-notify',
+    'alexaandru/nvim-lspupdate',
     {
       'weilbith/nvim-code-action-menu',
       cmd = 'CodeActionMenu',
@@ -125,4 +139,8 @@ packer.startup(function()
       end,
     },
   })
+
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 end)

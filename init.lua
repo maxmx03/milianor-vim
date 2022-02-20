@@ -1,10 +1,23 @@
-require('user.colors')
+vim.notify = require('notify')
+
+require('user.theme')
 require('user.settings')
-require('user.variables')
 require('user.mapping')
 require('plugins')
+local user_servers = require('user.servers')
 
-vim.notify('Welcome to Neovim!')
+user_servers:setup({
+  javascript = true,
+  html = true,
+  css = true,
+  ruby = true,
+  rust = true,
+  python = true,
+  php = true,
+  graphql = true,
+  vue = true,
+  docker = true,
+})
 
 vim.cmd([[
   augroup packer_user_config

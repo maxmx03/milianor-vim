@@ -6,3 +6,7 @@ vim.cmd([[
 set termguicolors
 colorscheme tokyonight
 ]])
+
+vim.notify.setup({
+  background_colour = '#1f2335',
+})

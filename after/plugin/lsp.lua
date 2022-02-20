@@ -1,6 +1,7 @@
 local s1, nvim_lsp = pcall(require, 'lspconfig')
-local config = require('utils.lspconfig')
 local s2, dartls = pcall(require, 'flutter-tools')
+local user_servers = require('user.servers')
+local config = require('utils.lspconfig')
 
 if not s1 and not s2 then
   vim.notify('error after/plugin/in lsp.lua', 'error')
@@ -21,19 +22,7 @@ table.insert(runtime_path, 'lua/?/init.lua')
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-local servers = {
-  'pylsp',
-  'tsserver',
-  'eslint',
-  'intelephense',
-  'cssls',
-  'vuels',
-  'jsonls',
-  'solargraph',
-  'vimls',
-  'rust_analyzer',
-}
-for _, lsp in ipairs(servers) do
+for _, lsp in ipairs(user_servers.servers) do
   nvim_lsp[lsp].setup({
     on_attach = on_attach,
     flags = {
@@ -64,45 +53,6 @@ nvim_lsp.sumneko_lua.setup({
       },
       telemetry = {
         enable = false,
-      },
-    },
-  },
-})
-
-nvim_lsp.html.setup({
-  on_attach = on_attach,
-  filetypes = { 'html', 'htmldjango' },
-  flags = {
-    debounce_text_changes = 150,
-  },
-  -- on_attach = my_custom_on_attach,
-  capabilities = capabilities,
-})
-
-nvim_lsp.vuels.setup({
-  on_attach = on_attach,
-  flags = {
-    debounce_text_changes = 150,
-  },
-  capabilities = capabilities,
-  init_options = {
-    config = {
-      vetur = {
-        ignoreProjectWarning = true,
-        format = {
-          enable = true,
-          defaultFormatter = {
-            css = 'prettier',
-            js = 'prettier',
-            ts = 'prettier',
-            sass = 'prettier',
-            scss = 'prettier',
-            less = 'prettier',
-          },
-          options = {
-            tabSize = 2,
-          },
-        },
       },
     },
   },

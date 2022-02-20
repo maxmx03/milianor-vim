@@ -5,14 +5,12 @@ if not success then
   return
 end
 
-tree.setup({})
-
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_highlight_opened_files = 1
 vim.g.nvim_tree_root_folder_modifier = ':~'
 vim.g.nvim_tree_add_trailing = 1
-vim.g.nvim_tree_group_empty = 1
+vim.g.nvim_tree_group_empty = 0
 vim.g.nvim_tree_disable_window_picker = 1
 vim.g.nvim_tree_icon_padding = ' '
 vim.g.nvim_tree_symlink_arrow = ' >> '
@@ -58,3 +56,28 @@ vim.g.nvim_tree_icons = {
     symlink_open = '',
   },
 }
+
+tree.setup({
+  filters = {
+    dotfiles = false,
+    custom = { 'node_modules', '.git' },
+  },
+  view = {
+    width = 30,
+    height = 30,
+    hide_root_folder = false,
+    side = 'right',
+    auto_resize = false,
+    mappings = {
+      custom_only = false,
+      list = {},
+    },
+    number = false,
+    relativenumber = false,
+    signcolumn = 'yes',
+  },
+  trash = {
+    cmd = 'trash',
+    require_confirm = true,
+  },
+})

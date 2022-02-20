@@ -26,7 +26,7 @@ function M:formatters()
   vim.cmd([[
 	  augroup Format
 	  autocmd! * <buffer>
-	  autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()
+	  autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
 	  augroup END
 	]])
 end

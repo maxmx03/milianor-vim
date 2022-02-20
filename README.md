@@ -35,34 +35,30 @@ My neovim configuration for web and mobile development
 ## Instalation
 
 1. Install [Neovim](https://neovim.io/)
-
 2. Install [Packer](https://github.com/wbthomason/packer.nvim)
 
-3. Install dependencies
 
-javascript, php, vue, scss, css, json
+### Installing dependencies
+
+Updates installed (or auto installs if missing) LSP servers, that are already configured in your init.lua
 ```bash
-  npm i -g neovim typescript typescript-language-server vscode-langservers-extracted intelephense vls
+nvim
+:LspUpdate
 ```
 
-for python
+then install
 ```bash
-pip install python-lsp-server
-pip install "python-lsp-server[all]"
-pip install black pynvim
+npm i -g neovim
+pip install pynvim
 ```
 
-for ruby
+check if is anything is mission, for example telescope needs some dependencies to be installed
 ```bash
-gem install solargraph
+nvim
+:checkhealth
 ```
 
-for rust
-```
-rustup component add rust-src
-```
-
-3. check if is anything is mission
+check if is anything is mission
 ```bash
 nvim
 :checkhealth
