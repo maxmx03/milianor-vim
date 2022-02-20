@@ -1,4 +1,4 @@
-local M = { servers = { 'vimls' } }
+local M = { servers = {} }
 
 function M:setup(o)
   local servers = {}
@@ -34,6 +34,8 @@ function M:setup(o)
       insert(servers, 'prismals')
     elseif language == 'golang' and enabled then
       insert(servers, 'gopls')
+    elseif language == 'vim' and enabled then
+      insert(servers, 'vimls')
     end
   end
 
