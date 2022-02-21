@@ -8,6 +8,7 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.timeoutlen = 250 -- for which-key
+vim.opt.updatetime = 250 -- for lsp
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' } -- for cmp
 vim.g.dashboard_default_executive = 'telescope'
 

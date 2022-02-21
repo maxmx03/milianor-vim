@@ -15,6 +15,7 @@ user:setup({
     colorscheme = 'onedark',
     transparent = false,
     style = 'dark',
+    sidebar = 'left',
   },
 })
 

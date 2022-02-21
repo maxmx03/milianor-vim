@@ -6,6 +6,34 @@ if not s1 and not s2 and not s3 then
   return
 end
 
+local function icons()
+  local signs = { Error = '', Warn = '', Hint = '', Info = '', Prefix = '' }
+
+  vim.diagnostic.config({
+    virtual_text = {
+      prefix = signs.Prefix,
+    },
+  })
+
+  for type, icon in pairs(signs) do
+    local hl = 'DiagnosticSign' .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+  end
+end
+
+local function format_onsave(client)
+  if client.name == 'tsserver' or client.name == 'rust_analyzer' then
+    client.resolved_capabilities.document_formatting = false
+  end
+
+  vim.cmd([[
+    augroup LspFormatting
+      autocmd! * <buffer>
+	  autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
+	augroup END
+  ]])
+end
+
 local opts = { noremap = true, silent = true }
 vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
@@ -35,16 +63,8 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
-  if client.name == 'tsserver' or client.name == 'rust_analyzer' then
-    client.resolved_capabilities.document_formatting = false
-  end
-
-  vim.cmd([[
-    augroup LspFormatting
-      autocmd! * <buffer>
-	  autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
-	augroup END
-  ]])
+  format_onsave(client)
+  icons()
 end
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
