@@ -31,7 +31,13 @@ nvim
 :checkhealth
 ```
 
-Servers are installed automatically, if you want to add more servers you need to add your server in the servers table in the init.lua file
+Lsp Servers are installed automatically.
+
+Example, to install tsserver you just need to open a javascript file
+```bash
+  nvim index.js
+```
+
 
 ## Tools to work with neovim *(optional)*
  

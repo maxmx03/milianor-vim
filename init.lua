@@ -1,24 +1,4 @@
 require('user.config')
-
-user:setup({
-  servers = {
-    'sumneko_lua',
-    'tsserver',
-    'pylsp',
-    'intelephense',
-    'solargraph',
-    'cssls',
-    'jsonls',
-    'eslint',
-  },
-  -- theme = {
-  --   colorscheme = 'tokyonight',
-  --   transparent = true,
-  --   style = 'night',
-  --   sidebar = 'left',
-  -- },
-})
-
 require('user.theme')
 require('user.settings')
 require('user.mapping')

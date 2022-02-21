@@ -63,15 +63,22 @@ end
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-local servers = user.servers
+function auto_install(servers)
+  local name = servers[vim.bo.filetype]
 
-for _, name in pairs(servers) do
   local server_is_found, server = lsp_installer.get_server(name)
   if server_is_found and not server:is_installed() then
     vim.notify('Installing ' .. name)
     server:install()
   end
 end
+
+vim.cmd([[
+  augroup LspAutoInstall
+    autocmd!
+	autocmd BufEnter <buffer> lua auto_install(user.servers)
+  augroup END
+]])
 
 lsp_installer.on_server_ready(function(server)
   local config = {
@@ -96,20 +103,15 @@ lsp_installer.on_server_ready(function(server)
       settings = {
         Lua = {
           runtime = {
-            -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
             version = 'LuaJIT',
-            -- Setup your lua path
             path = runtime_path,
           },
           diagnostics = {
-            -- Get the language server to recognize the `vim` global
             globals = { 'vim' },
           },
           workspace = {
-            -- Make the server aware of Neovim runtime files
             library = vim.api.nvim_get_runtime_file('', true),
           },
-          -- Do not send telemetry data containing a randomized but unique identifier
           telemetry = {
             enable = false,
           },
