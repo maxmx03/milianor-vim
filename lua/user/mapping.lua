@@ -10,7 +10,7 @@ local opts = { noremap = true }
 keymap('n', '<F2>', ':update<cr>', opts)
 keymap('n', '<F3>', ':quit<cr>', opts)
 keymap('t', '<esc>', [[<C-\><C-n>]], opts) -- exit the terminal
-
+-- show hover doc
 wk.register({
   b = {
     name = 'Bufferline',
@@ -62,11 +62,35 @@ wk.register({
       'Open a terminal',
     },
   },
-  c = {
-    name = 'Code Action',
+  g = {
+    name = 'Lspsaga',
     a = {
-      ':CodeActionMenu<cr>',
-      'code action',
+      '<cmd>Lspsaga code_action<cr>',
+      'Code action',
+    },
+    r = {
+      '<cmd>Lspsaga rename<cr>',
+      'Rename (will rename other files too)',
+    },
+    k = {
+      '<cmd>Lspsaga show_line_diagnostics<cr>',
+      'Show diagnostic',
+    },
+    K = {
+      '<cmd>Lspsaga hover_doc<cr>',
+      'Hover',
+    },
+    n = {
+      '<cmd>Lspsaga diagnostic_jump_next<cr>',
+      'Show diagnostic and jump to next',
+    },
+    p = {
+      '<cmd>Lspsaga diagnostic_jump_prev<cr>',
+      'Show diagnostic and jump to previous',
+    },
+    d = {
+      '<cmd>Lspsaga preview_definition<cr>',
+      'Preview definition',
     },
   },
 }, { prefix = '<space>' })

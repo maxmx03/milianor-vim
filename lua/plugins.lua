@@ -12,9 +12,9 @@ if fn.empty(fn.glob(install_path)) > 0 then
   )
 end
 
-local success, packer = pcall(require, 'packer')
+local status, packer = pcall(require, 'packer')
 
-if not success then
+if not status then
   return
 end
 
@@ -78,9 +78,9 @@ packer.startup(function()
     {
       'folke/which-key.nvim',
       config = function()
-        local success1, wk = pcall(require, 'which-key')
+        local success, wk = pcall(require, 'which-key')
 
-        if success1 then
+        if success then
           wk.setup()
         end
       end,
@@ -88,9 +88,9 @@ packer.startup(function()
     {
       'ray-x/lsp_signature.nvim',
       config = function()
-        local success2, lsp_signature = pcall(require, 'lsp_signature')
+        local success, lsp_signature = pcall(require, 'lsp_signature')
 
-        if success2 then
+        if success then
           lsp_signature.setup()
         end
       end,
@@ -98,7 +98,7 @@ packer.startup(function()
     {
       'norcalli/nvim-colorizer.lua',
       config = function()
-        local success3, colorizer = pcall(require, 'colorizer')
+        local success, colorizer = pcall(require, 'colorizer')
 
         if success3 then
           colorizer.setup({
@@ -121,9 +121,9 @@ packer.startup(function()
     {
       'windwp/nvim-autopairs',
       config = function()
-        local success4, autopairs = pcall(require, 'nvim-autopairs')
+        local success, autopairs = pcall(require, 'nvim-autopairs')
 
-        if success4 then
+        if success then
           autopairs.setup({
             disable_filetype = { 'TelescopePrompt', 'vim' },
           })
@@ -133,11 +133,23 @@ packer.startup(function()
     {
       'akinsho/toggleterm.nvim',
       config = function()
-        local success5, toggleterm = pcall(require, 'toggleterm')
+        local success, toggleterm = pcall(require, 'toggleterm')
 
-        if success5 then
+        if success then
           toggleterm.setup()
         end
+      end,
+    },
+    {
+      'tami5/lspsaga.nvim',
+      config = function()
+        local success, saga = pcall(require, 'lspsaga')
+
+        if not success then
+          return
+        end
+
+        saga.init_lsp_saga()
       end,
     },
   })
