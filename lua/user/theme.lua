@@ -1,10 +1,6 @@
 vim.notify = require('notify')
 local theme = user.theme
 
-if theme.style == 'night' and theme.colorscheme ~= 'tokyonight' then
-  theme.style = 'dark'
-end
-
 if theme.colorscheme == 'tokyonight' then
   vim.g.tokyonight_style = theme.style
   vim.g.tokyonight_transparent = theme.transparent

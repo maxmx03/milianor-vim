@@ -11,12 +11,12 @@ user:setup({
     'jsonls',
     'eslint',
   },
-  theme = {
-    colorscheme = 'tokyonight',
-    transparent = true,
-    style = 'night',
-    sidebar = 'left',
-  },
+  -- theme = {
+  --   colorscheme = 'tokyonight',
+  --   transparent = true,
+  --   style = 'night',
+  --   sidebar = 'left',
+  -- },
 })
 
 require('user.theme')
