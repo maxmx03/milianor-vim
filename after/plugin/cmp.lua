@@ -4,11 +4,8 @@ local status3, lspkind = pcall(require, 'lspkind')
 require('luasnip/loaders/from_vscode').lazy_load()
 
 if not status1 and not status2 and not status3 then
-  vim.notify('error in after/plugin/ cmp.lua', 'error')
   return
 end
-
--- vim.api.nvim_command [[set completeopt=menu,menuone,noselect ]]
 
 cmp.setup({
   snippet = {

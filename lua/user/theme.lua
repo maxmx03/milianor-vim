@@ -1,12 +1,52 @@
-vim.g.tokyonight_style = 'night'
-vim.g.tokyonight_transparent = true
-vim.g.tokyonight_italic_functions = true
+vim.notify = require('notify')
+local theme = user.theme
 
-vim.cmd([[
-set termguicolors
-colorscheme tokyonight
-]])
+if theme.colorscheme == 'tokyonight' then
+  vim.g.tokyonight_style = theme.style
+  vim.g.tokyonight_transparent = theme.transparent
+  vim.g.tokyonight_italic_functions = true
 
-vim.notify.setup({
-  background_colour = '#1f2335',
-})
+  vim.cmd([[
+	set termguicolors
+	colorscheme tokyonight
+  ]])
+
+  vim.notify.setup({
+    background_colour = '#1f2335',
+  })
+elseif theme.colorscheme == 'onedark' then
+  local success, onedark = pcall(require, 'onedark')
+
+  if not success then
+    return
+  end
+
+  onedark.setup({
+    style = theme.style,
+    transparent = theme.transparent,
+    term_colors = true,
+  })
+
+  vim.cmd([[
+	set termguicolors
+	colorscheme onedark
+  ]])
+
+  vim.notify.setup({
+    background_colour = '#333333',
+  })
+else
+  vim.g.vscode_style = theme.style
+  if theme.transparent then
+    vim.g.vscode_transparent = 1
+  end
+
+  vim.cmd([[
+	set termguicolors
+	colorscheme vscode
+  ]])
+
+  vim.notify.setup({
+    background_colour = '#333333',
+  })
+end

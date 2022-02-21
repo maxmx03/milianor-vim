@@ -1,27 +1,27 @@
-vim.notify = require('notify')
+require('user.config')
+
+user:setup({
+  servers = {
+    'sumneko_lua',
+    'tsserver',
+    'pylsp',
+    'intelephense',
+    'solargraph',
+    'cssls',
+    'jsonls',
+    'eslint',
+  },
+  theme = {
+    colorscheme = 'onedark',
+    transparent = false,
+    style = 'dark',
+  },
+})
 
 require('user.theme')
 require('user.settings')
 require('user.mapping')
 require('plugins')
-local user_servers = require('user.servers')
-
-user_servers:setup({
-  javascript = false,
-  html = false,
-  css = false,
-  ruby = false,
-  rust = false,
-  python = false,
-  php = false,
-  graphql = false,
-  vue = false,
-  vim = false,
-  java = false,
-  golang = false,
-  kotlin = false,
-  docker = false,
-})
 
 vim.cmd([[
   augroup packer_user_config

@@ -1,7 +1,6 @@
 local success, null_ls = pcall(require, 'null-ls')
 
 if not success then
-  vim.notify('error in after/plugin/null-lus.lua')
   return
 end
 
@@ -12,7 +11,6 @@ null_ls.setup({
   sources = {
     formatting.prettier,
     formatting.rustfmt,
-    formatting.autopep8,
     formatting.stylua.with({
       extra_args = {
         '--indent-type=Spaces',

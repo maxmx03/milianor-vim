@@ -1,7 +1,7 @@
 local success, treesitter = pcall(require, 'nvim-treesitter.configs')
 
 if not success then
-  vim.notify('error in after/plugin/treesitter.lua', 'error')
+  return
 end
 
 treesitter.setup({

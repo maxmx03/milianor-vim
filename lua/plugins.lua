@@ -36,7 +36,9 @@ packer.startup(function()
     'windwp/nvim-ts-autotag',
     'glepnir/dashboard-nvim',
     'rcarriga/nvim-notify',
-    'alexaandru/nvim-lspupdate',
+    'williamboman/nvim-lsp-installer',
+    'Mofiqul/vscode.nvim',
+    'navarasu/onedark.nvim',
     {
       'weilbith/nvim-code-action-menu',
       cmd = 'CodeActionMenu',

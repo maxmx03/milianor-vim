@@ -3,48 +3,21 @@
 
 My neovim configuration for web and mobile development
 
-## Supported programming languages
-
-- css
-- golang
-- html
-- javacript
-- java
-- kotlin
-- lua
-- python
-- php
-- ruby
-- rust
-- scss
-- typescript
-- vue
-
 ## Formatters
 - [prettier](https://prettier.io/)
-- [black](https://github.com/psf/black)
+- [yapf](https://github.com/google/yapf)
 - [stylua](https://github.com/JohnnyMorganz/StyLua)
-- [rustfmt](https://github.com/rust-lang/rustfmt)
+- [rustmt](https://github.com/rust-lang/rustfmt)
+- and more...
 
+## Themes
+- [onedark](https://github.com/navarasu/onedark.nvim) (default)
+- [tokyonight](https://github.com/folke/tokyonight.nvim)
+- [vscode](https://github.com/Mofiqul/vscode.nvim)
 
 ## Instalation
 
 1. Install [Neovim](https://neovim.io/)
-2. Install [Packer](https://github.com/wbthomason/packer.nvim)
-
-
-### Installing dependencies
-
-Updates installed (or auto installs if missing) LSP servers, that are already configured in your init.lua
-```bash
-nvim
-:LspUpdate
-```
-
-You need to install lua language server and rust manually [sumneko_lua](https://github.com/sumneko/lua-language-server/wiki/Build-and-Run)
-```bash
-rustup component add rust-src
-```
 
 then install
 ```bash
@@ -57,6 +30,8 @@ check if is anything is mission, for example telescope needs some dependencies t
 nvim
 :checkhealth
 ```
+
+Servers are installed automatically, if you want to add more servers you need to add your server in the servers table in the init.lua file
 
 ## Tools to work with neovim *(optional)*
  

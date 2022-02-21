@@ -1,14 +1,13 @@
 local success, lualine = pcall(require, 'lualine')
 
 if not success then
-  vim.notify('error in after/plugin/lualine.lua', 'error')
   return
 end
 
 lualine.setup({
   options = {
     icons_enabled = true,
-    theme = 'tokyonight',
+    theme = user.theme.colorscheme,
     component_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
     disabled_filetypes = { 'dashboard', 'NvimTree' },
