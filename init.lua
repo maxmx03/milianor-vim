@@ -12,9 +12,9 @@ user:setup({
     'eslint',
   },
   theme = {
-    colorscheme = 'onedark',
-    transparent = false,
-    style = 'dark',
+    colorscheme = 'tokyonight',
+    transparent = true,
+    style = 'night',
     sidebar = 'left',
   },
 })
