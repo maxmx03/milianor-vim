@@ -1,6 +1,7 @@
 local success, null_ls = pcall(require, 'null-ls')
 
 if not success then
+  vim.notify('null-ls is not working', 'error')
   return
 end
 

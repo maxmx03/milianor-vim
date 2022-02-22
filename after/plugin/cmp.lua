@@ -1,9 +1,20 @@
-local status1, luasnip = pcall(require, 'luasnip')
-local status2, cmp = pcall(require, 'cmp')
-local status3, lspkind = pcall(require, 'lspkind')
+local success1, luasnip = pcall(require, 'luasnip')
+local success2, cmp = pcall(require, 'cmp')
+local success3, lspkind = pcall(require, 'lspkind')
 require('luasnip/loaders/from_vscode').lazy_load()
 
-if not status1 and not status2 and not status3 then
+if not success1 then
+  vim.notify('luasnip is not working', 'error')
+  return
+end
+
+if not success2 then
+  vim.notify('cmp is not working', 'error')
+  return
+end
+
+if not success3 then
+  vim.notify('lspkind is not working', 'error')
   return
 end
 

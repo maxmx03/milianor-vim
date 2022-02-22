@@ -14,8 +14,19 @@ keymap('t', '<esc>', [[<C-\><C-n>]], opts) -- exit the terminal
 -- show hover doc
 wk.register({
   d = {
-    '<cmd>Dashboard<cr>',
-    'Open Dashboard',
+    name = 'Dashboard',
+    d = {
+      '<cmd>Dashboard<cr>',
+      'Open Dashboard',
+    },
+    s = {
+      '<cmd>SessionSave<cr>',
+      'Save session',
+    },
+    l = {
+      '<cmd>SessionLoad<cr>',
+      'Load session',
+    },
   },
   l = {
     name = 'Lsp Installer',
@@ -106,7 +117,7 @@ wk.register({
     },
   },
   h = {
-    name = 'GitSigns (Git Decorations)',
+    name = 'Git',
     s = {
       '<cmd>Gitsigns stage_hunk<cr>',
       'Stage hunk',
@@ -117,15 +128,27 @@ wk.register({
     },
     p = {
       '<cmd>Gitsigns preview_hunk<cr>',
-      'Preview Hunk',
+      'Preview hunk',
     },
     d = {
       '<cmd>Gitsigns diffthis<cr>',
-      'Open Diff',
+      'Toggle local diff',
+    },
+    D = {
+      '<cmd>DiffviewOpen<cr>',
+      'Open project diffview',
+    },
+    c = {
+      '<cmd>DiffviewClose<cr>',
+      'Close project diffview',
     },
     b = {
       '<cmd>Gitsigns toggle_current_line_blame<cr>',
-      'Toggle Blame',
+      'Toggle blame',
     },
+  },
+  c = {
+    '<cmd>CommentToggle<cr>',
+    'Comment Toggle',
   },
 }, { prefix = '<space>' })

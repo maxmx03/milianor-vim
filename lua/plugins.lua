@@ -49,6 +49,19 @@ packer.startup(function()
       run = ':TSUpdate',
     },
     {
+      'sindrets/diffview.nvim',
+      requires = 'nvim-lua/plenary.nvim',
+      config = function()
+        local success, diffview = pcall(require, 'diffview')
+
+        if success then
+          diffview.setup()
+        else
+          vim.notify('diffview is not working', 'error')
+        end
+      end,
+    },
+    {
       'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true },
     },
@@ -78,6 +91,8 @@ packer.startup(function()
 
         if success then
           wk.setup()
+        else
+          vim.notify('which-key is not working', 'error')
         end
       end,
     },
@@ -88,6 +103,8 @@ packer.startup(function()
 
         if success then
           lsp_signature.setup()
+        else
+          vim.notify('lsp_signature is not working', 'error')
         end
       end,
     },
@@ -103,6 +120,7 @@ packer.startup(function()
             'javascript',
             'javascriptreact',
             'json',
+            'lua',
             'toml',
             'typescript',
             'typescriptreact',
@@ -112,6 +130,8 @@ packer.startup(function()
             'yaml',
             'vim',
           })
+        else
+          vim.notify('colorizer is not working', 'error')
         end
       end,
     },
@@ -124,6 +144,8 @@ packer.startup(function()
           autopairs.setup({
             disable_filetype = { 'TelescopePrompt', 'vim' },
           })
+        else
+          vim.notify('nvim-autopairs is not working', 'error')
         end
       end,
     },
@@ -134,6 +156,8 @@ packer.startup(function()
 
         if success then
           toggleterm.setup()
+        else
+          vim.notify('toggleterm is not working', 'error')
         end
       end,
     },
@@ -142,11 +166,11 @@ packer.startup(function()
       config = function()
         local success, saga = pcall(require, 'lspsaga')
 
-        if not success then
-          return
+        if success then
+          saga.init_lsp_saga()
+        else
+          vim.notify('lspsaga is not working', 'error')
         end
-
-        saga.init_lsp_saga()
       end,
     },
     {
@@ -157,11 +181,23 @@ packer.startup(function()
       config = function()
         local success, gitsigns = pcall(require, 'gitsigns')
 
-        if not success then
-          return
+        if success then
+          gitsigns.setup()
+        else
+          vim.notify('gitsigns is not working', 'error')
         end
+      end,
+    },
+    {
+      'terrortylor/nvim-comment',
+      config = function()
+        local success, comment = pcall(require, 'nvim_comment')
 
-        gitsigns.setup()
+        if success then
+          comment.setup()
+        else
+          vim.notify('nvim_comment is not working', 'error')
+        end
       end,
     },
   })

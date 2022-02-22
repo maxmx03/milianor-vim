@@ -1,6 +1,7 @@
-local status, devicons = pcall(require, 'nvim-web-devicons')
+local success, devicons = pcall(require, 'nvim-web-devicons')
 
-if not status then
+if not success then
+  vim.notify('devicons is not working', 'error')
   return
 end
 
