@@ -70,10 +70,6 @@ packer.startup(function()
       'onsails/lspkind-nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true },
     },
-    {
-      'akinsho/flutter-tools.nvim',
-      requires = 'nvim-lua/plenary.nvim',
-    },
     { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' },
     {
       'folke/which-key.nvim',
@@ -100,7 +96,7 @@ packer.startup(function()
       config = function()
         local success, colorizer = pcall(require, 'colorizer')
 
-        if success3 then
+        if success then
           colorizer.setup({
             'html',
             'javascript',

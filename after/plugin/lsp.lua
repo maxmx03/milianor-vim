@@ -1,8 +1,6 @@
-local s1, lsp_installer = pcall(require, 'nvim-lsp-installer')
-local s2, dartls = pcall(require, 'flutter-tools')
-local s3, lsp = pcall(require, 'lspconfig')
+local success, lsp_installer = pcall(require, 'nvim-lsp-installer')
 
-if not s1 and not s2 and not s3 then
+if not success then
   return
 end
 
@@ -122,24 +120,3 @@ lsp_installer.on_server_ready(function(server)
 
   server:setup(config)
 end)
-
-lsp.rust_analyzer.setup({
-  on_attach = on_attach,
-  flags = {
-    debounce_text_changes = 150,
-  },
-  capabilities = capabilities,
-})
-
-dartls.setup({
-  widget_guides = {
-    enabled = true,
-  },
-  lsp = {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    flags = {
-      debounce_text_changes = 150,
-    },
-  },
-})
