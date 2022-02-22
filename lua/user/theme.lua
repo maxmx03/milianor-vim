@@ -6,11 +6,6 @@ if theme.colorscheme == 'tokyonight' then
   vim.g.tokyonight_transparent = theme.transparent
   vim.g.tokyonight_italic_functions = true
 
-  vim.cmd([[
-	set termguicolors
-	colorscheme tokyonight
-  ]])
-
   vim.notify.setup({
     background_colour = '#1f2335',
   })
@@ -27,11 +22,6 @@ elseif theme.colorscheme == 'onedark' then
     term_colors = true,
   })
 
-  vim.cmd([[
-	set termguicolors
-	colorscheme onedark
-  ]])
-
   vim.notify.setup({
     background_colour = '#333333',
   })
@@ -42,12 +32,9 @@ else
     vim.g.vscode_transparent = 1
   end
 
-  vim.cmd([[
-	set termguicolors
-	colorscheme vscode
-  ]])
-
   vim.notify.setup({
     background_colour = '#333333',
   })
 end
+
+vim.cmd(string.format('colorscheme %s', theme.colorscheme))
