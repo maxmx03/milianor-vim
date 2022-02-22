@@ -1,4 +1,16 @@
 require('user.config')
+
+--[[
+-- change your default theme, colorschemes: onedark, tokyonight, vscode
+user:setup({
+  theme = {
+    colorscheme = 'tokyonight',
+    transparent = false,
+    style = 'night',
+  },
+})
+]]
+
 require('user.theme')
 require('user.settings')
 require('user.mapping')
