@@ -11,6 +11,7 @@ vim.opt.timeoutlen = 250 -- for which-key
 vim.opt.updatetime = 250 -- for lsp
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' } -- for cmp
 vim.g.dashboard_default_executive = 'telescope'
+vim.o.termguicolors = true
 
 vim.cmd([[
 set t_8f=^[[38;2;%lu;%lu;%lum

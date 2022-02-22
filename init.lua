@@ -8,8 +8,8 @@ user:setup({
   },
 })
 
-require('user.theme')
 require('user.settings')
+require('user.theme')
 require('user.mapping')
 require('plugins')
 
