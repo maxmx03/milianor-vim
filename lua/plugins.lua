@@ -98,15 +98,16 @@ packer.startup(function()
 
         if success then
           colorizer.setup({
+            'css',
             'html',
             'javascript',
             'javascriptreact',
-            'css',
             'json',
-            'scss',
             'toml',
             'typescript',
             'typescriptreact',
+            'scss',
+            'svelte',
             'vue',
             'yaml',
             'vim',
