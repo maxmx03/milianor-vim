@@ -100,7 +100,7 @@ packer.startup(function()
       config = function()
         local success, colorizer = pcall(require, 'colorizer')
 
-        if success3 then
+        if success then
           colorizer.setup({
             'html',
             'javascript',

@@ -1,4 +1,13 @@
 require('user.config')
+
+user:setup({
+  theme = {
+    colorscheme = 'onedark',
+    transparent = false,
+    style = 'darker',
+  },
+})
+
 require('user.theme')
 require('user.settings')
 require('user.mapping')
