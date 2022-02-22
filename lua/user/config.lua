@@ -14,7 +14,6 @@ user.servers = {
   json = 'jsonls',
   java = 'jdtls',
   lua = 'sumneko_lua',
-  markdown = 'remark_ls',
   php = 'intelephense',
   python = 'pylsp',
   r = 'r_language_server',

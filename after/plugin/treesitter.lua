@@ -22,6 +22,7 @@ treesitter.setup({
     'rust',
     'ruby',
     'scss',
+    'svelte',
     'typescript',
     'tsx',
     'toml',

@@ -148,6 +148,21 @@ packer.startup(function()
         saga.init_lsp_saga()
       end,
     },
+    {
+      'lewis6991/gitsigns.nvim',
+      requires = {
+        'nvim-lua/plenary.nvim',
+      },
+      config = function()
+        local success, gitsigns = pcall(require, 'gitsigns')
+
+        if not success then
+          return
+        end
+
+        gitsigns.setup()
+      end,
+    },
   })
 
   if packer_bootstrap then
