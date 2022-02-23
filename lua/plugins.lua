@@ -1,5 +1,5 @@
 Promise
-  :new(function(resolve, reject)
+  :new(function(resolve)
     local fn = vim.fn
     local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
     if fn.empty(fn.glob(install_path)) > 0 then
@@ -194,11 +194,11 @@ Promise
           end,
         },
       })
-    end)
 
-    if packer_bootstrap then
-      resolve('resolve')
-    end
+      if packer_bootstrap then
+        resolve('resolve')
+      end
+    end)
   end)
   :next(function()
     require('packer').sync()
