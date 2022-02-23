@@ -16,12 +16,12 @@ Promise
   :next(function()
     local success, notify = pcall(require, 'notify')
 
-    vim.notify = notify
-
     if not success then
       vim.notify = function(msg, level)
         print(string.format('Error: %s, Level: %s', msg, level))
       end
+    else
+      vim.notify = notify
     end
 
     require('user.config')
