@@ -34,14 +34,14 @@ Promise
     print(string.format('Something went wrong: %s', error_message))
   end)
   :finally(function()
-    user:setup({
-      theme = {
-        colorscheme = 'vscode',
-        transparent = false,
-        style = 'dark',
-        sidebar = 'left',
-      },
-    })
+    -- user:setup({
+    -- theme = {
+    -- colorscheme = 'tokyonight',
+    -- transparent = false,
+    -- style = 'night',
+    -- sidebar = 'left',
+    -- },
+    -- })
 
     require('user.theme')
   end)
