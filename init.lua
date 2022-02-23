@@ -29,14 +29,14 @@ Promise
     require('user.mapping')
   end)
   :next(function()
-    user:setup({
-      theme = {
-        colorscheme = 'vscode',
-        transparent = false,
-        style = 'dark',
-        sidebar = 'left',
-      },
-    })
+    -- user:setup({
+    -- theme = {
+    -- colorscheme = 'vscode',
+    -- transparent = false,
+    -- style = 'dark',
+    -- sidebar = 'left',
+    -- },
+    -- })
 
     require('user.theme')
   end)
