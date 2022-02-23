@@ -6,7 +6,7 @@ Promise
       require('plugins')
     end)
 
-    if not success then
+    if not success and not packer_bootstrap then
       reject(Promise, result)
       return
     end
