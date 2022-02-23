@@ -20,28 +20,30 @@ Promise
       vim.notify = function(msg, level)
         print(string.format('Error: %s, Level: %s', msg, level))
       end
-    else
-      vim.notify = notify
+
+      error('Error in vim.notify')
+      return
     end
 
+    vim.notify = notify
     require('user.config')
     require('user.settings')
     require('user.mapping')
   end)
-  :next(function()
-    -- user:setup({
-    -- theme = {
-    -- colorscheme = 'vscode',
-    -- transparent = false,
-    -- style = 'dark',
-    -- sidebar = 'left',
-    -- },
-    -- })
+  :catch(function(error_message)
+    print(string.format('Something went wrong: %s', error_message))
+  end)
+  :finally(function()
+    user:setup({
+      theme = {
+        colorscheme = 'vscode',
+        transparent = false,
+        style = 'dark',
+        sidebar = 'left',
+      },
+    })
 
     require('user.theme')
-  end)
-  :catch(function(value)
-    print(string.format('Something went wrong: %s', value))
   end)
 
 vim.cmd([[

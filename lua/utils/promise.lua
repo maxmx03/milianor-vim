@@ -1,36 +1,51 @@
 local M = {}
 
-M.value = nil
-
 function M:new(cb)
   local o = {}
 
   self.__index = self
   setmetatable(o, self)
 
-  self.resolved = false
-  self.rejected = false
-  self.value = nil
+  self.is_rejected = false
+  self.is_resolved = false
+  self.is_finally = false
+  self.errors = { msg = '' }
+  self.result = nil
 
-  cb(self.resolve, self.reject)
+  local success = pcall(cb, self.resolve, self.reject)
+
+  if not success then
+    self.is_rejected = true
+  else
+    self.is_resolved = true
+  end
 
   return o
 end
 
-function M.resolve(self, value)
-  self.resolved = value
+function M.resolve(self, result)
+  self.result = result
 end
 
-function M.reject(self, value)
-  self.rejected = value
+function M.reject(self, result)
+  self.errors.msg = result
+
+  error(self.errors)
 end
 
 function M:next(cb)
-  if not self.rejected then
-    local success, resolved = pcall(cb, self.resolved)
+  if self.is_resolved and not self.is_rejected then
+    local success, result = pcall(cb, self.result)
 
-    if success then
-      self.resolved = resolved
+    if not success then
+      self.is_resolved = false
+      self.is_rejected = true
+      self.errors.msg = result
+    else
+      self.is_resolved = true
+      self.is_rejected = false
+      self.is_finally = true
+      self.result = result
     end
   end
 
@@ -38,11 +53,20 @@ function M:next(cb)
 end
 
 function M:catch(cb)
-  if self.rejected then
-    self.rejected = cb(self.rejected)
+  if self.is_rejected and not self.is_resolved then
+    pcall(cb, self.errors.msg)
+
+    self.is_rejected = false
+    self.is_finally = false
   end
 
   return self
+end
+
+function M:finally(cb)
+  if self.is_finally and not self.is_rejected then
+    cb()
+  end
 end
 
 return M
