@@ -11,15 +11,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
   })
 end
 
-local status, packer = pcall(require, 'packer')
-
-if not status then
-  return
-end
-
-local use = packer.use
-
-packer.startup(function()
+return require('packer').startup(function(use)
   use({
     'wbthomason/packer.nvim',
     'neovim/nvim-lspconfig',
