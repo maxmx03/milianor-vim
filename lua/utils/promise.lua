@@ -20,6 +20,7 @@ end
 
 function M:cb(status, value)
   self.is_resolved = status
+  self.is_rejected = self.is_resolved
 
   if value then
     self.value = value
@@ -40,9 +41,6 @@ function M:next(cb)
   if self.is_resolved and self.is_rejected then
     cb(self.value)
   end
-
-  self.is_resolved = false
-  self.is_rejected = true
 
   return self
 end

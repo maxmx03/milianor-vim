@@ -194,9 +194,8 @@ Promise
           end,
         },
       })
-
       if packer_bootstrap then
-        resolve('resolve')
+        resolve(Promise, 'resolve')
       end
     end)
   end)
