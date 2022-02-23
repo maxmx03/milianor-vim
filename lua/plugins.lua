@@ -195,5 +195,6 @@ return require('packer').startup(function(use)
 
   if packer_bootstrap then
     require('packer').sync()
+    print('installing plugins...')
   end
 end)
