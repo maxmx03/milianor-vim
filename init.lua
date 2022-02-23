@@ -6,7 +6,7 @@ Promise
       require('plugins')
     end)
 
-    if not success and not packer_bootstrap then
+    if not success then
       reject(Promise, result)
       return
     end
@@ -26,8 +26,19 @@ Promise
 
     require('user.config')
     require('user.settings')
-    require('user.theme')
     require('user.mapping')
+  end)
+  :next(function()
+    user:setup({
+      theme = {
+        colorscheme = 'vscode',
+        transparent = false,
+        style = 'dark',
+        sidebar = 'left',
+      },
+    })
+
+    require('user.theme')
   end)
   :catch(function(value)
     print(string.format('Something went wrong: %s', value))

@@ -20,7 +20,6 @@ local colors = {
 }
 
 if user.theme.colorscheme == 'tokyonight' then
-  vim.notify('is using tokyonight')
   colors = {
     bg = '#414868',
     fg = '#cfc9c2',
@@ -37,7 +36,6 @@ if user.theme.colorscheme == 'tokyonight' then
 end
 
 if user.theme.colorscheme == 'vscode' then
-  vim.notify('is using vscode')
   colors = {
     bg = '#262626',
     fg = '#ffffff',

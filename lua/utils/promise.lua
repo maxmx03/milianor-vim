@@ -1,7 +1,5 @@
 local M = {}
 
-M.is_resolved = false
-M.is_rejected = true
 M.value = nil
 
 function M:new(cb)
@@ -10,45 +8,41 @@ function M:new(cb)
   self.__index = self
   setmetatable(o, self)
 
-  self.is_resolved = false
-  self.is_rejected = false
+  self.resolved = false
+  self.rejected = false
+  self.value = nil
 
   cb(self.resolve, self.reject)
 
   return o
 end
 
-function M:cb(status, value)
-  self.is_resolved = status
-  self.is_rejected = self.is_resolved
-
-  if value then
-    self.value = value
-  end
-
-  return self
-end
-
 function M.resolve(self, value)
-  return self:cb(true, value)
+  self.resolved = value
 end
 
 function M.reject(self, value)
-  return self:cb(false, value)
+  self.rejected = value
 end
 
 function M:next(cb)
-  if self.is_resolved and self.is_rejected then
-    cb(self.value)
+  if not self.rejected then
+    local success, resolved = pcall(cb, self.resolved)
+
+    if success then
+      self.resolved = resolved
+    end
   end
 
   return self
 end
 
 function M:catch(cb)
-  if not self.is_resolved and not self.is_rejected then
-    cb(self.value)
+  if self.rejected then
+    self.rejected = cb(self.rejected)
   end
+
+  return self
 end
 
 return M

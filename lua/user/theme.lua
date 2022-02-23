@@ -1,6 +1,6 @@
 local theme = user.theme
 
-if theme.colorscheme == 'tokyonight' then
+if theme.colorscheme == 'tokyonight' and vim.notify.setup then
   vim.g.tokyonight_style = theme.style
   vim.g.tokyonight_transparent = theme.transparent
   vim.g.tokyonight_italic_functions = true
@@ -8,7 +8,7 @@ if theme.colorscheme == 'tokyonight' then
   vim.notify.setup({
     background_colour = '#1f2335',
   })
-elseif theme.colorscheme == 'onedark' then
+elseif theme.colorscheme == 'onedark' and vim.notify.setup then
   local success1, onedark = pcall(require, 'onedark')
 
   if not success1 then
@@ -31,9 +31,11 @@ else
     vim.g.vscode_transparent = 1
   end
 
-  vim.notify.setup({
-    background_colour = '#333333',
-  })
+  if vim.notify.setup then
+    vim.notify.setup({
+      background_colour = '#333333',
+    })
+  end
 end
 
 vim.cmd(string.format('colorscheme %s', theme.colorscheme))
