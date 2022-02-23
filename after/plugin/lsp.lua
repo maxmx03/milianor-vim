@@ -56,6 +56,11 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
+  -- ^M character at end of lines another fix is to use null_ls formatters
+  if vim.loop.os_uname().sysname == 'Windows' then
+    vim.cmd([[set ff=unix]])
+  end
+
   format_onsave(client)
   icons()
 end
