@@ -34,6 +34,13 @@ require('packer').startup(function(use)
     'williamboman/nvim-lsp-installer',
     'Mofiqul/vscode.nvim',
     'navarasu/onedark.nvim',
+    'terrortylor/nvim-comment',
+    'folke/which-key.nvim',
+    'ray-x/lsp_signature.nvim',
+    'norcalli/nvim-colorizer.lua',
+    'windwp/nvim-autopairs',
+    'akinsho/toggleterm.nvim',
+    'tami5/lspsaga.nvim',
     {
       'weilbith/nvim-code-action-menu',
       cmd = 'CodeActionMenu',
@@ -46,15 +53,6 @@ require('packer').startup(function(use)
     {
       'sindrets/diffview.nvim',
       requires = 'nvim-lua/plenary.nvim',
-      config = function()
-        local success, diffview = pcall(require, 'diffview')
-
-        if success then
-          diffview.setup()
-        else
-          vim.notify('diffview is not working', 'error')
-        end
-      end,
     },
     {
       'nvim-lualine/lualine.nvim',
@@ -80,120 +78,10 @@ require('packer').startup(function(use)
     },
     { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' },
     {
-      'folke/which-key.nvim',
-      config = function()
-        local success, wk = pcall(require, 'which-key')
-
-        if success then
-          wk.setup()
-        else
-          vim.notify('which-key is not working', 'error')
-        end
-      end,
-    },
-    {
-      'ray-x/lsp_signature.nvim',
-      config = function()
-        local success, lsp_signature = pcall(require, 'lsp_signature')
-
-        if success then
-          lsp_signature.setup()
-        else
-          vim.notify('lsp_signature is not working', 'error')
-        end
-      end,
-    },
-    {
-      'norcalli/nvim-colorizer.lua',
-      config = function()
-        local success, colorizer = pcall(require, 'colorizer')
-
-        if success then
-          colorizer.setup({
-            'css',
-            'html',
-            'javascript',
-            'javascriptreact',
-            'json',
-            'lua',
-            'toml',
-            'typescript',
-            'typescriptreact',
-            'scss',
-            'svelte',
-            'vue',
-            'yaml',
-            'vim',
-          })
-        else
-          vim.notify('colorizer is not working', 'error')
-        end
-      end,
-    },
-    {
-      'windwp/nvim-autopairs',
-      config = function()
-        local success, autopairs = pcall(require, 'nvim-autopairs')
-
-        if success then
-          autopairs.setup({
-            disable_filetype = { 'TelescopePrompt', 'vim' },
-          })
-        else
-          vim.notify('nvim-autopairs is not working', 'error')
-        end
-      end,
-    },
-    {
-      'akinsho/toggleterm.nvim',
-      config = function()
-        local success, toggleterm = pcall(require, 'toggleterm')
-
-        if success then
-          toggleterm.setup()
-        else
-          vim.notify('toggleterm is not working', 'error')
-        end
-      end,
-    },
-    {
-      'tami5/lspsaga.nvim',
-      config = function()
-        local success, saga = pcall(require, 'lspsaga')
-
-        if success then
-          saga.init_lsp_saga()
-        else
-          vim.notify('lspsaga is not working', 'error')
-        end
-      end,
-    },
-    {
       'lewis6991/gitsigns.nvim',
       requires = {
         'nvim-lua/plenary.nvim',
       },
-      config = function()
-        local success, gitsigns = pcall(require, 'gitsigns')
-
-        if success then
-          gitsigns.setup()
-        else
-          vim.notify('gitsigns is not working', 'error')
-        end
-      end,
-    },
-    {
-      'terrortylor/nvim-comment',
-      config = function()
-        local success, comment = pcall(require, 'nvim_comment')
-
-        if success then
-          comment.setup()
-        else
-          vim.notify('nvim_comment is not working', 'error')
-        end
-      end,
     },
   })
   if packer_bootstrap then

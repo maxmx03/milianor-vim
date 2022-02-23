@@ -49,9 +49,9 @@ Promise
     -- style: 'dark', 'light'
     -- user:setup({
     -- theme = {
-    -- colorscheme = 'tokyonight',
+    -- colorscheme = 'vscode',
     -- transparent = false,
-    -- style = 'night',
+    -- style = 'dark',
     -- sidebar = 'left',
     -- },
     -- })
