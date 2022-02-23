@@ -34,6 +34,19 @@ Promise
     print(string.format('Something went wrong: %s', error_message))
   end)
   :finally(function()
+    -- change your default theme,
+    -- colorschemes: onedark, tokyonight, vscode
+    --
+    -- styles
+    --
+    -- tokyonight
+    -- style: 'storm', 'night'
+    --
+    -- onedark
+    -- style: 'dark', 'darker', 'deep', 'cool', 'warm', 'warmer'
+    --
+    -- vscode
+    -- style: 'dark', 'light'
     -- user:setup({
     -- theme = {
     -- colorscheme = 'tokyonight',
