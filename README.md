@@ -78,6 +78,10 @@ Example, to install tsserver you just need to open a javascript file
 | nnoremap   | description       | plugin                           |
 | :---------- | :--------- | :---------------------------------- |
 | `<space>` | `Open a list of available keymappings` | Which keys |
+| `<space>d` | `Open Dashboard` | Dashboard |
+| `<space>s` | `Save Session` | Dashboard |
+| `<space>l` | `Load Session` | Dashboard |
+| `<space>ll` | `Show Installed and available lsp servers` | Dashboard |
 | `<space>b]` | `Move to next tab` | Bufferline |
 | `<space>b[` | `Move to previous tab` | Bufferline |
 | `<space>bx` | `Close the selected tab` | Bufferline |
@@ -87,12 +91,26 @@ Example, to install tsserver you just need to open a javascript file
 | `<space>fg` | `Search for a string in your current working directory` | Telescope |
 | `<space>fb` | `Lists open buffers in current neovim instance` | Telescope |
 | `<space>fh` | `Lists available help tags` | Telescope |
-| `<space>nn` | `Open Tree (sidebar)` | Tree |
-| `<space>tt` | `Open Terminal (press Esc and repeat the command to close the terminal)` | Terminal |
-| `<space>ca` | `Code Action` | LSP Code Action |
+| `<space>nn` | `Open tree (sidebar)` | Tree |
+| `<space>tt` | `Open terminal (press Esc and repeat the command to close the terminal)` | Terminal |
+| `<space>ga` | `Code action` | Lsp Saga |
+| `<space>gr` | `Rename` | Lsp Saga |
+| `<space>gk` | `Show diagnostic` | Lsp Saga |
+| `<space>gK` | `Hover` | Lsp Saga |
+| `<space>gn` | `Show next diagnostic` | Lsp Saga |
+| `<space>gp` | `Show prev diagnostic` | Lsp Saga |
+| `<space>gd` | `Preview definition` | Lsp Saga |
+| `<space>hs` | `Stage hunk` | Gitsigns |
+| `<space>hr` | `Reset hunk` | Gitsigns |
+| `<space>hp` | `Preview hunk` | Gitsigns |
+| `<space>hd` | `Toggle local diff` | Gitsigns |
+| `<space>hD` | `Open project diffview` | DiffView |
+| `<space>hc` | `Close project diffview` | DiffView |
+| `<space>hb` | `Toggle blame` | DiffView |
+| `<space>c` | `Comment Toggle` | CommentToggle |
 
 
-## Licença
+## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
