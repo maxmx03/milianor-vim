@@ -30,7 +30,7 @@ Promise
     require('user.mapping')
   end)
   :catch(function(value)
-    print(string.format('this is my error: %s', value))
+    print(string.format('Something went wrong: %s', value))
   end)
 
 vim.cmd([[
