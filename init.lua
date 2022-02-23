@@ -14,7 +14,15 @@ Promise
     resolve(Promise, 'success')
   end)
   :next(function()
-    vim.notify = require('notify')
+    local success, notify = pcall(require, 'notify')
+
+    vim.notify = notify
+
+    if not success then
+      vim.notify = function(msg, level)
+        print(string.format('Error: %s, Level: %s', msg, level))
+      end
+    end
 
     require('user.config')
     require('user.settings')
