@@ -1,40 +1,29 @@
-local function try_catch()
-  require('user.config')
+Promise = require('utils.promise')
 
-  -- change your default theme,
-  -- colorschemes: onedark, tokyonight, vscode
-  --
-  -- styles
-  --
-  -- tokyonight
-  -- style: 'storm', 'night'
-  --
-  -- onedark
-  -- style: 'dark', 'darker', 'deep', 'cool', 'warm', 'warmer'
-  --
-  -- vscode
-  -- style: 'dark', 'light'
-  -- user:setup({
-  -- theme = {
-  -- colorscheme = 'tokyonight',
-  -- transparent = false,
-  -- style = 'night',
-  -- sidebar = 'left',
-  -- },
-  -- })
+Promise
+  :new(function(resolve, reject)
+    local success, result = pcall(function()
+      require('plugins')
+    end)
 
-  require('user.settings')
-  require('user.theme')
-  require('user.mapping')
-  require('plugins')
-end
+    if not success then
+      reject(Promise, result)
+      return
+    end
 
-local success = pcall(try_catch)
+    resolve(Promise, 'success')
+  end)
+  :next(function()
+    vim.notify = require('notify')
 
-if not success then
-  print('error in user folder')
-else
-end
+    require('user.config')
+    require('user.settings')
+    require('user.theme')
+    require('user.mapping')
+  end)
+  :catch(function(value)
+    print(string.format('this is my error: %s', value))
+  end)
 
 vim.cmd([[
   augroup packer_user_config

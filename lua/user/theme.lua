@@ -1,15 +1,4 @@
-local function try_catch()
-  vim.notify = require('notify')
-end
-
-local success = pcall(try_catch)
 local theme = user.theme
-
-if not success then
-  print('vim notify is not working')
-  vim.cmd(string.format('colorscheme %s', theme.colorscheme))
-  return
-end
 
 if theme.colorscheme == 'tokyonight' then
   vim.g.tokyonight_style = theme.style
