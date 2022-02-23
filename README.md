@@ -28,15 +28,17 @@ sudo apt install gcc
 ```
 
 ## Windows
-1. install [scoop](https://scoop.sh/)
 
-2. install [dotnet](https://dotnet.microsoft.com/en-us/download)
+1. install [dotnet](https://dotnet.microsoft.com/en-us/download)
+
+
+2. install [scoop](https://scoop.sh/)
 
 ```powershell
 iwr -useb get.scoop.sh | iex
 ```
 
-2. install neovim/mingw/nvm
+3. install neovim/mingw/nvm
 
 ```powershell
 scoop bucket add versions
