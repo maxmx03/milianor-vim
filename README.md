@@ -32,10 +32,9 @@ sudo apt install gcc
 
 2. install [dotnet](https://dotnet.microsoft.com/en-us/download)
 
-`powershell
+```powershell
 iwr -useb get.scoop.sh | iex
-
-````
+```
 
 2. install neovim/mingw/nvm
 
