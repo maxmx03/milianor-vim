@@ -17,7 +17,34 @@ My neovim configuration for web and mobile development
 
 ## Instalation
 
+### Linux
 1. Install [Neovim](https://neovim.io/)
+
+
+2. install gcc
+
+```bash
+sudo apt install gcc
+```
+
+## Windows
+1. install [scoop](https://scoop.sh/)
+
+2. install [dotnet](https://dotnet.microsoft.com/en-us/download)
+
+`powershell
+iwr -useb get.scoop.sh | iex
+
+````
+
+2. install neovim/mingw/nvm
+
+```powershell
+scoop bucket add versions
+scoop install neovim-nightly mingw nvm
+```
+
+## Windows and Linux
 
 then install
 ```bash
