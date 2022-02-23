@@ -5,6 +5,8 @@ M.value = nil
 
 function M:new(cb)
   local o = {}
+  self.is_resolved = false
+  self.value = nil
 
   self.__index = self
   setmetatable(o, self)
