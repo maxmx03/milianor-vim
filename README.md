@@ -45,6 +45,10 @@ scoop bucket add versions
 scoop install neovim-nightly mingw nvm
 ```
 
+```powershell
+nvm install --lts
+```
+
 ## Windows and Linux
 
 then install
