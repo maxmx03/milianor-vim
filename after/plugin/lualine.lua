@@ -1,6 +1,7 @@
 local success, lualine = pcall(require, 'lualine')
 
 if not success then
+  vim.notify('lualine is not working', 'error')
   return
 end
 
@@ -17,6 +18,38 @@ local colors = {
   blue = '#51afef',
   red = '#ec5f67',
 }
+
+if user.theme.colorscheme == 'tokyonight' then
+  colors = {
+    bg = '#414868',
+    fg = '#cfc9c2',
+    yellow = '#e0af68',
+    cyan = '#73daca',
+    darkblue = '#081633',
+    green = '#9ece6a',
+    orange = '#ff9e64',
+    violet = '#a9a1e1',
+    magenta = '#bb9af7',
+    blue = '#7aa2f7',
+    red = '#f7768e',
+  }
+end
+
+if user.theme.colorscheme == 'vscode' then
+  colors = {
+    bg = '#262626',
+    fg = '#ffffff',
+    yellow = '#ffaf00',
+    cyan = '#008080',
+    darkblue = '#081633',
+    green = '#619955',
+    orange = '#FF8800',
+    violet = '#a9a1e1',
+    magenta = '#c678dd',
+    blue = '#0a7aca',
+    red = '#f44747',
+  }
+end
 
 local conditions = {
   buffer_not_empty = function()

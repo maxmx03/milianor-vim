@@ -1,6 +1,7 @@
 local success, treesitter = pcall(require, 'nvim-treesitter.configs')
 
 if not success then
+  vim.notify('treesitter is not working', 'error')
   return
 end
 
@@ -22,6 +23,7 @@ treesitter.setup({
     'rust',
     'ruby',
     'scss',
+    'svelte',
     'typescript',
     'tsx',
     'toml',

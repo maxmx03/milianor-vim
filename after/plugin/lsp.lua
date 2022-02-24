@@ -1,8 +1,9 @@
-local s1, lsp_installer = pcall(require, 'nvim-lsp-installer')
-local s2, dartls = pcall(require, 'flutter-tools')
-local s3, lsp = pcall(require, 'lspconfig')
+local success, lsp_installer = pcall(require, 'nvim-lsp-installer')
+local succes2, lsp = pcall(require, 'lspconfig')
+local success3, dartls = pcall(require, 'flutter-tools')
 
-if not s1 and not s2 and not s3 then
+if not success and not succes2 and not success3 then
+  vim.notify('lsp is not working', 'error')
   return
 end
 
@@ -56,6 +57,11 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+
+  -- ^M character at end of lines another fix is to use null_ls formatters
+  if vim.loop.os_uname().sysname == 'Windows' then
+    vim.cmd([[set ff=unix]])
+  end
 
   format_onsave(client)
   icons()

@@ -1,26 +1,21 @@
-local fn = vim.fn
-local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+if vim.loop.os_uname().sysname == 'Linux' then
+  local fn = vim.fn
+  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+  vim.o.runtimepath = vim.fn.stdpath('data') .. '/site/pack/*/start/*,' .. vim.o.runtimepath
 
-if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system(
-    'git',
-    'clone',
-    '--depth',
-    '1',
-    'https://github.com/wbthomason/packer.nvim',
-    install_path
-  )
+  if fn.empty(fn.glob(install_path)) > 0 then
+    packer_bootstrap = fn.system({
+      'git',
+      'clone',
+      '--depth',
+      '1',
+      'https://github.com/wbthomason/packer.nvim',
+      install_path,
+    })
+  end
 end
 
-local status, packer = pcall(require, 'packer')
-
-if not status then
-  return
-end
-
-local use = packer.use
-
-packer.startup(function()
+require('packer').startup(function(use)
   use({
     'wbthomason/packer.nvim',
     'neovim/nvim-lspconfig',
@@ -39,6 +34,13 @@ packer.startup(function()
     'williamboman/nvim-lsp-installer',
     'Mofiqul/vscode.nvim',
     'navarasu/onedark.nvim',
+    'terrortylor/nvim-comment',
+    'folke/which-key.nvim',
+    'ray-x/lsp_signature.nvim',
+    'norcalli/nvim-colorizer.lua',
+    'windwp/nvim-autopairs',
+    'akinsho/toggleterm.nvim',
+    'tami5/lspsaga.nvim',
     {
       'weilbith/nvim-code-action-menu',
       cmd = 'CodeActionMenu',
@@ -49,8 +51,16 @@ packer.startup(function()
       run = ':TSUpdate',
     },
     {
+      'sindrets/diffview.nvim',
+      requires = 'nvim-lua/plenary.nvim',
+    },
+    {
       'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    },
+    {
+      'akinsho/flutter-tools.nvim',
+      requires = 'nvim-lua/plenary.nvim',
     },
     {
       'nvim-telescope/telescope.nvim',
@@ -70,90 +80,14 @@ packer.startup(function()
       'onsails/lspkind-nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true },
     },
-    {
-      'akinsho/flutter-tools.nvim',
-      requires = 'nvim-lua/plenary.nvim',
-    },
     { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' },
     {
-      'folke/which-key.nvim',
-      config = function()
-        local success, wk = pcall(require, 'which-key')
-
-        if success then
-          wk.setup()
-        end
-      end,
-    },
-    {
-      'ray-x/lsp_signature.nvim',
-      config = function()
-        local success, lsp_signature = pcall(require, 'lsp_signature')
-
-        if success then
-          lsp_signature.setup()
-        end
-      end,
-    },
-    {
-      'norcalli/nvim-colorizer.lua',
-      config = function()
-        local success, colorizer = pcall(require, 'colorizer')
-
-        if success then
-          colorizer.setup({
-            'html',
-            'javascript',
-            'javascriptreact',
-            'css',
-            'json',
-            'scss',
-            'toml',
-            'typescript',
-            'typescriptreact',
-            'vue',
-            'yaml',
-            'vim',
-          })
-        end
-      end,
-    },
-    {
-      'windwp/nvim-autopairs',
-      config = function()
-        local success, autopairs = pcall(require, 'nvim-autopairs')
-
-        if success then
-          autopairs.setup({
-            disable_filetype = { 'TelescopePrompt', 'vim' },
-          })
-        end
-      end,
-    },
-    {
-      'akinsho/toggleterm.nvim',
-      config = function()
-        local success, toggleterm = pcall(require, 'toggleterm')
-
-        if success then
-          toggleterm.setup()
-        end
-      end,
-    },
-    {
-      'tami5/lspsaga.nvim',
-      config = function()
-        local success, saga = pcall(require, 'lspsaga')
-
-        if not success then
-          return
-        end
-
-        saga.init_lsp_saga()
-      end,
+      'lewis6991/gitsigns.nvim',
+      requires = {
+        'nvim-lua/plenary.nvim',
+      },
     },
   })
-
   if packer_bootstrap then
     require('packer').sync()
   end

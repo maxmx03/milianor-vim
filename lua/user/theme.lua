@@ -1,4 +1,3 @@
-vim.notify = require('notify')
 local theme = user.theme
 
 if theme.colorscheme == 'tokyonight' then
@@ -10,9 +9,9 @@ if theme.colorscheme == 'tokyonight' then
     background_colour = '#1f2335',
   })
 elseif theme.colorscheme == 'onedark' then
-  local success, onedark = pcall(require, 'onedark')
+  local success1, onedark = pcall(require, 'onedark')
 
-  if not success then
+  if not success1 then
     return
   end
 
