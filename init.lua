@@ -34,27 +34,57 @@ Promise
     print(string.format('Something went wrong: %s', error_message))
   end)
   :finally(function()
-    -- change your default theme,
-    -- colorschemes: onedark, tokyonight, vscode
-    --
-    -- styles
-    --
-    -- tokyonight
-    -- style: 'storm', 'night'
-    --
-    -- onedark
-    -- style: 'dark', 'darker', 'deep', 'cool', 'warm', 'warmer'
-    --
-    -- vscode
-    -- style: 'dark', 'light'
-    -- user:setup({
-    -- theme = {
-    -- colorscheme = 'vscode',
-    -- transparent = false,
-    -- style = 'dark',
-    -- sidebar = 'left',
-    -- },
-    -- })
+    user:setup({
+      -- place your lsp servers bellow
+      -- for more: https://github.com/williamboman/nvim-lsp-installer
+      servers = {
+        javascript = 'tsserver',
+        typescript = 'tsserver',
+        bash = 'bashls',
+        c = 'ccls',
+        cs = 'csharp_ls',
+        cpp = 'ccls',
+        deno = 'denols',
+        docker = 'dockerls',
+        go = 'gopls',
+        graphql = 'graphql',
+        html = 'html',
+        json = 'jsonls',
+        java = 'jdtls',
+        lua = 'sumneko_lua',
+        php = 'intelephense',
+        python = 'pylsp',
+        r = 'r_language_server',
+        ruby = 'solargraph',
+        svelte = 'svelte',
+        swift = '	sourcekit',
+        terraform = 'terraformls',
+        sql = 'sqls',
+        toml = 'taplo',
+        vue = 'vuels',
+        xml = 'lemminx',
+        yaml = 'yamlls',
+      },
+      -- change your default theme,
+      -- colorschemes: onedark, tokyonight, vscode
+      --
+      -- styles
+      --
+      -- tokyonight
+      -- style: 'storm', 'night'
+      --
+      -- onedark
+      -- style: 'dark', 'darker', 'deep', 'cool', 'warm', 'warmer'
+      --
+      -- vscode
+      -- style: 'dark', 'light'
+      -- theme = {
+      -- colorscheme = 'tokyonight',
+      -- transparent = false,
+      -- style = 'night',
+      -- sidebar = 'left',
+      -- },
+    })
 
     require('user.theme')
   end)
