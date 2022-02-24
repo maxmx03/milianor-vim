@@ -65,6 +65,11 @@ Promise
         xml = 'lemminx',
         yaml = 'yamlls',
       },
+      -- disable lsp default formatter to use null_instead
+      disable_server_formatter = {
+        'tsserver',
+        'html',
+      },
       -- change your default theme,
       -- colorschemes: onedark, tokyonight, vscode
       --
