@@ -65,6 +65,12 @@ Promise
         xml = 'lemminx',
         yaml = 'yamlls',
       },
+
+      disable_server_formatter = {
+        'tsserver',
+        'rust_analyzer',
+        'dartls',
+      },
       -- change your default theme,
       -- colorschemes: onedark, tokyonight, vscode
       --

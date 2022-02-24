@@ -12,6 +12,7 @@ null_ls.setup({
   sources = {
     formatting.prettier,
     formatting.rustfmt,
+    formatting.dart_format,
     formatting.stylua.with({
       extra_args = {
         '--indent-type=Spaces',

@@ -23,8 +23,10 @@ local function icons()
 end
 
 local function format_onsave(client)
-  if client.name == 'tsserver' or client.name == 'rust_analyzer' then
-    client.resolved_capabilities.document_formatting = false
+  for _, server_name in pairs(user.disable_server_formatter) do
+    if client.name == server_name then
+      client.resolved_capabilities.document_formatting = false
+    end
   end
 
   vim.cmd([[
