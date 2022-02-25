@@ -6,11 +6,13 @@ if not success then
 end
 
 local formatting = null_ls.builtins.formatting
+local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
   debug = false,
   sources = {
     formatting.prettier,
+    diagnostics.eslint,
     formatting.stylua.with({
       extra_args = {
         '--indent-type=Spaces',
