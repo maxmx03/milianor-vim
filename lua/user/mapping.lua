@@ -165,9 +165,9 @@ wk.register({
       '<cmd>FlutterVisualDebug<cr>',
       'Flutter Visual Debug',
     },
-    s = {
-      '<cmd>FlutterScreenshot<cr>',
-      'Flutter ScreenShow',
+    o = {
+      '<cmd>FlutterOutlineToggle<cr>',
+      'Flutter Outline Toggle',
     },
   },
   c = {
