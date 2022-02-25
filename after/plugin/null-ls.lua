@@ -6,6 +6,7 @@ if not success then
 end
 
 local formatting = null_ls.builtins.formatting
+local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
   debug = false,
@@ -21,5 +22,6 @@ null_ls.setup({
         '--line-endings=Unix',
       },
     }),
+    diagnostics.eslint,
   },
 })
