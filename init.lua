@@ -70,6 +70,7 @@ Promise --{{{
         'tsserver',
         'rust_analyzer',
         'dartls',
+        'sumneko_lua',
       },
       -- change your default theme,
       -- colorschemes: onedark, tokyonight, vscode
