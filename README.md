@@ -17,7 +17,13 @@ My neovim configuration for web and mobile development
 
 ## Instalation
 
+clone repo
+```bash
+git clone https://github.com/maxmx03/milianor-vim.git ~/.config/nvim
+```
+
 ### Linux
+
 1. Install [Neovim](https://neovim.io/)
 
 
@@ -26,6 +32,8 @@ My neovim configuration for web and mobile development
 ```bash
 sudo apt install gcc
 ```
+
+3. Install [node](https://nodejs.org/en/)
 
 ## Windows
 
@@ -53,7 +61,7 @@ nvm install --lts
 
 then install
 ```bash
-npm i -g neovim
+npm i -g neovim yarn
 pip install pynvim
 ```
 
@@ -70,6 +78,23 @@ Example, to install tsserver you just need to open a javascript file
   nvim index.js
 ```
 
+## Installing the default formatters
+
+
+install rust and cargo
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+lua formatter
+```
+cargo install stylua
+```
+
+prettier
+```
+npm install -g prettier
+```
 
 ## Tools to work with neovim *(optional)*
  
