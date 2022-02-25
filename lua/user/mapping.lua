@@ -147,6 +147,21 @@ wk.register({
       'Toggle blame',
     },
   },
+m = {
+  name = 'Flutter',
+  r = {
+	'<cmd>:FlutterRun<cr>',
+	'Flutter Run'
+  },
+  R = {
+	'<cmd>:FlutterHotRestart<cr>',
+	'Flutter Restart'
+  },
+  q = {
+	'<cmd>:FlutterQuit<cr>',
+	'Flutter Quit'
+  }
+},
   c = {
     '<cmd>CommentToggle<cr>',
     'Comment Toggle',

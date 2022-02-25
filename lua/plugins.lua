@@ -60,21 +60,19 @@ require('packer').startup(function(use)
     },
     {
       'akinsho/flutter-tools.nvim',
-      requires = 'nvim-lua/plenary.nvim',
+	  requires = {'nvim-lua/plenary.nvim', 'thosakwe/vim-flutter'},
     },
     {
       'nvim-telescope/telescope.nvim',
-      requires = { { 'nvim-lua/plenary.nvim' } },
+      requires = 'nvim-lua/plenary.nvim'
     },
     {
       'jose-elias-alvarez/null-ls.nvim',
-      requires = { { 'nvim-lua/plenary.nvim' } },
+      requires = 'nvim-lua/plenary.nvim'
     },
     {
       'kyazdani42/nvim-tree.lua',
-      requires = {
-        'kyazdani42/nvim-web-devicons',
-      },
+      requires = 'kyazdani42/nvim-web-devicons'
     },
     {
       'onsails/lspkind-nvim',
@@ -83,9 +81,7 @@ require('packer').startup(function(use)
     { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' },
     {
       'lewis6991/gitsigns.nvim',
-      requires = {
-        'nvim-lua/plenary.nvim',
-      },
+      requires = 'nvim-lua/plenary.nvim',
     },
   })
   if packer_bootstrap then
