@@ -1,6 +1,6 @@
 Promise = require('utils.promise')
 
-Promise
+Promise --{{{
   :new(function(resolve, reject)
     local success, result = pcall(function()
       require('plugins')
@@ -32,7 +32,7 @@ Promise
   end)
   :catch(function(error_message)
     print(string.format('Something went wrong: %s', error_message))
-  end)
+  end) --}}}
   :finally(function()
     user:setup({
       -- place your lsp servers bellow
