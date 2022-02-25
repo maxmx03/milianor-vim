@@ -88,7 +88,7 @@ Promise --{{{
       theme = {
         colorscheme = 'onedark',
         transparent = false,
-        style = 'deep',
+        style = 'darker',
         sidebar = 'left',
       },
     })
