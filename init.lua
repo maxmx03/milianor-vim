@@ -31,8 +31,8 @@ Promise --{{{
     require('user.mapping')
   end)
   :catch(function(error_message)
-    print(string.format('Something went wrong: %s', error_message)) --}}}
-  end)
+    print(string.format('Something went wrong: %s', error_message))
+  end) --}}}
   :finally(function()
     user:setup({
       -- place your lsp servers bellow
