@@ -1,6 +1,6 @@
 Promise = require('utils.promise')
 
-Promise
+Promise --{{{
   :new(function(resolve, reject)
     local success, result = pcall(function()
       require('plugins')
@@ -31,7 +31,7 @@ Promise
     require('user.mapping')
   end)
   :catch(function(error_message)
-    print(string.format('Something went wrong: %s', error_message))
+    print(string.format('Something went wrong: %s', error_message)) --}}}
   end)
   :finally(function()
     user:setup({

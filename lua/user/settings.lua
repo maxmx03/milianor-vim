@@ -7,6 +7,7 @@ vim.opt.si = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
+vim.opt.foldmethod = 'marker'
 vim.opt.timeoutlen = 250 -- for which-key
 vim.opt.updatetime = 250 -- for lsp
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' } -- for cmp
