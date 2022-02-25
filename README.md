@@ -98,7 +98,7 @@ npm install -g prettier
 
 ## Tools to work with neovim *(optional)*
  
-- [Alacritty](https://github.com/alacritty/alacritty)
+- [Kitty](https://sw.kovidgoyal.net/kitty/)
 - [Fish](https://fishshell.com/)
 - [Tmux](https://github.com/tmux/tmux)
 
