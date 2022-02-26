@@ -84,7 +84,7 @@ end
 vim.cmd([[
   augroup LspAutoInstall
     autocmd!
-	autocmd BufEnter <buffer> lua auto_install(user.servers)
+	autocmd VimEnter <buffer> lua auto_install(user.servers)
   augroup END
 ]])
 
