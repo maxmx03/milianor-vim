@@ -75,6 +75,7 @@ Promise --{{{
         'rust_analyzer',
         'dartls',
         'html',
+        'cssls',
         'sumneko_lua',
       },
       -- change your default theme,
