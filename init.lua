@@ -75,6 +75,7 @@ Promise --{{{
         'rust_analyzer',
         'dartls',
         'html',
+        'sumneko_lua',
       },
       -- change your default theme,
       -- colorschemes: onedark, tokyonight, vscode

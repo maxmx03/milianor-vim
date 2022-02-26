@@ -23,6 +23,8 @@ local function icons()
 end
 
 local function format_onsave(client)
+  client.resolved_capabilities.document_formatting = true
+
   for _, server_name in pairs(user.disable_server_formatter) do
     if client.name == server_name then
       client.resolved_capabilities.document_formatting = false
@@ -122,6 +124,43 @@ lsp_installer.on_server_ready(function(server)
           },
           telemetry = {
             enable = false,
+          },
+        },
+      },
+    }
+  end
+
+  if server.name == 'vuels' then
+    config = {
+      on_attach = on_attach,
+      flags = {
+        debounce_text_changes = 150,
+      },
+      capabilities = capabilities,
+      init_options = {
+        config = {
+          vetur = {
+            ignoreProjectWarning = true,
+            completion = {
+              autoImport = false,
+              tagCasing = 'kebab',
+              useScaffoldSnippets = false,
+            },
+            format = {
+              defaultFormatter = {
+                js = 'prettier',
+                ts = 'prettier',
+              },
+              defaultFormatterOptions = {},
+              scriptInitialIndent = false,
+              styleInitialIndent = false,
+            },
+            useWorkspaceDependencies = false,
+            validation = {
+              script = true,
+              style = true,
+              template = true,
+            },
           },
         },
       },
