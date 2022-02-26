@@ -74,6 +74,7 @@ Promise --{{{
         'tsserver',
         'rust_analyzer',
         'dartls',
+        'html',
       },
       -- change your default theme,
       -- colorschemes: onedark, tokyonight, vscode
@@ -90,7 +91,7 @@ Promise --{{{
       -- style: 'dark', 'light'
       theme = {
         colorscheme = 'solarized',
-        transparent = true,
+        transparent = false,
         -- style = 'darker',
         sidebar = 'left',
       },
