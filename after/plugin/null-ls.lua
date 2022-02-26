@@ -11,7 +11,7 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
   debug = false,
   sources = {
-    --    formatting.prettier,
+    formatting.prettier,
     formatting.rustfmt,
     formatting.dart_format,
     formatting.stylua.with({
