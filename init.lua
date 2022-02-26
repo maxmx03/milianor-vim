@@ -73,6 +73,7 @@ Promise --{{{
       disable_server_formatter = {
         'tsserver',
         'html',
+        'sumneko_lua',
       },
       -- change your default theme,
       -- colorschemes: onedark, tokyonight, vscode
