@@ -35,6 +35,22 @@ if user.theme.colorscheme == 'tokyonight' then
   }
 end
 
+if user.theme.colorscheme == 'solarized' then
+  colors = {
+    bg = '#001e26',
+    fg = '#708183',
+    yellow = '#a57705',
+    cyan = '#259185',
+    darkblue = '#081633',
+    green = '#728905',
+    orange = '#bd3612',
+    violet = '#c61b6e',
+    magenta = '#5856b9',
+    blue = '#2075c7',
+    red = '#d01b24',
+  }
+end
+
 if user.theme.colorscheme == 'vscode' then
   colors = {
     bg = '#262626',

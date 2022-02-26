@@ -41,6 +41,7 @@ require('packer').startup(function(use)
     'windwp/nvim-autopairs',
     'akinsho/toggleterm.nvim',
     'tami5/lspsaga.nvim',
+    'ishan9299/nvim-solarized-lua',
     {
       'weilbith/nvim-code-action-menu',
       cmd = 'CodeActionMenu',
@@ -60,19 +61,19 @@ require('packer').startup(function(use)
     },
     {
       'akinsho/flutter-tools.nvim',
-	  requires = {'nvim-lua/plenary.nvim', 'thosakwe/vim-flutter'},
+      requires = { 'nvim-lua/plenary.nvim', 'thosakwe/vim-flutter' },
     },
     {
       'nvim-telescope/telescope.nvim',
-      requires = 'nvim-lua/plenary.nvim'
+      requires = 'nvim-lua/plenary.nvim',
     },
     {
       'jose-elias-alvarez/null-ls.nvim',
-      requires = 'nvim-lua/plenary.nvim'
+      requires = 'nvim-lua/plenary.nvim',
     },
     {
       'kyazdani42/nvim-tree.lua',
-      requires = 'kyazdani42/nvim-web-devicons'
+      requires = 'kyazdani42/nvim-web-devicons',
     },
     {
       'onsails/lspkind-nvim',

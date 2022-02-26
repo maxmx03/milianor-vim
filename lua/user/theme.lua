@@ -24,6 +24,14 @@ elseif theme.colorscheme == 'onedark' then
   vim.notify.setup({
     background_colour = '#333333',
   })
+elseif theme.colorscheme == 'solarized' then
+  if theme.transparent then
+    vim.g.solarized_termtrans = 1
+  end
+
+  vim.notify.setup({
+    background_colour = '#001e26',
+  })
 else
   vim.g.vscode_style = theme.style
 
