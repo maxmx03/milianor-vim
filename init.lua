@@ -60,6 +60,7 @@ Promise --{{{
         prisma = 'prismals',
         r = 'r_language_server',
         ruby = 'solargraph',
+        rust = 'rust_analyzer',
         svelte = 'svelte',
         swift = '	sourcekit',
         terraform = 'terraformls',
