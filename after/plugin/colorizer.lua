@@ -3,6 +3,7 @@ local success, colorizer = pcall(require, 'colorizer')
 if success then
   colorizer.setup({
     'css',
+    'conf',
     'html',
     'javascript',
     'javascriptreact',

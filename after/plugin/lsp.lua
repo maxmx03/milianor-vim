@@ -170,14 +170,6 @@ lsp_installer.on_server_ready(function(server)
   server:setup(config)
 end)
 
-lsp.rust_analyzer.setup({
-  on_attach = on_attach,
-  flags = {
-    debounce_text_changes = 150,
-  },
-  capabilities = capabilities,
-})
-
 dartls.setup({
   widget_guides = {
     enabled = true,

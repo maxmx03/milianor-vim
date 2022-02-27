@@ -60,6 +60,7 @@ Promise --{{{
         prisma = 'prismals',
         r = 'r_language_server',
         ruby = 'solargraph',
+        rust = 'rust_analyzer',
         svelte = 'svelte',
         swift = '	sourcekit',
         terraform = 'terraformls',
@@ -72,11 +73,11 @@ Promise --{{{
       -- disable lsp default formatter to use null_instead
       disable_server_formatter = {
         'tsserver',
-        'rust_analyzer',
         'dartls',
         'html',
         'cssls',
         'sumneko_lua',
+        'rust_analyzer',
       },
       -- change your default theme,
       -- colorschemes: onedark, tokyonight, vscode
