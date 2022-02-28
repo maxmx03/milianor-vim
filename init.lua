@@ -76,8 +76,10 @@ Promise --{{{
         'dartls',
         'html',
         'cssls',
+        'jsonls',
         'sumneko_lua',
         'rust_analyzer',
+        'tailwindcss',
       },
       -- change your default theme,
       -- colorschemes: onedark, tokyonight, vscode
