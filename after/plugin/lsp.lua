@@ -26,6 +26,7 @@ local function format_onsave(client)
   for _, server_name in pairs(user.disable_server_formatter) do
     if client.name == server_name then
       client.resolved_capabilities.document_formatting = false
+      client.resolved_capabilities.document_range_formatting = false
     end
   end
 
