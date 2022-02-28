@@ -1,8 +1,7 @@
 local success, lsp_installer = pcall(require, 'nvim-lsp-installer')
-local succes2, lsp = pcall(require, 'lspconfig')
-local success3, dartls = pcall(require, 'flutter-tools')
+local success2, dartls = pcall(require, 'flutter-tools')
 
-if not success and not succes2 and not success3 then
+if not success and not success2 then
   vim.notify('lsp is not working', 'error')
   return
 end
@@ -28,6 +27,7 @@ local function format_onsave(client)
   for _, server_name in pairs(user.disable_server_formatter) do
     if client.name == server_name then
       client.resolved_capabilities.document_formatting = false
+      client.resolved_capabilities.document_range_formatting = false
     end
   end
 
