@@ -51,6 +51,27 @@ if user.theme.colorscheme == 'vscode' then
   }
 end
 
+if user.theme.colorscheme == 'NeoSolarized' then
+  colors = {
+    bg = '#073642',
+    fg = '#fdf6e3',
+    yellow = '#af8700',
+    cyan = '#2aa198',
+    darkblue = '#586e75',
+    green = '#859900',
+    orange = '#cb4b16',
+    violet = '#6c71c4',
+    magenta = '#d33682',
+    blue = '#268bd2',
+    red = '#dc322f',
+  }
+
+  if user.theme.style == 'light' then
+    colors.bg = '#eee8d5'
+    colors.fg = '#1c1c1c'
+  end
+end
+
 local conditions = {
   buffer_not_empty = function()
     return vim.fn.empty(vim.fn.expand('%:t')) ~= 1

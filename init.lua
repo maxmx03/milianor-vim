@@ -95,9 +95,9 @@ Promise --{{{
       -- vscode
       -- style: 'dark', 'light'
       theme = {
-        colorscheme = 'onedark',
+        colorscheme = 'NeoSolarized',
         transparent = false,
-        style = 'darker',
+        style = 'dark',
         sidebar = 'left',
       },
     })
