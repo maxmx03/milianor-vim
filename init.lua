@@ -81,19 +81,6 @@ Promise --{{{
         'rust_analyzer',
         'tailwindcss',
       },
-      -- change your default theme,
-      -- colorschemes: onedark, tokyonight, vscode
-      --
-      -- styles
-      --
-      -- tokyonight
-      -- style: 'storm', 'night'
-      --
-      -- onedark
-      -- style: 'dark', 'darker', 'deep', 'cool', 'warm', 'warmer'
-      --
-      -- vscode
-      -- style: 'dark', 'light'
       theme = {
         colorscheme = 'NeoSolarized',
         transparent = false,
