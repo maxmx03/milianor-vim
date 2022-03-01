@@ -24,7 +24,7 @@ elseif theme.colorscheme == 'onedark' then
   vim.notify.setup({
     background_colour = '#333333',
   })
-elseif theme.colorscheme == 'vscode' then
+else
   vim.g.vscode_style = theme.style
 
   if theme.transparent then
@@ -33,16 +33,6 @@ elseif theme.colorscheme == 'vscode' then
 
   vim.notify.setup({
     background_colour = '#333333',
-  })
-else
-  if theme.transparent then
-    vim.g.neosolarized_vertSplitBgTrans = 1
-  end
-
-  vim.opt.background = theme.style
-
-  vim.notify.setup({
-    background_colour = '#073642',
   })
 end
 

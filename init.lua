@@ -82,9 +82,9 @@ Promise --{{{
         'tailwindcss',
       },
       theme = {
-        colorscheme = 'NeoSolarized',
+        colorscheme = 'onedark',
         transparent = false,
-        style = 'dark',
+        style = 'darker',
         sidebar = 'left',
       },
     })
