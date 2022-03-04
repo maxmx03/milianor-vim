@@ -35,28 +35,26 @@ wk.register({
       'Show Installed and available lsp servers',
     },
   },
-  b = {
-    name = 'Bufferline (Tabs)',
-    [']'] = {
-      ':BufferLineCycleNext<cr>',
-      'Move to the next tab',
-    },
-    ['['] = {
-      ':BufferLineCyclePrev<CR>',
-      'Move to the previous tab',
-    },
-    ['x'] = {
-      ':BufferLinePickClose<CR>',
-      'Close the selected tab',
-    },
-    ['l'] = {
-      ':BufferLineCloseLeft<CR>',
-      'Close all the left tabs',
-    },
-    ['r'] = {
-      ':BufferLineCloseRight<CR>',
-      'Close all the right tab',
-    },
+  name = 'Bufferline (Tabs)',
+  [']'] = {
+    ':BufferLineCycleNext<cr>',
+    'Move to the next tab',
+  },
+  ['['] = {
+    ':BufferLineCyclePrev<CR>',
+    'Move to the previous tab',
+  },
+  x = {
+    ':BufferLinePickClose<CR>',
+    'Close the selected tab',
+  },
+  ['?'] = {
+    ':BufferLineCloseLeft<CR>',
+    'Close all the left tabs',
+  },
+  ['/'] = {
+    ':BufferLineCloseRight<CR>',
+    'Close all the right tab',
   },
   f = {
     name = 'Telescope (Fuzzy Finder)',

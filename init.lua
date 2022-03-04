@@ -35,8 +35,6 @@ Promise --{{{
   end) --}}}
   :finally(function()
     user:setup({
-      -- place your lsp servers bellow
-      -- for more: https://github.com/williamboman/nvim-lsp-installer
       servers = {
         javascript = 'tsserver',
         typescript = 'tsserver',
@@ -70,7 +68,6 @@ Promise --{{{
         xml = 'lemminx',
         yaml = 'yamlls',
       },
-      -- disable lsp default formatter to use null_instead
       disable_server_formatter = {
         'tsserver',
         'dartls',
@@ -82,9 +79,9 @@ Promise --{{{
         'tailwindcss',
       },
       theme = {
-        colorscheme = 'tokyonight',
+        colorscheme = 'onedark',
         transparent = false,
-        style = 'night',
+        style = 'darker',
         sidebar = 'left',
       },
     })
