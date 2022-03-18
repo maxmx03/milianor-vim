@@ -39,7 +39,7 @@ Promise --{{{
         javascript = 'tsserver',
         typescript = 'tsserver',
         bash = 'bashls',
-        c = 'ccls',
+        c = 'clangd',
         cs = 'csharp_ls',
         css = 'cssls',
         cpp = 'clangd',
