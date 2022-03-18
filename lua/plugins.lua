@@ -59,10 +59,6 @@ require('packer').startup(function(use)
       requires = { 'kyazdani42/nvim-web-devicons', opt = true },
     },
     {
-      'akinsho/flutter-tools.nvim',
-      requires = { 'nvim-lua/plenary.nvim', 'thosakwe/vim-flutter' },
-    },
-    {
       'nvim-telescope/telescope.nvim',
       requires = 'nvim-lua/plenary.nvim',
     },

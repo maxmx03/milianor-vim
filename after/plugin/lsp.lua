@@ -1,7 +1,6 @@
 local success, lsp_installer = pcall(require, 'nvim-lsp-installer')
-local success2, dartls = pcall(require, 'flutter-tools')
 
-if not success and not success2 then
+if not success then
   vim.notify('lsp is not working', 'error')
   return
 end
@@ -169,16 +168,3 @@ lsp_installer.on_server_ready(function(server)
 
   server:setup(config)
 end)
-
-dartls.setup({
-  widget_guides = {
-    enabled = true,
-  },
-  lsp = {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    flags = {
-      debounce_text_changes = 150,
-    },
-  },
-})

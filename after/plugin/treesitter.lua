@@ -9,13 +9,17 @@ treesitter.setup({
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
   ensure_installed = {
     'bash',
+    'c',
+    'cpp',
     'css',
     'dart',
     'fish',
     'graphql',
     'html',
     'javascript',
+    'java',
     'json',
+    'kotlin',
     'lua',
     'php',
     'python',
