@@ -51,6 +51,10 @@ require('packer').startup(function(use)
       run = ':TSUpdate',
     },
     {
+      'akinsho/flutter-tools.nvim',
+      requires = { 'nvim-lua/plenary.nvim', 'thosakwe/vim-flutter' },
+    },
+    {
       'sindrets/diffview.nvim',
       requires = 'nvim-lua/plenary.nvim',
     },
