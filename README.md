@@ -3,6 +3,11 @@
 
 My neovim configuration for web and mobile development
 
+## Changing Branch
+The main brain is for linux users, for windows you need to change branch to nvim-windows
+```powershell
+git checkout nvim-windows
+```
 
 ## Formatters
 - [prettier](https://prettier.io/)
@@ -18,52 +23,43 @@ My neovim configuration for web and mobile development
 
 ## Instalation
 
-clone repo
-```bash
-git clone https://github.com/maxmx03/milianor-vim.git ~/.config/nvim
+### Dependencies
+
+gcc
 ```
-
-### Linux
-
-1. Install [Neovim](https://neovim.io/)
-
-
-2. install gcc
-
-```bash
 sudo apt install gcc
 ```
 
-3. Install [node](https://nodejs.org/en/)
-
-## Windows
-
-1. install [dotnet](https://dotnet.microsoft.com/en-us/download)
-
-
-2. install [scoop](https://scoop.sh/)
-
-```powershell
-iwr -useb get.scoop.sh | iex
-```
-
-3. install neovim/mingw/nvm
-
-```powershell
-scoop bucket add versions
-scoop install neovim-nightly mingw nvm
-```
-
-```powershell
-nvm install lts
-```
-
-## Windows and Linux
-
-then install
+Node
 ```bash
+sudo apt install nodejs
 npm i -g neovim yarn
+```
+
+Python
+```bash
+sudo apt-get install python-dev python-pip python3-dev python3-pip
 pip install pynvim
+```
+
+Rust/Cargo
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+### Neovim instalation
+
+```bash
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt-get update
+sudo apt-get install neovim
+```
+
+### Cloning repo
+
+```bash
+git clone https://github.com/maxmx03/milianor-vim.git ~/.config/nvim
 ```
 
 check if is anything is mission, for example telescope needs some dependencies to be installed
@@ -73,7 +69,6 @@ nvim
 ```
 
 Lsp Servers are installed automatically.
-
 Example, to install tsserver you just need to open a javascript file
 ```bash
   nvim index.js
@@ -81,11 +76,6 @@ Example, to install tsserver you just need to open a javascript file
 
 ## Installing the default formatters
 
-
-install rust and cargo
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
 
 lua formatter
 ```
@@ -114,11 +104,11 @@ npm install -g prettier
 | `<space>s` | `Save Session` | Dashboard |
 | `<space>l` | `Load Session` | Dashboard |
 | `<space>ll` | `Show Installed and available lsp servers` | Dashboard |
-| `<space>b]` | `Move to next tab` | Bufferline |
-| `<space>b[` | `Move to previous tab` | Bufferline |
-| `<space>bx` | `Close the selected tab` | Bufferline |
-| `<space>bl` | `Close all the left tabs` | Bufferline |
-| `<space>br` | `Close all the right tabs` | Bufferline |
+| `<space>]` | `Move to next tab` | Bufferline |
+| `<space>[` | `Move to previous tab` | Bufferline |
+| `<space>x` | `Close the selected tab` | Bufferline |
+| `<space>?` | `Close all the left tabs` | Bufferline |
+| `<space>/` | `Close all the right tabs` | Bufferline |
 | `<space>ff` | `Lists files in your current working directory` | Telescope |
 | `<space>fg` | `Search for a string in your current working directory` | Telescope |
 | `<space>fb` | `Lists open buffers in current neovim instance` | Telescope |
@@ -139,7 +129,11 @@ npm install -g prettier
 | `<space>hD` | `Open project diffview` | DiffView |
 | `<space>hc` | `Close project diffview` | DiffView |
 | `<space>hb` | `Toggle blame` | DiffView |
-| `<space>c` | `Comment Toggle` | CommentToggle |
+| `<space>mr` | `Flutter Run` | Flutter |
+| `<space>mR` | `Flutter Restart` | Flutter |
+| `<space>mg` | `Flutter Quit` | Flutter |
+| `<space>mv` | `Flutter Visual Debug` | Flutter |
+| `<space>mo` | `Flutter Outline Toggle` | Flutter |
 
 
 ## License
