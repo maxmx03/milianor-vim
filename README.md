@@ -21,7 +21,7 @@ git checkout nvim-windows
 - [tokyonight](https://github.com/folke/tokyonight.nvim)
 - [vscode](https://github.com/Mofiqul/vscode.nvim)
 
-## Instalation
+## Installation
 
 ### Dependencies
 
