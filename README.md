@@ -54,7 +54,7 @@ scoop install neovim-nightly mingw nvm
 ```
 
 ```powershell
-nvm install --lts
+nvm install lts
 ```
 
 ## Windows and Linux

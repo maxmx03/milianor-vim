@@ -89,12 +89,12 @@ Promise --{{{
       --
       -- vscode
       -- style: 'dark', 'light'
-      -- theme = {
-      -- colorscheme = 'tokyonight',
-      -- transparent = false,
-      -- style = 'night',
-      -- sidebar = 'left',
-      -- },
+      theme = {
+        colorscheme = 'onedark',
+        transparent = true,
+        style = 'deep',
+        sidebar = 'left',
+      },
     })
 
     require('user.theme')
