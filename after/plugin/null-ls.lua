@@ -11,8 +11,11 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
   debug = false,
   sources = {
-    formatting.prettier,
-    diagnostics.eslint,
+    formatting.prettier.with({
+      disabled_filetypes = { 'vue' },
+    }),
+    formatting.rustfmt,
+    formatting.dart_format,
     formatting.stylua.with({
       extra_args = {
         '--indent-type=Spaces',
@@ -21,5 +24,6 @@ null_ls.setup({
         '--line-endings=Unix',
       },
     }),
+    diagnostics.eslint,
   },
 })

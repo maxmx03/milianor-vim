@@ -49,6 +49,10 @@ require('packer').startup(function(use)
       run = ':TSUpdate',
     },
     {
+      'akinsho/flutter-tools.nvim',
+      requires = { 'nvim-lua/plenary.nvim', 'thosakwe/vim-flutter' },
+    },
+    {
       'sindrets/diffview.nvim',
       requires = 'nvim-lua/plenary.nvim',
     },
@@ -58,17 +62,15 @@ require('packer').startup(function(use)
     },
     {
       'nvim-telescope/telescope.nvim',
-      requires = { { 'nvim-lua/plenary.nvim' } },
+      requires = 'nvim-lua/plenary.nvim',
     },
     {
       'jose-elias-alvarez/null-ls.nvim',
-      requires = { { 'nvim-lua/plenary.nvim' } },
+      requires = 'nvim-lua/plenary.nvim',
     },
     {
       'kyazdani42/nvim-tree.lua',
-      requires = {
-        'kyazdani42/nvim-web-devicons',
-      },
+      requires = 'kyazdani42/nvim-web-devicons',
     },
     {
       'onsails/lspkind-nvim',

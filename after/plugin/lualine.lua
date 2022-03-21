@@ -21,16 +21,16 @@ local colors = {
 
 if user.theme.colorscheme == 'tokyonight' then
   colors = {
-    bg = '#414868',
-    fg = '#cfc9c2',
-    yellow = '#e0af68',
-    cyan = '#73daca',
+    bg = '#24283b',
+    fg = '#bbc2cf',
+    yellow = '#ECBE7B',
+    cyan = '#008080',
     darkblue = '#081633',
-    green = '#9ece6a',
-    orange = '#ff9e64',
-    violet = '#a9a1e1',
+    green = '#98be65',
+    orange = '#FF8800',
+    violet = '#9d7cd8',
     magenta = '#bb9af7',
-    blue = '#7aa2f7',
+    blue = '#2ac2de',
     red = '#f7768e',
   }
 end

@@ -1,6 +1,8 @@
 local success, lsp_installer = pcall(require, 'nvim-lsp-installer')
+local succes2, lsp = pcall(require, 'lspconfig')
+local success3, dartls = pcall(require, 'flutter-tools')
 
-if not success then
+if not success and not succes2 and not success3 then
   vim.notify('lsp is not working', 'error')
   return
 end
@@ -129,5 +131,63 @@ lsp_installer.on_server_ready(function(server)
     }
   end
 
+  if server.name == 'vuels' then
+    config = {
+      on_attach = on_attach,
+      flags = {
+        debounce_text_changes = 150,
+      },
+      capabilities = capabilities,
+      init_options = {
+        config = {
+          vetur = {
+            ignoreProjectWarning = true,
+            completion = {
+              autoImport = false,
+              tagCasing = 'kebab',
+              useScaffoldSnippets = false,
+            },
+            format = {
+              defaultFormatter = {
+                js = 'prettier',
+                ts = 'prettier',
+              },
+              defaultFormatterOptions = {},
+              scriptInitialIndent = false,
+              styleInitialIndent = false,
+            },
+            useWorkspaceDependencies = false,
+            validation = {
+              script = true,
+              style = true,
+              template = true,
+            },
+          },
+        },
+      },
+    }
+  end
+
   server:setup(config)
 end)
+
+lsp.rust_analyzer.setup({
+  on_attach = on_attach,
+  flags = {
+    debounce_text_changes = 150,
+  },
+  capabilities = capabilities,
+})
+
+dartls.setup({
+  widget_guides = {
+    enabled = true,
+  },
+  lsp = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    flags = {
+      debounce_text_changes = 150,
+    },
+  },
+})

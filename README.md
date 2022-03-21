@@ -3,6 +3,7 @@
 
 My neovim configuration for web and mobile development
 
+
 ## Formatters
 - [prettier](https://prettier.io/)
 - [yapf](https://github.com/google/yapf)

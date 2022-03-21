@@ -35,28 +35,26 @@ wk.register({
       'Show Installed and available lsp servers',
     },
   },
-  b = {
-    name = 'Bufferline (Tabs)',
-    [']'] = {
-      ':BufferLineCycleNext<cr>',
-      'Move to the next tab',
-    },
-    ['['] = {
-      ':BufferLineCyclePrev<CR>',
-      'Move to the previous tab',
-    },
-    ['x'] = {
-      ':BufferLinePickClose<CR>',
-      'Close the selected tab',
-    },
-    ['l'] = {
-      ':BufferLineCloseLeft<CR>',
-      'Close all the left tabs',
-    },
-    ['r'] = {
-      ':BufferLineCloseRight<CR>',
-      'Close all the right tab',
-    },
+  name = 'Bufferline (Tabs)',
+  [']'] = {
+    ':BufferLineCycleNext<cr>',
+    'Move to the next tab',
+  },
+  ['['] = {
+    ':BufferLineCyclePrev<CR>',
+    'Move to the previous tab',
+  },
+  x = {
+    ':BufferLinePickClose<CR>',
+    'Close the selected tab',
+  },
+  ['?'] = {
+    ':BufferLineCloseLeft<CR>',
+    'Close all the left tabs',
+  },
+  ['/'] = {
+    ':BufferLineCloseRight<CR>',
+    'Close all the right tab',
   },
   f = {
     name = 'Telescope (Fuzzy Finder)',
@@ -145,6 +143,29 @@ wk.register({
     b = {
       '<cmd>Gitsigns toggle_current_line_blame<cr>',
       'Toggle blame',
+    },
+  },
+  m = {
+    name = 'Flutter',
+    r = {
+      '<cmd>FlutterRun<cr>',
+      'Flutter Run',
+    },
+    R = {
+      '<cmd>FlutterHotRestart<cr>',
+      'Flutter Restart',
+    },
+    q = {
+      '<cmd>FlutterQuit<cr>',
+      'Flutter Quit',
+    },
+    v = {
+      '<cmd>FlutterVisualDebug<cr>',
+      'Flutter Visual Debug',
+    },
+    o = {
+      '<cmd>FlutterOutlineToggle<cr>',
+      'Flutter Outline Toggle',
     },
   },
   c = {
