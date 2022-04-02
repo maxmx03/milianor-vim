@@ -71,20 +71,15 @@ Promise --{{{
         yaml = 'yamlls',
       },
       -- disable lsp default formatter to use null_instead
-      disable_server_formatter = {
-        'tsserver',
-        'html',
-        'sumneko_lua',
-        'tsserver',
-        'dartls',
-        'emmet_ls',
-        'html',
-        'cssls',
-        'jsonls',
-        'sumneko_lua',
-        'rust_analyzer',
-        'tailwindcss',
-        'yamlls',
+      enable_server_formatter = {
+        'svelte',
+        'vuels',
+        'pylsp',
+        'jdtls',
+        'clandg',
+        'solargraph',
+        'intelephnse',
+        'gols',
       },
       -- change your default theme,
       -- colorschemes: onedark, tokyonight, vscode
@@ -100,9 +95,9 @@ Promise --{{{
       -- vscode
       -- style: 'dark', 'light'
       theme = {
-        colorscheme = 'onedark',
-        transparent = false,
-        style = 'darker',
+        colorscheme = 'vscode',
+        transparent = true,
+        style = 'dark',
         sidebar = 'left',
       },
     })

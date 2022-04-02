@@ -23,12 +23,14 @@ local function icons()
 end
 
 local function format_onsave(client)
-  client.resolved_capabilities.document_formatting = true
+if client.name ~= 'null-ls' then
+    client.resolved_capabilities.document_formatting = false
+  end
 
-  for _, server_name in pairs(user.disable_server_formatter) do
+  for _, server_name in pairs(user.enable_server_formatter) do
     if client.name == server_name then
-      client.resolved_capabilities.document_formatting = false
-      client.resolved_capabilities.document_range_formatting = false
+      client.resolved_capabilities.document_formatting = true
+      client.resolved_capabilities.document_range_formatting = true
     end
   end
 
