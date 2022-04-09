@@ -13,6 +13,7 @@ vim.opt.updatetime = 250 -- for lsp
 vim.opt.pumheight = 20
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' } -- for cmp
 vim.g.dashboard_default_executive = 'telescope'
+vim.g.python3_host_prog = '/usr/bin/python3'
 vim.o.termguicolors = true
 
 vim.cmd([[
