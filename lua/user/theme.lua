@@ -11,19 +11,29 @@ if theme.colorscheme == 'tokyonight' then
 elseif theme.colorscheme == 'onedark' then
   local success1, onedark = pcall(require, 'onedark')
 
-  if not success1 then
-    return
+  if success1 then
+    onedark.setup({
+      style = theme.style,
+      transparent = theme.transparent,
+      term_colors = true,
+    })
+
+    vim.notify.setup({
+      background_colour = '#333333',
+    })
+  end
+elseif theme.colorscheme == 'NeoSolarized' then
+  -- for tmux
+  vim.cmd([[
+	set t_8f=^[[38;2;%lu;%lu;%lum
+	set t_8b=^[[48;2;%lu;%lu;%lum
+  ]])
+
+  if theme.transparent then
+    vim.g.neosolarized_termtrans = 1
   end
 
-  onedark.setup({
-    style = theme.style,
-    transparent = theme.transparent,
-    term_colors = true,
-  })
-
-  vim.notify.setup({
-    background_colour = '#333333',
-  })
+  vim.opt.background = theme.style
 else
   vim.g.vscode_style = theme.style
 

@@ -49,6 +49,54 @@ if user.theme.colorscheme == 'vscode' then
     blue = '#0a7aca',
     red = '#f44747',
   }
+
+  if user.theme.style == 'light' then
+    colors = {
+      bg = '#fafafa',
+      fg = '#262626',
+      yellow = '#ffaf00',
+      cyan = '#008080',
+      darkblue = '#081633',
+      green = '#619955',
+      orange = '#FF8800',
+      violet = '#a9a1e1',
+      magenta = '#c678dd',
+      blue = '#0a7aca',
+      red = '#f44747',
+    }
+  end
+end
+
+if user.theme.colorscheme == 'NeoSolarized' then
+  colors = {
+    bg = '#073642',
+    fg = '#eee8d5',
+    yellow = '#b58900',
+    cyan = '#2aa198',
+    darkblue = '#081633',
+    green = '#719e07',
+    orange = '#cb4b16',
+    violet = '#a9a1e1',
+    magenta = '#6c71c4',
+    blue = '#268bd2',
+    red = '#dc322f',
+  }
+
+  if user.theme.style == 'light' then
+    colors = {
+      bg = '#eee8d5',
+      fg = '#93a1a1',
+      yellow = '#b58900',
+      cyan = '#2aa198',
+      darkblue = '#081633',
+      green = '#719e07',
+      orange = '#cb4b16',
+      violet = '#a9a1e1',
+      magenta = '#6c71c4',
+      blue = '#268bd2',
+      red = '#dc322f',
+    }
+  end
 end
 
 local conditions = {
@@ -186,6 +234,20 @@ ins_left({
   end,
 })
 
+local function set_fg()
+  local color = { fg = '#ffffff', gui = 'bold' }
+
+  if user.theme.style == 'light' then
+    color.fg = '#262626'
+
+    if user.theme.colorscheme == 'NeoSolarized' then
+      color.fg = '#93a1a1'
+    end
+  end
+
+  return color
+end
+
 ins_left({
   -- Lsp server name .
   function()
@@ -204,7 +266,7 @@ ins_left({
     return msg
   end,
   icon = ' LSP:',
-  color = { fg = '#ffffff', gui = 'bold' },
+  color = set_fg(),
 })
 
 -- Add components to right sections
