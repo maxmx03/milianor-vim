@@ -1,6 +1,8 @@
+vim.opt.fileencoding = 'utf-8'
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.mouse = 'a'
+vim.opt.smartindent = true
 vim.opt.autoindent = true
 vim.opt.ai = true
 vim.opt.si = true
