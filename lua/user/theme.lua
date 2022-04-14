@@ -34,6 +34,16 @@ elseif theme.colorscheme == 'NeoSolarized' then
   end
 
   vim.opt.background = theme.style
+
+  if theme.style == 'dark' then
+    vim.notify.setup({
+      background_colour = '#073642',
+    })
+  else
+    vim.notify.setup({
+      background_colour = '#eee8d5',
+    })
+  end
 else
   vim.g.vscode_style = theme.style
 
@@ -41,9 +51,15 @@ else
     vim.g.vscode_transparent = 1
   end
 
-  vim.notify.setup({
-    background_colour = '#333333',
-  })
+  if theme.style == 'dark' then
+    vim.notify.setup({
+      background_colour = '#262626',
+    })
+  else
+    vim.notify.setup({
+      background_colour = '#fafafa',
+    })
+  end
 end
 
 vim.cmd(string.format('colorscheme %s', theme.colorscheme))
