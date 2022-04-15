@@ -31,6 +31,7 @@ require('packer').startup(function(use)
     'windwp/nvim-autopairs',
     'akinsho/toggleterm.nvim',
     'tami5/lspsaga.nvim',
+    'sunjon/shade.nvim',
     {
       'weilbith/nvim-code-action-menu',
       cmd = 'CodeActionMenu',
