@@ -98,12 +98,12 @@ Promise --{{{
       -- NeoSolarized
       -- style: 'dark', 'light'
       --
-      theme = {
-        colorscheme = 'NeoSolarized',
-        transparent = true,
-        style = 'dark',
-        sidebar = 'left',
-      },
+      -- theme = {
+      -- colorscheme = 'NeoSolarized',
+      -- transparent = true,
+      -- style = 'dark',
+      -- sidebar = 'left',
+      -- },
     })
 
     require('user.theme')
