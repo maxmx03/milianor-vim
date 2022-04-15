@@ -21,7 +21,6 @@ require('packer').startup(function(use)
     'Mofiqul/vscode.nvim',
     'navarasu/onedark.nvim',
     'overcache/NeoSolarized',
-    'norcalli/nvim-colorizer.lua',
     'windwp/nvim-ts-autotag',
     'glepnir/dashboard-nvim',
     'rcarriga/nvim-notify',
@@ -40,6 +39,10 @@ require('packer').startup(function(use)
     {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate',
+    },
+    {
+      'KabbAmine/vCoolor.vim',
+      requires = 'norcalli/nvim-colorizer.lua',
     },
     {
       'hrsh7th/nvim-cmp',

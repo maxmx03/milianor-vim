@@ -172,4 +172,23 @@ wk.register({
     '<cmd>CommentToggle<cr>',
     'Comment Toggle',
   },
+  v = {
+    name = 'vcoolor',
+    c = {
+      '<cmd>VCoolor<cr>',
+      'hash color insertion',
+    },
+    r = {
+      '<cmd>VCoolIns r<cr>',
+      'For rgb color insertion',
+    },
+    h = {
+      '<cmd>VCoolIns h<cr>',
+      'hsl color insertion',
+    },
+    b = {
+      '<cmd>VCoolIns ra<cr>',
+      'rgba color insertion',
+    },
+  },
 }, { prefix = '<space>' })
