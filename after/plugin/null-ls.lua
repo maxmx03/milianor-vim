@@ -12,6 +12,9 @@ null_ls.setup({
   debug = false,
   sources = {
     formatting.prettier.with({
+      extra_args = {
+        '--single-quote',
+      },
       disabled_filetypes = { 'vue' },
     }),
     formatting.rustfmt,
