@@ -1,7 +1,4 @@
-local success, wk = pcall(require, 'which-key')
+local utils = require('lib.utils')
+local wk = utils:require('which-key')
 
-if success then
-  wk.setup()
-else
-  vim.notify('which-key is not working', 'error')
-end
+wk.setup()

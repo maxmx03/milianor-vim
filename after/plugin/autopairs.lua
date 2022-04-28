@@ -1,9 +1,6 @@
-local success, autopairs = pcall(require, 'nvim-autopairs')
+local utils = require('lib.utils')
+local autopairs = utils:require('nvim-autopairs')
 
-if success then
-  autopairs.setup({
-    disable_filetype = { 'TelescopePrompt', 'vim' },
-  })
-else
-  vim.notify('nvim-autopairs is not working', 'error')
-end
+autopairs.setup({
+  disable_filetype = { 'TelescopePrompt', 'vim' },
+})

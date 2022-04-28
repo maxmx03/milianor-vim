@@ -1,11 +1,7 @@
-local success, lsp_installer = pcall(require, 'nvim-lsp-installer')
-local succes2, lsp = pcall(require, 'lspconfig')
-local success3, dartls = pcall(require, 'flutter-tools')
-
-if not success and not succes2 and not success3 then
-  vim.notify('lsp is not working', 'error')
-  return
-end
+local utils = require('lib.utils')
+local lsp_installer = utils:require('nvim-lsp-installer')
+local lsp = utils:require('lspconfig')
+local dartls = utils:require('flutter-tools')
 
 local function icons()
   local signs = { Error = '', Warn = '', Hint = '', Info = '', Prefix = '' }
@@ -23,7 +19,7 @@ local function icons()
 end
 
 local function format_onsave(client)
-if client.name ~= 'null-ls' then
+  if client.name ~= 'null-ls' then
     client.resolved_capabilities.document_formatting = false
   end
 

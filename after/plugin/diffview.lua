@@ -1,7 +1,4 @@
-local success, diffview = pcall(require, 'diffview')
+local utils = require('lib.utils')
+local diffview = utils:require('diffview')
 
-if success then
-  diffview.setup()
-else
-  vim.notify('diffview is not working', 'error')
-end
+diffview.setup()

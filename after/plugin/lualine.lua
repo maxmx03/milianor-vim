@@ -1,9 +1,5 @@
-local success, lualine = pcall(require, 'lualine')
-
-if not success then
-  vim.notify('lualine is not working', 'error')
-  return
-end
+local utils = require('lib.utils')
+local lualine = utils:require('lualine')
 
 local colors = {
   bg = '#202328',
@@ -67,7 +63,7 @@ if user.theme.colorscheme == 'vscode' then
   end
 end
 
-if user.theme.colorscheme == 'NeoSolarized' then
+if string.find(user.theme.colorscheme, 'solarized') then
   colors = {
     bg = '#073642',
     fg = '#eee8d5',
@@ -81,22 +77,6 @@ if user.theme.colorscheme == 'NeoSolarized' then
     blue = '#268bd2',
     red = '#dc322f',
   }
-
-  if user.theme.style == 'light' then
-    colors = {
-      bg = '#eee8d5',
-      fg = '#93a1a1',
-      yellow = '#b58900',
-      cyan = '#2aa198',
-      darkblue = '#081633',
-      green = '#719e07',
-      orange = '#cb4b16',
-      violet = '#a9a1e1',
-      magenta = '#6c71c4',
-      blue = '#268bd2',
-      red = '#dc322f',
-    }
-  end
 end
 
 local conditions = {

@@ -1,7 +1,4 @@
-local success, gitsigns = pcall(require, 'gitsigns')
+local utils = require('lib.utils')
+local gitsigns = utils:require('gitsigns')
 
-if success then
-  gitsigns.setup()
-else
-  vim.notify('gitsigns is not working', 'error')
-end
+gitsigns.setup()

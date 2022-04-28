@@ -1,9 +1,5 @@
-local status, telescope = pcall(require, 'telescope')
-
-if not status then
-  vim.notify('telescope is not working', 'error')
-  return
-end
+local utils = require('lib.utils')
+local telescope = utils:require('telescope')
 
 telescope.setup({
   defaults = {

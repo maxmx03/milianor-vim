@@ -1,9 +1,5 @@
-local success, tree = pcall(require, 'nvim-tree')
-
-if not success then
-  vim.notify('nvim-tree is not working', 'error')
-  return
-end
+local utils = require('lib.utils')
+local tree = utils:require('nvim-tree')
 
 vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_highlight_opened_files = 1

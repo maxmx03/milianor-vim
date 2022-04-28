@@ -1,7 +1,4 @@
-local success, toggleterm = pcall(require, 'toggleterm')
+local utils = require('lib.utils')
+local toggleterm = utils:require('toggleterm')
 
-if success then
-  toggleterm.setup()
-else
-  vim.notify('toggleterm is not working', 'error')
-end
+toggleterm.setup()

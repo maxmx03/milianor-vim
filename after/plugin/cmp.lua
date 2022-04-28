@@ -1,21 +1,7 @@
-local success1, luasnip = pcall(require, 'luasnip')
-local success2, cmp = pcall(require, 'cmp')
-local success3, lspkind = pcall(require, 'lspkind')
-
-if not success1 then
-  vim.notify('luasnip is not working', 'error')
-  return
-end
-
-if not success2 then
-  vim.notify('cmp is not working', 'error')
-  return
-end
-
-if not success3 then
-  vim.notify('lspkind is not working', 'error')
-  return
-end
+local utils = require('lib.utils')
+local luasnip = utils:require('luasnip')
+local cmp = utils:require('cmp')
+local lspkind = utils:require('lspkind')
 
 cmp.setup({
   snippet = {

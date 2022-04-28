@@ -1,4 +1,4 @@
-Promise = require('utils.promise')
+Promise = require('lib.promise')
 
 Promise --{{{
   :new(function(resolve, reject)
@@ -97,10 +97,7 @@ Promise --{{{
       --
       -- Solarized
       -- colorscheme: 'solarized', 'solarized-high', 'solarized-flat', 'solarized-low'
-      --
       -- style: nil
-      --
-      --
       theme = {
         colorscheme = 'solarized',
         transparent = false,

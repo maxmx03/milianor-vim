@@ -1,9 +1,5 @@
-local success, null_ls = pcall(require, 'null-ls')
-
-if not success then
-  vim.notify('null-ls is not working', 'error')
-  return
-end
+local utils = require('lib.utils')
+local null_ls = utils:require('null-ls')
 
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics

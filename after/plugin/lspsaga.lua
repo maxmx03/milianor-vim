@@ -1,7 +1,4 @@
-local success, saga = pcall(require, 'lspsaga')
+local utils = require('lib.utils')
+local saga = require('lspsaga')
 
-if success then
-  saga.init_lsp_saga()
-else
-  vim.notify('lspsaga is not working', 'error')
-end
+saga.init_lsp_saga()
