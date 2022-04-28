@@ -22,28 +22,19 @@ elseif theme.colorscheme == 'onedark' then
       background_colour = '#333333',
     })
   end
-elseif theme.colorscheme == 'NeoSolarized' then
-  -- for tmux
-  vim.cmd([[
-	set t_8f=^[[38;2;%lu;%lu;%lum
-	set t_8b=^[[48;2;%lu;%lu;%lum
-  ]])
-
+elseif
+  theme.colorscheme == 'solarized'
+  or theme.colorscheme == 'solarized-high'
+  or theme.colorscheme == 'solarized-flat'
+  or theme.colorscheme == 'solarized-low'
+then
   if theme.transparent then
-    vim.g.neosolarized_termtrans = 1
+    vim.g.solarized_termtrans = 1
   end
 
-  vim.opt.background = theme.style
-
-  if theme.style == 'dark' then
-    vim.notify.setup({
-      background_colour = '#073642',
-    })
-  else
-    vim.notify.setup({
-      background_colour = '#eee8d5',
-    })
-  end
+  vim.notify.setup({
+    background_colour = '#073642',
+  })
 else
   vim.g.vscode_style = theme.style
 
