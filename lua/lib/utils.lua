@@ -9,7 +9,7 @@ function M:require(plugin)
   self.plugin = plugin
 
   if not success then
-    return M
+    return self
   end
 
   return p
