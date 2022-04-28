@@ -1,14 +1,14 @@
 local utils = require('lib.utils')
 local devicons = utils:require('nvim-web-devicons')
 
-local _, jscolor = devicons.get_icon_color('index.js', 'js')
-local tsicon, _ = devicons.get_icon_color('index.ts', 'ts')
-local _, htmlcolor = devicons.get_icon_color('index.html', 'html')
-local rubyicon = devicons.get_icon_color('index.rb', 'rb')
-local tscolor, csscolor, gitcolor, angularcolor, karmacolor, jsoncolor, rubycolor, gemcolor, rubocopcolor =
+local _, js_color = devicons.get_icon_color('index.js', 'js')
+local ts_icon, _ = devicons.get_icon_color('index.ts', 'ts')
+local _, html_color = devicons.get_icon_color('index.html', 'html')
+local ruby_icon = devicons.get_icon_color('index.rb', 'rb')
+local ts_color, css_color, git_color, angular_color, karma_color, json_color, ruby_color, gem_color, rubocop_color =
   '#3DB2FF', '#7C83FD', '#C84B31', '#EC4646', '#17D7A0', '#3E7C17', '#FC4F4F', '#FA4EAB', '#C0C0C0'
 
-local htmlicon, cssicon, nodeicon, giticon, testicon, angularicon, karmaicon, webpackicon, babelicon =
+local html_icon, css_icon, node_icon, giticon, test_icon, angular_icon, karma_icon, webpack_icon, babel_icon =
   '', '', '', '', '', '', '', 'ﰩ', ''
 
 local function iconConfig(icon, color, name)
@@ -20,34 +20,34 @@ local function iconConfig(icon, color, name)
 end
 
 devicons.set_icon({
-  html = iconConfig(htmlicon, htmlcolor, 'html'),
-  css = iconConfig(cssicon, csscolor, 'css'),
-  ts = iconConfig(tsicon, tscolor, 'typescript'),
-  rb = iconConfig(rubyicon, rubycolor, 'ruby'),
-  ['config.ru'] = iconConfig(rubyicon, rubycolor, 'ruby'),
-  ['Gemfile'] = iconConfig(rubyicon, gemcolor, 'GemFile'),
-  ['.rubocop.yml'] = iconConfig(rubyicon, rubocopcolor, 'rubocop'),
-  ['package.json'] = iconConfig(nodeicon, jsoncolor, 'packagejson'),
-  ['package-lock.json'] = iconConfig(nodeicon, jsoncolor, 'packagelockjson'),
-  ['.gitkeep'] = iconConfig(nodeicon, gitcolor, 'git'),
-  ['.gitignore'] = iconConfig(giticon, gitcolor, 'git'),
-  ['spec.js'] = iconConfig(testicon, jscolor, 'javascriptspec'),
-  ['spec.jsx'] = iconConfig(testicon, jscolor, 'javascriptreactspec'),
-  ['spec.ts'] = iconConfig(testicon, tscolor, 'typescriptspec'),
-  ['spec.tsx'] = iconConfig(testicon, tscolor, 'typescriptreactspec'),
-  ['test.js'] = iconConfig(testicon, jscolor, 'javascripttest'),
-  ['test.jsx'] = iconConfig(testicon, jscolor, 'javascriptreacttest'),
-  ['test.ts'] = iconConfig(testicon, tscolor, 'typescripttest'),
-  ['test.tsx'] = iconConfig(testicon, tscolor, 'typescriptreacttest'),
-  ['component.html'] = iconConfig(angularicon, htmlcolor, 'angularhtml'),
-  ['component.ts'] = iconConfig(angularicon, tscolor, 'angularts'),
-  ['component.css'] = iconConfig(angularicon, csscolor, 'angularcss'),
-  ['module.ts'] = iconConfig(angularicon, angularcolor, 'angularmode'),
-  ['service.ts'] = iconConfig(angularicon, jscolor, 'angularservice'),
-  ['angular.json'] = iconConfig(angularicon, angularcolor, 'angularjson'),
-  ['karma.conf.js'] = iconConfig(karmaicon, karmacolor, 'karmaconfig'),
-  ['webpack.config.js'] = iconConfig(webpackicon, tscolor, 'webpack'),
-  ['.babelrc'] = iconConfig(babelicon, jscolor, 'babel'),
+  html = iconConfig(html_icon, html_color, 'html'),
+  css = iconConfig(css_icon, css_color, 'css'),
+  ts = iconConfig(ts_icon, ts_color, 'typescript'),
+  rb = iconConfig(ruby_icon, ruby_color, 'ruby'),
+  ['config.ru'] = iconConfig(ruby_icon, ruby_color, 'ruby'),
+  ['Gemfile'] = iconConfig(ruby_icon, gem_color, 'GemFile'),
+  ['.rubocop.yml'] = iconConfig(ruby_icon, rubocop_color, 'rubocop'),
+  ['package.json'] = iconConfig(node_icon, json_color, 'packagejson'),
+  ['package-lock.json'] = iconConfig(node_icon, json_color, 'packagelockjson'),
+  ['.gitkeep'] = iconConfig(node_icon, git_color, 'git'),
+  ['.gitignore'] = iconConfig(giticon, git_color, 'git'),
+  ['spec.js'] = iconConfig(test_icon, js_color, 'javascriptspec'),
+  ['spec.jsx'] = iconConfig(test_icon, js_color, 'javascriptreactspec'),
+  ['spec.ts'] = iconConfig(test_icon, ts_color, 'typescriptspec'),
+  ['spec.tsx'] = iconConfig(test_icon, ts_color, 'typescriptreactspec'),
+  ['test.js'] = iconConfig(test_icon, js_color, 'javascripttest'),
+  ['test.jsx'] = iconConfig(test_icon, js_color, 'javascriptreacttest'),
+  ['test.ts'] = iconConfig(test_icon, ts_color, 'typescripttest'),
+  ['test.tsx'] = iconConfig(test_icon, ts_color, 'typescriptreacttest'),
+  ['component.html'] = iconConfig(angular_icon, html_color, 'angularhtml'),
+  ['component.ts'] = iconConfig(angular_icon, ts_color, 'angularts'),
+  ['component.css'] = iconConfig(angular_icon, css_color, 'angularcss'),
+  ['module.ts'] = iconConfig(angular_icon, angular_color, 'angularmode'),
+  ['service.ts'] = iconConfig(angular_icon, js_color, 'angularservice'),
+  ['angular.json'] = iconConfig(angular_icon, angular_color, 'angularjson'),
+  ['karma.conf.js'] = iconConfig(karma_icon, karma_color, 'karmaconfig'),
+  ['webpack.config.js'] = iconConfig(webpack_icon, ts_color, 'webpack'),
+  ['.babelrc'] = iconConfig(babel_icon, js_color, 'babel'),
 })
 
 devicons.setup({
