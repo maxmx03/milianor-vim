@@ -82,9 +82,7 @@ Promise --{{{
         'gols',
       },
       -- change your default theme,
-      -- colorschemes: onedark, tokyonight, vscode
-      --
-      -- styles
+      -- colorschemes: onedark, tokyonight, vscode, solarized
       --
       -- tokyonight
       -- style: 'storm', 'night'
@@ -98,12 +96,12 @@ Promise --{{{
       -- Solarized
       -- colorscheme: 'solarized', 'solarized-high', 'solarized-flat', 'solarized-low'
       -- style: nil
-      theme = {
-        colorscheme = 'solarized',
-        transparent = true,
-        style = nil,
-        sidebar = 'left',
-      },
+      -- theme = {
+      -- colorscheme = 'solarized',
+      -- transparent = true,
+      -- style = nil,
+      -- sidebar = 'left',
+      -- },
     })
 
     require('user.theme')
