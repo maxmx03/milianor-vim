@@ -98,12 +98,12 @@ Promise --{{{
       -- Solarized
       -- colorscheme: 'solarized', 'solarized-high', 'solarized-flat', 'solarized-low'
       -- style: nil
-      -- theme = {
-      -- colorscheme = 'solarized',
-      -- transparent = false,
-      -- style = nil,
-      -- sidebar = 'left',
-      -- },
+      theme = {
+        colorscheme = 'solarized',
+        transparent = true,
+        style = nil,
+        sidebar = 'left',
+      },
     })
 
     require('user.theme')

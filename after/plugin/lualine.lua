@@ -219,10 +219,6 @@ local function set_fg()
 
   if user.theme.style == 'light' then
     color.fg = '#262626'
-
-    if user.theme.colorscheme == 'NeoSolarized' then
-      color.fg = '#93a1a1'
-    end
   end
 
   return color
