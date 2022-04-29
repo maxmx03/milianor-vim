@@ -1,4 +1,7 @@
 local Promise = require('lib.promise')
+local utils = require('lib.utils')
+
+utils:packer_auto_install()
 
 Promise --{{{
   :new(function(resolve, reject)
@@ -17,9 +20,7 @@ Promise --{{{
     local success, notify = pcall(require, 'notify')
 
     if not success then
-      vim.notify = function(msg, level)
-        print(string.format('Error: %s, Level: %s', msg, level))
-      end
+      vim.notify = function(...) end
 
       error('Error in vim.notify')
       return
@@ -95,12 +96,12 @@ Promise --{{{
       --
       -- solarized
       -- style: nil
-      -- theme = {
-      -- colorscheme = 'solarized',
-      -- transparent = false,
-      -- style = nil,
-      -- sidebar = 'left',
-      -- },
+      theme = {
+        colorscheme = 'solarized',
+        transparent = false,
+        style = nil,
+        sidebar = 'left',
+      },
     })
 
     require('user.theme')
