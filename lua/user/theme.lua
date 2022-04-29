@@ -1,3 +1,4 @@
+local utils = require('lib.utils')
 local theme = user.theme
 
 if theme.colorscheme == 'tokyonight' then
@@ -9,19 +10,17 @@ if theme.colorscheme == 'tokyonight' then
     background_colour = '#1f2335',
   })
 elseif theme.colorscheme == 'onedark' then
-  local success1, onedark = pcall(require, 'onedark')
+  local onedark = utils:require('onedark')
 
-  if success1 then
-    onedark.setup({
-      style = theme.style,
-      transparent = theme.transparent,
-      term_colors = true,
-    })
+  onedark.setup({
+    style = theme.style,
+    transparent = theme.transparent,
+    term_colors = true,
+  })
 
-    vim.notify.setup({
-      background_colour = '#333333',
-    })
-  end
+  vim.notify.setup({
+    background_colour = '#333333',
+  })
 elseif theme.colorscheme == 'solarized' then
   if theme.transparent then
     vim.g.transparent_background = true
