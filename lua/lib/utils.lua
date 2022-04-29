@@ -9,10 +9,10 @@ function M:require(plugin)
   self.plugin = plugin
 
   if not success then
-    return self, false
+    return self
   end
 
-  return p, true
+  return p
 end
 
 function M:packer_auto_install()
