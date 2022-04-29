@@ -22,9 +22,9 @@ elseif theme.colorscheme == 'onedark' then
       background_colour = '#333333',
     })
   end
-elseif string.find(user.theme.colorscheme, 'solarized') then
+elseif theme.colorscheme == 'solarized' then
   if theme.transparent then
-    vim.g.solarized_termtrans = 1
+    vim.g.transparent_background = true
   end
 
   vim.notify.setup({

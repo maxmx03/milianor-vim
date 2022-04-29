@@ -20,7 +20,7 @@ require('packer').startup(function(use)
     'folke/tokyonight.nvim',
     'Mofiqul/vscode.nvim',
     'navarasu/onedark.nvim',
-    'ishan9299/nvim-solarized-lua',
+    'maxmx03/solarized.nvim',
     'windwp/nvim-ts-autotag',
     'glepnir/dashboard-nvim',
     'rcarriga/nvim-notify',

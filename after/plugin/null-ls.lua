@@ -10,6 +10,7 @@ null_ls.setup({
     formatting.prettier.with({
       extra_args = {
         '--single-quote',
+        '--no-semi',
       },
       disabled_filetypes = { 'vue' },
     }),

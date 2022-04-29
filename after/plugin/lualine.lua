@@ -63,7 +63,7 @@ if user.theme.colorscheme == 'vscode' then
   end
 end
 
-if string.find(user.theme.colorscheme, 'solarized') then
+if user.theme.colorscheme == 'solarized' then
   colors = {
     bg = '#073642',
     fg = '#eee8d5',
