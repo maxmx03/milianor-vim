@@ -1,4 +1,14 @@
-local colors = require('lib.plugins.lualine_config.colors')
+local c = require('lib.plugins.lualine_config.colors')
+
+local colors = {
+  red = c.red,
+  grey = c.grey,
+  black = c.bg,
+  white = c.fg,
+  light_green = c.cyan,
+  orange = c.orange,
+  green = c.green
+}
 
 local theme = {
   normal = {

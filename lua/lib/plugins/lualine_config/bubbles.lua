@@ -3,7 +3,16 @@
 -- MIT license, see LICENSE for more details.
 
 -- stylua: ignore
-local colors = require('lib.plugins.lualine_config.colors')
+local c = require('lib.plugins.lualine_config.colors')
+
+local colors = {
+  blue = c.blue,
+  cyan = c.cyan,
+  black = c.bg,
+  white = c.fg,
+  violet = c.violet,
+  grey = c.grey
+}
 
 local bubbles_theme = {
   normal = {
