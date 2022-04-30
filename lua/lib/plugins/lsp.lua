@@ -1,5 +1,4 @@
-local lsp_installer = require('nvim-lsp-installer')
-local lsp = require('lspconfig')
+local lspconfig = require('lspconfig')
 local dartls = require('flutter-tools')
 
 local function icons()
@@ -66,109 +65,44 @@ end
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-function auto_install(servers)
-  local name = servers[vim.bo.filetype]
+local runtime_path = vim.split(package.path, ';')
+table.insert(runtime_path, 'lua/?.lua')
+table.insert(runtime_path, 'lua/?/init.lua')
 
-  local server_is_found, server = lsp_installer.get_server(name)
-  if server_is_found and not server:is_installed() then
-    server:install()
-    lsp_installer.info_window.open()
-  end
-end
-
-vim.cmd([[
-  augroup LspAutoInstall
-    autocmd!
-	autocmd VimEnter <buffer> lua auto_install(user.servers)
-  augroup END
-]])
-
-lsp_installer.on_server_ready(function(server)
-  local config = {
+local servers = user.servers
+for _, lsp in pairs(servers) do
+  require('lspconfig')[lsp].setup({
     on_attach = on_attach,
     flags = {
+      -- This will be the default in neovim 0.7+
       debounce_text_changes = 150,
     },
-    capabilities = capabilities,
-  }
+  })
+end
 
-  if server.name == 'sumneko_lua' then
-    local runtime_path = vim.split(package.path, ';')
-    table.insert(runtime_path, 'lua/?.lua')
-    table.insert(runtime_path, 'lua/?/init.lua')
-
-    config = {
-      on_attach = on_attach,
-      flags = {
-        debounce_text_changes = 150,
-      },
-      capabilities = capabilities,
-      settings = {
-        Lua = {
-          runtime = {
-            version = 'LuaJIT',
-            path = runtime_path,
-          },
-          diagnostics = {
-            globals = { 'vim' },
-          },
-          workspace = {
-            library = vim.api.nvim_get_runtime_file('', true),
-          },
-          telemetry = {
-            enable = false,
-          },
-        },
-      },
-    }
-  end
-
-  if server.name == 'vuels' then
-    config = {
-      on_attach = on_attach,
-      flags = {
-        debounce_text_changes = 150,
-      },
-      capabilities = capabilities,
-      init_options = {
-        config = {
-          vetur = {
-            ignoreProjectWarning = true,
-            completion = {
-              autoImport = false,
-              tagCasing = 'kebab',
-              useScaffoldSnippets = false,
-            },
-            format = {
-              defaultFormatter = {
-                js = 'prettier',
-                ts = 'prettier',
-              },
-              defaultFormatterOptions = {},
-              scriptInitialIndent = false,
-              styleInitialIndent = false,
-            },
-            useWorkspaceDependencies = false,
-            validation = {
-              script = true,
-              style = true,
-              template = true,
-            },
-          },
-        },
-      },
-    }
-  end
-
-  server:setup(config)
-end)
-
-lsp.rust_analyzer.setup({
+lspconfig.sumneko_lua.setup({
   on_attach = on_attach,
   flags = {
+    -- This will be the default in neovim 0.7+
     debounce_text_changes = 150,
   },
-  capabilities = capabilities,
+  settings = {
+    Lua = {
+      runtime = {
+        version = 'LuaJIT',
+        path = runtime_path,
+      },
+      diagnostics = {
+        globals = { 'vim' },
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file('', true),
+      },
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
 })
 
 dartls.setup({
