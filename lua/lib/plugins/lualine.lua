@@ -3,51 +3,71 @@ local lualine = utils:require('lualine')
 
 local colors = {}
 
+-- solarized colors
+colors = {
+  bg = '#073642',
+  fg = '#eee8d5',
+  yellow = '#b58900',
+  cyan = '#2aa198',
+  darkblue = '#081633',
+  green = '#719e07',
+  orange = '#cb4b16',
+  violet = '#a9a1e1',
+  magenta = '#6c71c4',
+  blue = '#268bd2',
+  red = '#dc322f',
+}
+
 if user.theme.colorscheme == 'tokyonight' then
   colors = {
     bg = '#24283b',
-    fg = '#bbc2cf',
-    yellow = '#ECBE7B',
-    cyan = '#008080',
-    darkblue = '#081633',
-    green = '#98be65',
-    orange = '#FF8800',
+    fg = '#c0caf5',
+    yellow = '#e0af68',
+    cyan = '#7dcfff',
+    darkblue = '#394b70',
+    green = '#9ece6a',
+    orange = '#ff9e64',
     violet = '#9d7cd8',
-    magenta = '#bb9af7',
-    blue = '#2ac2de',
+    magenta = '#ff007c',
+    blue = '#7aa2f7',
     red = '#f7768e',
   }
+
+  if user.theme.style == 'night' then
+    colors.bg = '#1f2335'
+    colors.fg = '#a9b1d6'
+  end
 end
 
-if user.theme.colorscheme == 'darkplus' or user.theme.colorscheme == 'onedarker' then
+if user.theme.colorscheme == 'darkplus' then
   colors = {
-    bg = '#262626',
-    fg = '#ffffff',
-    yellow = '#ffaf00',
-    cyan = '#008080',
-    darkblue = '#081633',
-    green = '#619955',
-    orange = '#FF8800',
-    violet = '#a9a1e1',
-    magenta = '#c678dd',
-    blue = '#0a7aca',
-    red = '#f44747',
+    bg = '#1E1E1E',
+    fg = '#D4D4D4',
+    yellow = '#DCDCAA',
+    cyan = '#4EC9B0',
+    darkblue = '#223E55',
+    green = '#6A9955',
+    orange = '#CE9178',
+    violet = '#C586C0',
+    magenta = '#D16D9E',
+    blue = '#569CD6',
+    red = '#F44747',
   }
 end
 
-if user.theme.colorscheme == 'solarized' then
+if user.theme.colorscheme == 'onedarker' then
   colors = {
-    bg = '#073642',
-    fg = '#eee8d5',
-    yellow = '#b58900',
-    cyan = '#2aa198',
-    darkblue = '#081633',
-    green = '#719e07',
-    orange = '#cb4b16',
-    violet = '#a9a1e1',
-    magenta = '#6c71c4',
-    blue = '#268bd2',
-    red = '#dc322f',
+    bg = '#1E232A',
+    fg = '#abb2bf',
+    yellow = '#E5C07B',
+    cyan = '#56B6C2',
+    darkblue = '#223E55',
+    green = '#98C379',
+    orange = '#CE9178',
+    violet = '#C678DD',
+    magenta = '#D16D9E',
+    blue = '#61AFEF',
+    red = '#e06c75',
   }
 end
 
