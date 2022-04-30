@@ -1,17 +1,5 @@
 local M = {}
 
-function M:require(plugin)
-  local success, p = pcall(require, plugin)
-  self.plugin = plugin
-
-  if not success then
-    vim.notify(M.plugin .. ' is not working', 'error')
-    return self
-  end
-
-  return p
-end
-
 function M:packer_auto_install()
   local fn = vim.fn
   local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'

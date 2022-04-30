@@ -1,5 +1,4 @@
-local utils = require('lib.utils')
-local telescope = utils:require('telescope')
+local telescope = require('telescope')
 
 telescope.setup({
   defaults = {

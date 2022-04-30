@@ -1,4 +1,3 @@
-local utils = require('lib.utils')
-local diffview = utils:require('diffview')
+local diffview = require('diffview')
 
 diffview.setup()

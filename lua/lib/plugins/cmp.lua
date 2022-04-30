@@ -1,7 +1,6 @@
-local utils = require('lib.utils')
-local luasnip = utils:require('luasnip')
-local cmp = utils:require('cmp')
-local lspkind = utils:require('lspkind')
+local luasnip = require('luasnip')
+local cmp = require('cmp')
+local lspkind = require('lspkind')
 
 cmp.setup({
   snippet = {

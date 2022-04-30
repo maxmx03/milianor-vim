@@ -1,4 +1,3 @@
-local utils = require('lib.utils')
-local gitsigns = utils:require('gitsigns')
+local gitsigns = require('gitsigns')
 
 gitsigns.setup()

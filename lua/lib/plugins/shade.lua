@@ -1,6 +1,5 @@
 if not user.theme.transparent then
-  local utils = require('lib.utils')
-  local shade = utils:require('shade')
+  local shade = require('shade')
 
   shade.setup({})
 end

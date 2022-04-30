@@ -2,7 +2,7 @@ user = {}
 user.servers = {}
 user.enable_server_formatter = {}
 user.theme = {
-  colorscheme = 'solarized',
+  colorscheme = 'onedarker',
   transparent = false,
   style = nil,
   sidebar = 'left',
@@ -10,6 +10,7 @@ user.theme = {
   italic_keywords = true,
   italic_functions = false,
   italic_variables = false,
+  lualine = 'evil_lualine',
 }
 
 function user:setup(o)

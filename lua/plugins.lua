@@ -1,5 +1,4 @@
-local utils = require('lib.utils')
-local packer = utils:require('packer')
+local packer = require('packer')
 
 packer.startup(function(use)
   use({

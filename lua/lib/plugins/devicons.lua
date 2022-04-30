@@ -1,5 +1,4 @@
-local utils = require('lib.utils')
-local devicons = utils:require('nvim-web-devicons')
+local devicons = require('nvim-web-devicons')
 
 local _, js_color = devicons.get_icon_color('index.js', 'js')
 local ts_icon, _ = devicons.get_icon_color('index.ts', 'ts')

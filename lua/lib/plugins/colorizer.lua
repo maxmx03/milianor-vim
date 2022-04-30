@@ -1,5 +1,4 @@
-local utils = require('lib.utils')
-local colorizer = utils:require('colorizer')
+local colorizer = require('colorizer')
 
 colorizer.setup({
   'css',

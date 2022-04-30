@@ -1,4 +1,3 @@
-local utils = require('lib.utils')
-local toggleterm = utils:require('toggleterm')
+local toggleterm = require('toggleterm')
 
 toggleterm.setup()

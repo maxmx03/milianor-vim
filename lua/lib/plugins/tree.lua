@@ -1,5 +1,4 @@
-local utils = require('lib.utils')
-local tree = utils:require('nvim-tree')
+local tree = require('nvim-tree')
 
 vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_highlight_opened_files = 1

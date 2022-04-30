@@ -1,5 +1,4 @@
-local utils = require('lib.utils')
-local treesitter = utils:require('nvim-treesitter.configs')
+local treesitter = require('nvim-treesitter.configs')
 
 treesitter.setup({
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages

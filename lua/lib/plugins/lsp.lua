@@ -1,7 +1,6 @@
-local utils = require('lib.utils')
-local lsp_installer = utils:require('nvim-lsp-installer')
-local lsp = utils:require('lspconfig')
-local dartls = utils:require('flutter-tools')
+local lsp_installer = require('nvim-lsp-installer')
+local lsp = require('lspconfig')
+local dartls = require('flutter-tools')
 
 local function icons()
   local signs = { Error = '', Warn = '', Hint = '', Info = '', Prefix = '' }
