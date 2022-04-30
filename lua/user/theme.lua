@@ -1,50 +1,36 @@
-local utils = require('lib.utils')
 local theme = user.theme
 
 if theme.colorscheme == 'tokyonight' then
-  vim.g.tokyonight_style = theme.style
+  vim.g.tokyonight_style = theme.style or 'storm'
   vim.g.tokyonight_transparent = theme.transparent
-  vim.g.tokyonight_italic_functions = true
+  vim.g.tokyonight_italic_comments = theme.italic_comments
+  vim.g.tokyonight_italic_keywords = theme.italic_keywords
+  vim.g.tokyonight_italic_functions = theme.italic_functions
+  vim.g.tokyonight_italic_variables = theme.italic_variables
 
   vim.notify.setup({
     background_colour = '#1f2335',
   })
-elseif theme.colorscheme == 'onedark' then
-  local onedark = utils:require('onedark')
-
-  onedark.setup({
-    style = theme.style,
-    transparent = theme.transparent,
-    term_colors = true,
-  })
-
-  vim.notify.setup({
-    background_colour = '#333333',
-  })
-elseif theme.colorscheme == 'solarized' then
-  if theme.transparent then
-    vim.g.transparent_background = true
-  end
-
-  vim.notify.setup({
-    background_colour = '#073642',
-  })
 else
-  vim.g.vscode_style = theme.style
+  local background_colour = '#1E232A' -- onedarker
 
-  if theme.transparent then
-    vim.g.vscode_transparent = 1
+  if theme.colorscheme == 'solarized' then
+    background_colour = '#073642'
   end
 
-  if theme.style == 'dark' then
-    vim.notify.setup({
-      background_colour = '#262626',
-    })
-  else
-    vim.notify.setup({
-      background_colour = '#fafafa',
-    })
+  if theme.colorscheme == 'darkplus' then
+    background_colour = '#1E1E1E'
   end
+
+  vim.g.transparent_background = theme.transparent -- transparent background(Default: false)
+  vim.g.italic_comments = true -- italic comments(Default: true)
+  vim.g.italic_keywords = true -- italic keywords(Default: true)
+  vim.g.italic_functions = true -- italic functions(Default: false)
+  vim.g.italic_variables = true -- italic variables(Default: false)
+
+  vim.notify.setup({
+    background_colour = background_colour,
+  })
 end
 
 vim.cmd(string.format('colorscheme %s', theme.colorscheme))

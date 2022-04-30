@@ -1,7 +1,16 @@
 user = {}
 user.servers = {}
 user.enable_server_formatter = {}
-user.theme = { colorscheme = 'solarized', transparent = false, style = nil, sidebar = 'left' }
+user.theme = {
+  colorscheme = 'solarized',
+  transparent = false,
+  style = nil,
+  sidebar = 'left',
+  italic_comments = true,
+  italic_keywords = true,
+  italic_functions = false,
+  italic_variables = false,
+}
 
 function user:setup(o)
   self.theme = o.theme or self.theme

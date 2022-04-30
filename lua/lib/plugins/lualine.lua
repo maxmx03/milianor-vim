@@ -1,19 +1,7 @@
 local utils = require('lib.utils')
 local lualine = utils:require('lualine')
 
-local colors = {
-  bg = '#202328',
-  fg = '#bbc2cf',
-  yellow = '#ECBE7B',
-  cyan = '#008080',
-  darkblue = '#081633',
-  green = '#98be65',
-  orange = '#FF8800',
-  violet = '#a9a1e1',
-  magenta = '#c678dd',
-  blue = '#51afef',
-  red = '#ec5f67',
-}
+local colors = {}
 
 if user.theme.colorscheme == 'tokyonight' then
   colors = {
@@ -31,7 +19,7 @@ if user.theme.colorscheme == 'tokyonight' then
   }
 end
 
-if user.theme.colorscheme == 'vscode' then
+if user.theme.colorscheme == 'darkplus' or user.theme.colorscheme == 'onedarker' then
   colors = {
     bg = '#262626',
     fg = '#ffffff',
@@ -45,22 +33,6 @@ if user.theme.colorscheme == 'vscode' then
     blue = '#0a7aca',
     red = '#f44747',
   }
-
-  if user.theme.style == 'light' then
-    colors = {
-      bg = '#fafafa',
-      fg = '#262626',
-      yellow = '#ffaf00',
-      cyan = '#008080',
-      darkblue = '#081633',
-      green = '#619955',
-      orange = '#FF8800',
-      violet = '#a9a1e1',
-      magenta = '#c678dd',
-      blue = '#0a7aca',
-      red = '#f44747',
-    }
-  end
 end
 
 if user.theme.colorscheme == 'solarized' then
@@ -214,16 +186,6 @@ ins_left({
   end,
 })
 
-local function set_fg()
-  local color = { fg = '#ffffff', gui = 'bold' }
-
-  if user.theme.style == 'light' then
-    color.fg = '#262626'
-  end
-
-  return color
-end
-
 ins_left({
   -- Lsp server name .
   function()
@@ -242,7 +204,7 @@ ins_left({
     return msg
   end,
   icon = ' LSP:',
-  color = set_fg(),
+  color = { fg = '#ffffff', gui = 'bold' },
 })
 
 -- Add components to right sections
