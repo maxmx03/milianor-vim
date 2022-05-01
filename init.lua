@@ -89,6 +89,12 @@ if success then
       keymap('<space>gD', ':DiffviewOpen<cr>') -- open project diff
       keymap('<space>gc', ':DiffviewClose<cr>') -- close project diff
       keymap('<space>gb', ':Gitsigns toggle_current_line_blame<cr>') -- toggle blame
+
+      -- VCOLOR
+      keymap('<space>cr', ':VCoolor<cr>') -- hash color insertion
+      keymap('<space>cg', ':VCoolIns r<cr>') -- rgb color insertion
+      keymap('<space>ch', ':VCoolIns h<cr>') -- hsl color insertion
+      keymap('<space>cb', ':VCoolIns ra<cr>') -- rgba color insertion
     end,
   })
 end
