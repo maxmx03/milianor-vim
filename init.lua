@@ -95,7 +95,17 @@ if success then
       keymap('<space>cg', ':VCoolIns r<cr>') -- rgb color insertion
       keymap('<space>ch', ':VCoolIns h<cr>') -- hsl color insertion
       keymap('<space>cb', ':VCoolIns ra<cr>') -- rgba color insertion
-    end,
+
+      -- FLUTTER
+      keymap('<space>mr', ':FlutterRun<cr>') -- flutter run
+      keymap('<space>mR', ':FlutterHotRestart<cr>') -- flutter restart
+      keymap('<space>mq', ':FlutterQuit<cr>') -- flutter quit
+      keymap('<space>mv', ':FlutterVisualDebug<cr>') -- flutter visual debug
+      keymap('<space>mo', ':FlutterOutlineToggle<cr') -- flutter ooutline debug
+
+      -- COMMENT
+      keymap('<space>cc', ':CommentToggle<cr>') -- comment toggle
+      end,
   })
 end
 
