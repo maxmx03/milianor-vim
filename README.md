@@ -6,6 +6,14 @@ What is MilianorVim? MilianorVim is a configuration for Neovim with alot of plug
 
 All the instructions was moved to the [wiki](https://github.com/maxmx03/milianor-vim/wiki)
 
+### Quick Start
+
+linux example
+```
+git clone https://github.com/maxmx03/milianor-vim ~/.config/nvim
+nvim
+```
+
 ### Other tools to use alongside milianor-vim (optional)
 
 - [Kitty](https://sw.kovidgoyal.net/kitty/)
