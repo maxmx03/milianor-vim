@@ -41,7 +41,7 @@ if success then
     },
     keymapping = function()
       local keymap = function(key, map, opt)
-        vim.api.nvim_set_keymap(opt or 'n', key, map, { noremap = true, silent = true })
+        vim.api.nvim_set_keymap(opt or 'n', key, map, { noremap = true })
       end
 
       -- DEFAULT
@@ -105,7 +105,7 @@ if success then
 
       -- COMMENT
       keymap('<space>cc', ':CommentToggle<cr>') -- comment toggle
-      end,
+    end,
   })
 end
 
