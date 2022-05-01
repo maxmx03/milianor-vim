@@ -32,7 +32,7 @@ packer.startup(function(use)
     'ray-x/lsp_signature.nvim',
     'windwp/nvim-autopairs',
     'akinsho/toggleterm.nvim',
-    'glepnir/lspsaga.nvim',
+    'tami5/lspsaga.nvim',
     'sunjon/shade.nvim',
     {
       'weilbith/nvim-code-action-menu',
