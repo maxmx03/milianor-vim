@@ -15,12 +15,6 @@ if success then
       'vuels',
       'volar',
     },
-    -- enable the default server formatter.
-    enable_server_formatter = {
-      'svelte',
-      'vuels', -- remove this line if you are on windows
-      'pylsp', --remove this line if you are on windows
-    },
     -- change your default theme,
     --
     -- tokyonight

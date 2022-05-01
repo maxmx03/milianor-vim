@@ -16,26 +16,6 @@ local function icons()
   end
 end
 
-local function format_onsave(client)
-  if client.name ~= 'null-ls' then
-    client.resolved_capabilities.document_formatting = false
-  end
-
-  for _, server_name in pairs(user.enable_server_formatter) do
-    if client.name == server_name then
-      client.resolved_capabilities.document_formatting = true
-      client.resolved_capabilities.document_range_formatting = true
-    end
-  end
-
-  vim.cmd([[
-    augroup LspFormatting
-      autocmd! * <buffer>
-	  autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
-	augroup END
-  ]])
-end
-
 local opts = { noremap = true, silent = true }
 vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
@@ -59,8 +39,14 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
-  format_onsave(client)
   icons()
+
+  vim.cmd([[
+    augroup LspFormatting
+      autocmd! * <buffer>
+	  autocmd BufWritePre <buffer> lua vim.lsp.buf.format()
+	augroup END
+  ]])
 end
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())

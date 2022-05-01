@@ -1,6 +1,5 @@
 user = {}
 user.servers = {}
-user.enable_server_formatter = {}
 user.theme = {
   colorscheme = 'onedarker',
   transparent = false,
