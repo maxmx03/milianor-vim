@@ -39,186 +39,57 @@ if success then
       italic_variables = false,
       lualine = 'evil_lualine', -- evil_lualine, bubbles, slanted, default
     },
-    keymapping = {
-      d = {
-        name = 'Dashboard',
-        d = {
-          '<cmd>Dashboard<cr>',
-          'Open Dashboard',
-        },
-        s = {
-          '<cmd>SessionSave<cr>',
-          'Save session',
-        },
-        l = {
-          '<cmd>SessionLoad<cr>',
-          'Load session',
-        },
-      },
-      l = {
-        name = 'Lsp Installer',
-        i = {
-          '<cmd>LspInstallInfo<cr>',
-          'Show Installed and available lsp servers',
-        },
-      },
-      name = 'Bufferline (Tabs)',
-      [']'] = {
-        ':BufferLineCycleNext<cr>',
-        'Move to the next tab',
-      },
-      ['['] = {
-        ':BufferLineCyclePrev<CR>',
-        'Move to the previous tab',
-      },
-      x = {
-        ':BufferLinePickClose<CR>',
-        'Close the selected tab',
-      },
-      ['?'] = {
-        ':BufferLineCloseLeft<CR>',
-        'Close all the left tabs',
-      },
-      ['/'] = {
-        ':BufferLineCloseRight<CR>',
-        'Close all the right tab',
-      },
-      f = {
-        name = 'Telescope (Fuzzy Finder)',
-        f = {
-          "<cmd>lua require('telescope.builtin').find_files()<cr>",
-          'Lists files in your current working directory, respects .gitignore',
-        },
-        g = {
-          "<cmd>lua require('telescope.builtin').live_grep()<cr>",
-          'Search for a string in your current working directory and get results live as you type (respecting .gitignore)',
-        },
-        b = { "<cmd>lua require('telescope.builtin').buffers()<cr>", 'Lists open buffers in current neovim instance' },
-        h = { "<cmd>lua require('telescope.builtin').help_tags()<cr>", 'Lists available help tags' },
-      },
-      n = {
-        name = 'Tree (File Explorer)',
-        n = {
-          ':NvimTreeToggle<cr>',
-          'Open Tree',
-        },
-      },
-      t = {
-        name = 'Terminal (Integrated Terminal)',
-        t = {
-          ':ToggleTerm direction=float<cr>',
-          'Open a terminal',
-        },
-      },
-      g = {
-        name = 'LspSaga (Diagnostics and Code Actions)',
-        a = {
-          '<cmd>Lspsaga code_action<cr>',
-          'Code action',
-        },
-        r = {
-          '<cmd>Lspsaga rename<cr>',
-          'Rename (will rename other files too)',
-        },
-        k = {
-          '<cmd>Lspsaga show_line_diagnostics<cr>',
-          'Show diagnostic',
-        },
-        K = {
-          '<cmd>Lspsaga hover_doc<cr>',
-          'Hover',
-        },
-        n = {
-          '<cmd>Lspsaga diagnostic_jump_next<cr>',
-          'Show diagnostic and jump to next',
-        },
-        p = {
-          '<cmd>Lspsaga diagnostic_jump_prev<cr>',
-          'Show diagnostic and jump to previous',
-        },
-        d = {
-          '<cmd>Lspsaga preview_definition<cr>',
-          'Preview definition',
-        },
-      },
-      h = {
-        name = 'Git',
-        s = {
-          '<cmd>Gitsigns stage_hunk<cr>',
-          'Stage hunk',
-        },
-        r = {
-          '<cmd>Gitsigns reset_hunk<cr>',
-          'Reset hunk',
-        },
-        p = {
-          '<cmd>Gitsigns preview_hunk<cr>',
-          'Preview hunk',
-        },
-        d = {
-          '<cmd>Gitsigns diffthis<cr>',
-          'Toggle local diff',
-        },
-        D = {
-          '<cmd>DiffviewOpen<cr>',
-          'Open project diffview',
-        },
-        c = {
-          '<cmd>DiffviewClose<cr>',
-          'Close project diffview',
-        },
-        b = {
-          '<cmd>Gitsigns toggle_current_line_blame<cr>',
-          'Toggle blame',
-        },
-      },
-      m = {
-        name = 'Flutter',
-        r = {
-          '<cmd>FlutterRun<cr>',
-          'Flutter Run',
-        },
-        R = {
-          '<cmd>FlutterHotRestart<cr>',
-          'Flutter Restart',
-        },
-        q = {
-          '<cmd>FlutterQuit<cr>',
-          'Flutter Quit',
-        },
-        v = {
-          '<cmd>FlutterVisualDebug<cr>',
-          'Flutter Visual Debug',
-        },
-        o = {
-          '<cmd>FlutterOutlineToggle<cr>',
-          'Flutter Outline Toggle',
-        },
-      },
-      c = {
-        '<cmd>CommentToggle<cr>',
-        'Comment Toggle',
-      },
-      v = {
-        name = 'vcoolor',
-        c = {
-          '<cmd>VCoolor<cr>',
-          'hash color insertion',
-        },
-        r = {
-          '<cmd>VCoolIns r<cr>',
-          'For rgb color insertion',
-        },
-        h = {
-          '<cmd>VCoolIns h<cr>',
-          'hsl color insertion',
-        },
-        b = {
-          '<cmd>VCoolIns ra<cr>',
-          'rgba color insertion',
-        },
-      },
-    },
+    keymapping = function()
+      local keymap = function(key, map, opt)
+        vim.api.nvim_set_keymap(opt or 'n', key, map, { noremap = true, silent = true })
+      end
+
+      -- DEFAULT
+      keymap('<F2>', ':update<cr>') -- save file
+      keymap('<F3>', ':quit<cr>') -- exit neovim
+
+      -- NVIM-TREE
+      keymap('<space>n', ':NvimTreeToggle<cr>') -- open file explorer
+
+      -- TELESCOPE
+      keymap('<space>ff', ':Telescope find_files<cr>') -- find files
+      keymap('<space>fg', ':Telescope live_grep<cr>') -- find character
+      keymap('<space>fb', ':Telescope buffers<cr>') -- find buffers
+      keymap('<space>fh', ':Telescope help_tag<cr>') -- help tags
+
+      -- BUFFERLINE
+      keymap('<space>]', ':BufferLineCycleNext<cr>') -- move to the next tab
+      keymap('<space>[', ':BufferLineCyclePrev<cr>') -- move to previous tab
+      keymap('<space>x', ':BufferLinePickClose<cr>') -- close the selected tab
+      keymap('<space>l', ':BufferLineCloseLeft<cr>') -- close all left tabs
+      keymap('<space>r', ':BufferLineCloseRight<cr>') -- close all right tabs
+
+      -- INTEGRATED TERMINAL
+      keymap('<space>tt', ':ToggleTerm direction=float<cr>')
+      keymap('<esc>', [[<C-\><C-n>]], 't') -- exit the terminal
+
+      -- LSP
+      --[[ 
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>bf', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>bd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>bi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>K', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>bt', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>br', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+      --]]
+
+      -- GIT
+      keymap('<space>gs', ':Gitsigns stage_hunk<cr>') -- stage hunk
+      keymap('<space>gr', ':Gitsigns reset_hunk<cr>') -- reset hunk
+      keymap('<space>gp', ':Gitsigns preview_hunk<cr>') -- preview hunk
+      keymap('<space>gd', ':Gitsigns diffthis<cr>') -- toggle local diff
+      keymap('<space>gD', ':DiffviewOpen<cr>') -- open project diff
+      keymap('<space>gc', ':DiffviewClose<cr>') -- close project diff
+      keymap('<space>gb', ':Gitsigns toggle_current_line_blame<cr>') -- toggle blame
+    end,
   })
 end
 

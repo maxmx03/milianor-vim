@@ -28,12 +28,11 @@ packer.startup(function(use)
     'rcarriga/nvim-notify',
     'williamboman/nvim-lsp-installer',
     'terrortylor/nvim-comment',
-    'folke/which-key.nvim',
     'ray-x/lsp_signature.nvim',
     'windwp/nvim-autopairs',
     'akinsho/toggleterm.nvim',
-    'tami5/lspsaga.nvim',
     'sunjon/shade.nvim',
+    'kosayoda/nvim-lightbulb',
     {
       'weilbith/nvim-code-action-menu',
       cmd = 'CodeActionMenu',

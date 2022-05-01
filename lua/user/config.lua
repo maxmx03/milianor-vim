@@ -11,7 +11,8 @@ user.theme = {
   italic_variables = false,
   lualine = 'evil_lualine',
 }
-user.keymapping = {}
+user.keymapping = function ()
+end
 
 function user:setup(o)
   self.theme = o.theme or self.theme
@@ -24,6 +25,7 @@ function user:setup(o)
   if success then
     vim.notify = notify
     require('user.theme')
+    self.keymapping()
   else
     vim.notify = nil
   end
