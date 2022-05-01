@@ -32,13 +32,13 @@ packer.startup(function(use)
     'ray-x/lsp_signature.nvim',
     'windwp/nvim-autopairs',
     'akinsho/toggleterm.nvim',
-    'tami5/lspsaga.nvim',
+    'glepnir/lspsaga.nvim',
     'sunjon/shade.nvim',
     {
       'weilbith/nvim-code-action-menu',
       cmd = 'CodeActionMenu',
     },
-    { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install' },
+    { 'iamcco/markdown-preview.nvim', run = 'cd app && npm install' },
     {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate',
