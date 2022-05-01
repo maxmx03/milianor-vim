@@ -1,6 +1,6 @@
 local plugins_folder = 'lib.plugins.'
 
-pcall(function()
+local success, result = pcall(function()
   require(plugins_folder .. 'autopairs')
   require(plugins_folder .. 'autotag')
   require(plugins_folder .. 'bufferline')
@@ -23,3 +23,9 @@ pcall(function()
   require(plugins_folder .. 'treesitter')
   require(plugins_folder .. 'which-key')
 end)
+
+if not success then
+  if type(vim.notify) ~= 'nil' then
+    vim.notify(result, 'error')
+  end
+end

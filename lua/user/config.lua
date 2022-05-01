@@ -24,5 +24,7 @@ function user:setup(o)
   if success then
     vim.notify = notify
     require('user.theme')
+  else
+    vim.notify = nil
   end
 end
