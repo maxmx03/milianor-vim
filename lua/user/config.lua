@@ -12,9 +12,18 @@ user.theme = {
   italic_variables = false,
   lualine = 'evil_lualine',
 }
+user.keymapping = {}
 
 function user:setup(o)
   self.theme = o.theme or self.theme
   self.servers = o.servers or self.servers
   self.enable_server_formatter = o.enable_server_formatter or self.enable_server_formatter
+  self.keymapping = o.keymapping or self.keymapping
+
+  local success, notify = pcall(require, 'notify')
+
+  if success then
+    vim.notify = notify
+    require('user.theme')
+  end
 end
