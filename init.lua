@@ -69,7 +69,7 @@ if success then
       keymap('<esc>', [[<C-\><C-n>]], 't') -- exit the terminal
 
       -- LSP
-      --[[ 
+      --[[
           vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>bf', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
           vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>bd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
           vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>bi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
