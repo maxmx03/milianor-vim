@@ -13,7 +13,7 @@ colors = {
   magenta = '#6c71c4',
   blue = '#268bd2',
   red = '#dc322f',
-  grey = '#93a1a1',
+  grey = '#536162',
 }
 
 if user.theme.colorscheme == 'tokyonight' then
@@ -26,7 +26,7 @@ if user.theme.colorscheme == 'tokyonight' then
     green = '#9ece6a',
     orange = '#ff9e64',
     violet = '#9d7cd8',
-    magenta = '#ff007c',
+    magenta = '#bb9af7',
     blue = '#7aa2f7',
     red = '#f7768e',
     grey = '#737aa2',
@@ -51,7 +51,7 @@ if user.theme.colorscheme == 'darkplus' then
     magenta = '#D16D9E',
     blue = '#569CD6',
     red = '#F44747',
-    grey = '#808080',
+    grey = '#383838',
   }
 end
 
@@ -68,7 +68,7 @@ if user.theme.colorscheme == 'onedarker' then
     magenta = '#D16D9E',
     blue = '#61AFEF',
     red = '#e06c75',
-    grey = '#5c6370',
+    grey = '#383838',
   }
 end
 

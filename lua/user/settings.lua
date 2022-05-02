@@ -14,7 +14,7 @@ vim.opt.pumheight = 20
 vim.opt.foldmethod = 'marker'
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' } -- for cmp
 vim.g.dashboard_default_executive = 'telescope'
-vim.g.python3_host_prog = '/usr/bin/python3'
+vim.g.python3_host_prog = '/usr/bin/python3.10'
 vim.o.termguicolors = true
 
 vim.cmd([[

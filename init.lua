@@ -1,4 +1,4 @@
-local success = pcall(require, 'load')
+local success = pcall(require, 'main')
 
 if success then
   user:setup({
@@ -41,7 +41,7 @@ if success then
     },
     keymapping = function()
       local keymap = function(key, map, opt)
-        vim.api.nvim_set_keymap(opt or 'n', key, map, { noremap = true })
+        vim.api.nvim_set_keymap(opt or 'n', key, map, { noremap = true, silent = true })
       end
 
       -- DEFAULT
@@ -64,22 +64,20 @@ if success then
       keymap('<space>l', ':BufferLineCloseLeft<cr>') -- close all left tabs
       keymap('<space>r', ':BufferLineCloseRight<cr>') -- close all right tabs
 
+      -- LSP SAGA
+      keymap('<space>sr', ':Lspsaga rename<cr>') -- rename character
+      keymap('<space>sc', ':Lspsaga code_action<cr>') -- code action
+      keymap('ca', ':Lspsaga code_action<cr>') -- code action
+      keymap('<space>C', ':Lspsaga range_code_action<cr>') -- range code action
+      keymap('<space>sh', ':Lspsaga hover_doc<cr>') -- hover doc
+      keymap('K', ':Lspsaga hover_doc<cr>') -- hover doc
+      keymap('<space>sl', ':Lspsaga show_line_diagnostics<cr>') -- show line diagnostic
+      keymap('<space>s[', ':Lspsaga diagnostic_jump_next<cr>') -- jump next diagnostic
+      keymap('<space>s]', ':Lspsaga diagnostic_jump_prev<cr>') -- jump prev diagnostic
+
       -- INTEGRATED TERMINAL
       keymap('<space>tt', ':ToggleTerm direction=float<cr>')
       keymap('<esc>', [[<C-\><C-n>]], 't') -- exit the terminal
-
-      -- LSP
-      --[[
-          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>bf', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>bd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>bi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>K', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>bt', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>br', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-          vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-          vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-      --]]
 
       -- GIT
       keymap('<space>gs', ':Gitsigns stage_hunk<cr>') -- stage hunk

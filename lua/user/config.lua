@@ -11,8 +11,7 @@ user.theme = {
   italic_variables = false,
   lualine = 'evil_lualine',
 }
-user.keymapping = function ()
-end
+user.keymapping = function() end
 
 function user:setup(o)
   self.theme = o.theme or self.theme

@@ -1,4 +1,4 @@
-local c = require('lib.plugins.lualine_config.colors')
+local c = require('theme.lualine.colors')
 
 local colors = {
   red = c.red,

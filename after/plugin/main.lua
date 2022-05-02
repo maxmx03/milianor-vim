@@ -1,4 +1,4 @@
-local plugins_folder = 'lib.plugins.'
+local plugins_folder = 'core.'
 
 local success, result = pcall(function()
   require(plugins_folder .. 'autopairs')
