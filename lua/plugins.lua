@@ -33,6 +33,7 @@ packer.startup(function(use)
     'akinsho/toggleterm.nvim',
     'sunjon/shade.nvim',
     'kosayoda/nvim-lightbulb',
+    'j-hui/fidget.nvim',
     {
       'weilbith/nvim-code-action-menu',
       cmd = 'CodeActionMenu',
