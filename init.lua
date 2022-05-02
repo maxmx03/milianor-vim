@@ -37,7 +37,7 @@ if success then
       italic_keywords = true,
       italic_functions = false,
       italic_variables = false,
-      lualine = 'evil_lualine', -- evil_lualine, bubbles, slanted, default
+      lualine = 'default', -- evil_lualine, bubbles, slanted, default
     },
     keymapping = function()
       local keymap = function(key, map, opt)
