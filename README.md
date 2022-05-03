@@ -8,9 +8,17 @@ All the instructions was moved to the [wiki](https://github.com/maxmx03/milianor
 
 ### Quick Start
 
-linux example
+linux/macos
+
 ```
 git clone https://github.com/maxmx03/milianor-vim ~/.config/nvim
+nvim
+```
+
+windows
+
+```
+git clone https://github.com/maxmx03/milianor-vim $env:LOCALAPPDATA\nvim
 nvim
 ```
 
