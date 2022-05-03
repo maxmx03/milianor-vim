@@ -31,7 +31,7 @@ if success then
     -- colorscheme: solarized
     -- style: nil
     theme = {
-      colorscheme = 'solarized',
+      colorscheme = 'onedarker',
       transparent = false,
       style = nil,
       sidebar = 'left',
@@ -42,8 +42,8 @@ if success then
       lualine = 'bubbles', -- evil_lualine, bubbles, slanted, default
     },
     keymapping = function()
-      local keymap = function(key, map, opt)
-        vim.api.nvim_set_keymap(opt or 'n', key, map, { noremap = true, silent = true })
+      local keymap = function(lhs, rhs, mode, opts)
+        vim.api.nvim_set_keymap(mode or 'n', lhs, rhs, opts or { noremap = true, silent = true })
       end
 
       -- DEFAULT
@@ -79,11 +79,11 @@ if success then
 
       -- INTEGRATED TERMINAL
       keymap('<space>tt', ':ToggleTerm direction=float<cr>')
-      keymap('<esc>', [[<C-\><C-n>]], 't') -- exit the terminal
+      keymap('<esc>', [[<C-\><C-n>]], 't', { noremap = true, silent = true }) -- exit the terminal
 
       -- GIT
       keymap('<space>gs', ':Gitsigns stage_hunk<cr>') -- stage hunk
-      keymap('<space>gr', ':Gitsigns reset_hunk<cr>') -- reset hunk
+      keymap('<space>gr', ':Gitsigns reset_h  unk<cr>') -- reset hunk
       keymap('<space>gp', ':Gitsigns preview_hunk<cr>') -- preview hunk
       keymap('<space>gd', ':Gitsigns diffthis<cr>') -- toggle local diff
       keymap('<space>gD', ':DiffviewOpen<cr>') -- open project diff
@@ -104,7 +104,13 @@ if success then
       keymap('<space>mo', ':FlutterOutlineToggle<cr') -- flutter ooutline debug
 
       -- COMMENT
-      keymap('<space>cc', ':CommentToggle<cr>') -- comment toggle
+      keymap(
+        '<space>cc',
+        "v:count == 0 ? '<Plug>(comment_toggle_current_linewise)' : '<Plug>(comment_toggle_linewise_count)'",
+        nil,
+        { expr = true, noremap = true }
+      )
+      keymap('<space>cc', '<Plug>(comment_toggle_linewise_visual)', 'x')
     end,
   })
 end

@@ -13,7 +13,7 @@ packer.startup(function(use)
     'glepnir/dashboard-nvim',
     'rcarriga/nvim-notify',
     'williamboman/nvim-lsp-installer',
-    'terrortylor/nvim-comment',
+    'numToStr/Comment.nvim',
     'ray-x/lsp_signature.nvim',
     'windwp/nvim-autopairs',
     'akinsho/toggleterm.nvim',
