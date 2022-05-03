@@ -31,7 +31,7 @@ if success then
     -- colorscheme: solarized
     -- style: nil
     theme = {
-      colorscheme = 'onedarker',
+      colorscheme = 'solarized',
       transparent = false,
       style = nil,
       sidebar = 'left',
