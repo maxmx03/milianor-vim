@@ -32,7 +32,7 @@ if success then
     -- style: nil
     theme = {
       colorscheme = 'onedarker',
-      transparent = false,
+      transparent = true,
       style = nil,
       sidebar = 'left',
       italic_comments = true,
