@@ -5,28 +5,30 @@ if success then
     -- place your lsp servers bellow
     -- for more: https://github.com/williamboman/nvim-lsp-installer
     servers = {
-      'tsserver',
       'cssls',
+      'emmet_ls',
       'html',
       'jsonls',
+      'pylsp',
       'sumneko_lua',
       'svelte',
-      'pylsp',
+      'tsserver',
+      'tailwindcss',
       'vuels',
       'volar',
     },
     -- change your default theme,
     --
-    -- tokyonight
+    -- colorscheme: tokyonight
     -- style: 'storm', 'night'
     --
-    -- onedarker
+    -- colorscheme: onedarker
     -- style: nil
     --
-    -- darkplus
+    -- colorscheme: darkplus
     -- style: nil
     --
-    -- solarized
+    -- colorscheme: solarized
     -- style: nil
     theme = {
       colorscheme = 'onedarker',
