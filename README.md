@@ -1,10 +1,11 @@
 # Milianor Vim
 
-What is MilianorVim? MilianorVim is a configuration for Neovim with alot of plugins.
+What is MilianorVim? MilianorVim is a configuration for Neovim with alot of plugins, why use MilianorVim? 
+well, you dont need to config neovim or search for plugins, you know is alot of work to do, so you can just let me to do this for you.
 
 ### Wiki
 
-All the instructions was moved to the [wiki](https://github.com/maxmx03/milianor-vim/wiki)
+All the instructions and keymapping was moved to the [wiki](https://github.com/maxmx03/milianor-vim/wiki)
 
 ### Quick Start
 
