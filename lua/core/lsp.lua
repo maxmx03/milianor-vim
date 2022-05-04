@@ -1,8 +1,10 @@
 local lspconfig = require('lspconfig')
 local dartls = require('flutter-tools')
 
-local on_attach = function()
+local on_attach = function(_, bufnr)
   local signs = { Error = '', Warn = '', Hint = '', Info = '', Prefix = '' }
+
+  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   vim.diagnostic.config({
     virtual_text = {
