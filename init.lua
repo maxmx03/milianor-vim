@@ -71,7 +71,7 @@ if success then
       keymap('<space>sc', ':Lspsaga code_action<cr>') -- code action
       keymap('ca', ':Lspsaga code_action<cr>') -- code action
       keymap('<space>C', ':Lspsaga range_code_action<cr>') -- range code action
-      keymap('<space>sh', ':Lspsaga hover_doc<cr>') -- hover doc
+      keymap('<space>sh', ':Lspsaga signature_help<cr>') -- signature help
       keymap('K', ':Lspsaga hover_doc<cr>') -- hover doc
       keymap('<space>sl', ':Lspsaga show_line_diagnostics<cr>') -- show line diagnostic
       keymap('<space>s[', ':Lspsaga diagnostic_jump_next<cr>') -- jump next diagnostic
