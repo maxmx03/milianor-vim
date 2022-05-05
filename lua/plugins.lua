@@ -21,6 +21,7 @@ packer.startup(function(use)
     'kosayoda/nvim-lightbulb',
     'j-hui/fidget.nvim',
     'tami5/lspsaga.nvim',
+    'folke/which-key.nvim',
     {
       'weilbith/nvim-code-action-menu',
       cmd = 'CodeActionMenu',

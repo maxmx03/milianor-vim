@@ -22,6 +22,7 @@ local success, result = pcall(function()
   require(plugins_folder .. 'treesitter')
   require(plugins_folder .. 'lightbulb')
   require(plugins_folder .. 'fidget')
+  require(plugins_folder .. 'which-key')
 end)
 
 if not success then

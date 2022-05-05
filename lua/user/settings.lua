@@ -10,6 +10,7 @@ vim.opt.shiftwidth = 2 -- size of an indentation (sw).
 vim.opt.softtabstop = 0 -- number of spaces a <Tab> counts for. When 0, featuer is off (sts).
 vim.opt.expandtab = true -- always uses spaces instead of tab characters (et).
 vim.opt.updatetime = 250 -- for lsp
+vim.opt.timeoutlen = 200 -- for which-key
 vim.opt.pumheight = 20
 vim.opt.foldmethod = 'marker'
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' } -- for cmp
