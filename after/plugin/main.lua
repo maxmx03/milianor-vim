@@ -1,5 +1,9 @@
 local plugins_folder = 'core.'
 
+if not packer_done then
+  return
+end
+
 local success, result = pcall(function()
   require(plugins_folder .. 'autopairs')
   require(plugins_folder .. 'autotag')
