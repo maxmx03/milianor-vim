@@ -14,15 +14,15 @@ user.servers = {
   -- 'volar',
 }
 
-user.theme.colorscheme = 'onedarker' -- tokyonight, onedarker, darkplus, solarized
+user.theme.colorscheme = 'tokyonight' -- tokyonight, onedarker, darkplus, solarized
 user.theme.transparent = false
 user.theme.lualine = 'bubbles' -- default, evil_lualine, bubbles, slanted
-user.theme.style = nil -- tokyonight: night, storm
+user.theme.style = 'night' -- tokyonight: night, storm
 user.theme.sidebar = 'left'
 user.theme.italic_comments = true
 user.theme.italic_keywords = true
-user.theme.italic_functions = true
-user.theme.italic_variables = true
+user.theme.italic_functions = false
+user.theme.italic_variables = false
 
 local keymap = function(lhs, rhs, mode, opts)
   vim.api.nvim_set_keymap(mode or 'n', lhs, rhs, opts or { noremap = true, silent = true })
