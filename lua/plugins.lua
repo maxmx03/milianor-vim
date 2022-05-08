@@ -17,7 +17,6 @@ packer.startup(function(use)
     'ray-x/lsp_signature.nvim',
     'windwp/nvim-autopairs',
     'akinsho/toggleterm.nvim',
-    'sunjon/shade.nvim',
     'kosayoda/nvim-lightbulb',
     'j-hui/fidget.nvim',
     'tami5/lspsaga.nvim',
