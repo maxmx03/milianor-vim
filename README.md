@@ -1,7 +1,12 @@
 # Milianor Vim
 
 What is MilianorVim? MilianorVim is a configuration for Neovim with alot of plugins, why use MilianorVim? 
-well, you dont need to config neovim or search for plugins, you know is alot of work to do, so you can just let me to do this for you.
+well, you dont need to config neovim or search for plugins, you know is alot of work to do, so you can just let me to do this for you.A
+<img src="./screenshots/1.png" />
+<hr />
+<img src="./screenshots/2.png" />
+<hr />
+<img src="./screenshots/3.png" />
 
 ### Wiki
 
