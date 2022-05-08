@@ -11,11 +11,23 @@ end
 
 -- place your lsp servers bellow
 -- for more: https://github.com/williamboman/nvim-lsp-installer
-user.servers = {}
+user.servers = {
+  -- 'cssls',
+  -- 'emmet_ls',
+  -- 'html',
+  -- 'jsonls',
+  -- 'pylsp',
+  -- 'sumneko_lua',
+  -- 'svelte',
+  -- 'tsserver',
+  -- 'tailwindcss',
+  -- 'vuels',
+  -- 'volar',
+}
 
-user.theme.colorscheme = 'onedarker' -- tokyonight, onedarker, darkplus, solarized
+user.theme.colorscheme = 'tokyonight' -- tokyonight, onedarker, darkplus, solarized
 user.theme.transparent = false
-user.theme.lualine = 'bubbles' -- default, evil_lualine, bubbles, slanted
+user.theme.lualine = 'evil_lualine' -- default, evil_lualine, bubbles, slanted
 user.theme.style = 'night' -- tokyonight: night, storm
 user.theme.sidebar = 'left'
 user.theme.italic_comments = true

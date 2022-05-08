@@ -29,7 +29,7 @@ if user.theme.colorscheme == 'tokyonight' then
     magenta = '#bb9af7',
     blue = '#7aa2f7',
     red = '#f7768e',
-    grey = '#737aa2',
+    grey = '#394b70',
   }
 
   if user.theme.style == 'night' then

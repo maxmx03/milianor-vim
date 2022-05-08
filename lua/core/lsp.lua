@@ -35,6 +35,7 @@ local servers = user.servers
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup({
     on_attach = on_attach,
+    capabilities = capabilities,
     flags = {
       -- This will be the default in neovim 0.7+
       debounce_text_changes = 150,
@@ -44,6 +45,7 @@ end
 
 lspconfig.sumneko_lua.setup({
   on_attach = on_attach,
+  capabilities = capabilities,
   flags = {
     -- This will be the default in neovim 0.7+
     debounce_text_changes = 150,
