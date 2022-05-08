@@ -11,19 +11,7 @@ end
 
 -- place your lsp servers bellow
 -- for more: https://github.com/williamboman/nvim-lsp-installer
-user.servers = {
-  -- 'cssls',
-  -- 'emmet_ls',
-  -- 'html',
-  -- 'jsonls',
-  -- 'pylsp',
-  -- 'sumneko_lua',
-  -- 'svelte',
-  -- 'tsserver',
-  -- 'tailwindcss',
-  -- 'vuels',
-  -- 'volar',
-}
+user.servers = {}
 
 user.theme.colorscheme = 'onedarker' -- tokyonight, onedarker, darkplus, solarized
 user.theme.transparent = false
