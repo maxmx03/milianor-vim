@@ -26,7 +26,6 @@ packer.startup(function(use)
       'weilbith/nvim-code-action-menu',
       cmd = 'CodeActionMenu',
     },
-    { 'iamcco/markdown-preview.nvim', run = 'cd app && npm install' },
     {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate',
