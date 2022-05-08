@@ -152,7 +152,7 @@ end
 
 -- DEFAULT
 keymap('<F2>', ':update<cr>') -- save file
-keymap('<F3>', ':quit<cr>') -- exit neovim
+keymap('<F3>', ':quit!<cr>') -- exit neovim
 
 -- NVIM-TREE
 keymap('<space>n', ':NvimTreeToggle<cr>') -- open file explorer
