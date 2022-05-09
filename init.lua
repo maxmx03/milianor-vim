@@ -9,6 +9,16 @@ if not success then
   return
 end
 
+user.theme.colorscheme = 'onedarkpro' -- tokyonight, onedarker, darkplus, solarized, kanagawa, gruvbox, doom-one, onedarkpro
+user.theme.transparent = false
+user.theme.lualine = 'bubbles' -- default, evil_lualine, bubbles, slanted
+user.theme.style = 'night' -- tokyonight: night, storm
+user.theme.sidebar = 'left'
+user.theme.italic_comments = true
+user.theme.italic_keywords = true
+user.theme.italic_functions = false
+user.theme.italic_variables = false
+
 -- uncomment the server of your choice
 -- server list: https://github.com/williamboman/nvim-lsp-installer
 user.servers = {
@@ -136,16 +146,6 @@ user.servers = {
   -- 'zls',
 }
 
-user.theme.colorscheme = 'tokyonight' -- tokyonight, onedarker, darkplus, solarized
-user.theme.transparent = false
-user.theme.lualine = 'evil_lualine' -- default, evil_lualine, bubbles, slanted
-user.theme.style = 'night' -- tokyonight: night, storm
-user.theme.sidebar = 'left'
-user.theme.italic_comments = true
-user.theme.italic_keywords = true
-user.theme.italic_functions = false
-user.theme.italic_variables = false
-
 local keymap = function(lhs, rhs, mode, opts)
   vim.api.nvim_set_keymap(mode or 'n', lhs, rhs, opts or { noremap = true, silent = true })
 end
@@ -216,4 +216,4 @@ keymap(
 )
 keymap('<space>cc', '<Plug>(comment_toggle_linewise_visual)', 'x')
 
-require('user.theme')
+require('theme.colorschemes.init')

@@ -1,19 +1,19 @@
 local colors = {}
 
--- solarized colors
+-- onedarkpro
 colors = {
-  bg = '#073642',
-  fg = '#eee8d5',
-  yellow = '#b58900',
-  cyan = '#2aa198',
-  darkblue = '#081633',
-  green = '#719e07',
-  orange = '#cb4b16',
-  violet = '#a9a1e1',
-  magenta = '#6c71c4',
-  blue = '#268bd2',
-  red = '#dc322f',
-  grey = '#536162',
+  bg = '#282c34',
+  fg = '#abb2bf',
+  yellow = '#e5c07b',
+  cyan = '#56b6c2',
+  darkblue = '#223E55',
+  green = '#98c379',
+  orange = '#d19a66',
+  violet = '#c678dd',
+  magenta = '#D16D9E',
+  blue = '#61afef',
+  red = '#e06c75',
+  grey = '#383838',
 }
 
 if user.theme.colorscheme == 'tokyonight' then
@@ -36,6 +36,75 @@ if user.theme.colorscheme == 'tokyonight' then
     colors.bg = '#1f2335'
     colors.fg = '#a9b1d6'
   end
+end
+
+-- solarized colors
+if user.theme.colorscheme == 'solarized' then
+  colors = {
+    bg = '#073642',
+    fg = '#eee8d5',
+    yellow = '#b58900',
+    cyan = '#2aa198',
+    darkblue = '#081633',
+    green = '#719e07',
+    orange = '#cb4b16',
+    violet = '#a9a1e1',
+    magenta = '#6c71c4',
+    blue = '#268bd2',
+    red = '#dc322f',
+    grey = '#536162',
+  }
+end
+
+if user.theme.colorscheme == 'gruvbox' then
+  colors = {
+    bg = '#282828',
+    fg = '#fbf1c7',
+    yellow = '#d79921',
+    cyan = '#689d6a',
+    darkblue = '#223E55',
+    green = '#98C379',
+    orange = '#d65d0e',
+    violet = '#d3869b',
+    magenta = '#D16D9E',
+    blue = '#458588',
+    red = '#cc241d',
+    grey = '#282828',
+  }
+end
+
+if user.theme.colorscheme == 'kanagawa' then
+  colors = {
+    bg = '#16161D',
+    fg = '#C8C093',
+    yellow = '#938056',
+    cyan = '#6A9589',
+    darkblue = '#7E9CD8',
+    green = '#98c379',
+    orange = '#FFA066',
+    violet = '#938AA9',
+    magenta = '#D16D9E',
+    blue = '#658594',
+    red = '#E82424',
+    grey = '#54546D',
+  }
+end
+
+if user.theme.colorscheme == 'doom-one' then
+  colors = {
+    bg = '#282c34',
+    fg = '#bbc2cf',
+    yellow = '#ECBE7B',
+    cyan = '#46D9FF',
+    darkblue = '#4e4f67',
+    green = '#98be65',
+    orange = '#da8548',
+    violet = '#a9a1e1',
+    magenta = '#c678dd',
+    blue = '#51afef',
+    red = '#ff6c6b',
+    grey = '#1B2229',
+  }
 end
 
 if user.theme.colorscheme == 'darkplus' then
