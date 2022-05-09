@@ -1,21 +1,5 @@
 local colors = {}
 
--- onedarkpro
-colors = {
-  bg = '#282c34',
-  fg = '#abb2bf',
-  yellow = '#e5c07b',
-  cyan = '#56b6c2',
-  darkblue = '#223E55',
-  green = '#98c379',
-  orange = '#d19a66',
-  violet = '#c678dd',
-  magenta = '#D16D9E',
-  blue = '#61afef',
-  red = '#e06c75',
-  grey = '#383838',
-}
-
 if user.theme.colorscheme == 'tokyonight' then
   colors = {
     bg = '#24283b',
@@ -36,10 +20,7 @@ if user.theme.colorscheme == 'tokyonight' then
     colors.bg = '#1f2335'
     colors.fg = '#a9b1d6'
   end
-end
-
--- solarized colors
-if user.theme.colorscheme == 'solarized' then
+elseif user.theme.colorscheme == 'solarized' then
   colors = {
     bg = '#073642',
     fg = '#eee8d5',
@@ -54,9 +35,7 @@ if user.theme.colorscheme == 'solarized' then
     red = '#dc322f',
     grey = '#536162',
   }
-end
-
-if user.theme.colorscheme == 'gruvbox' then
+elseif user.theme.colorscheme == 'gruvbox' then
   colors = {
     bg = '#282828',
     fg = '#fbf1c7',
@@ -71,9 +50,7 @@ if user.theme.colorscheme == 'gruvbox' then
     red = '#cc241d',
     grey = '#282828',
   }
-end
-
-if user.theme.colorscheme == 'kanagawa' then
+elseif user.theme.colorscheme == 'kanagawa' then
   colors = {
     bg = '#16161D',
     fg = '#C8C093',
@@ -88,9 +65,7 @@ if user.theme.colorscheme == 'kanagawa' then
     red = '#E82424',
     grey = '#54546D',
   }
-end
-
-if user.theme.colorscheme == 'doom-one' then
+elseif user.theme.colorscheme == 'doom-one' then
   colors = {
     bg = '#282c34',
     fg = '#bbc2cf',
@@ -105,9 +80,7 @@ if user.theme.colorscheme == 'doom-one' then
     red = '#ff6c6b',
     grey = '#1B2229',
   }
-end
-
-if user.theme.colorscheme == 'darkplus' then
+elseif user.theme.colorscheme == 'darkplus' then
   colors = {
     bg = '#1E1E1E',
     fg = '#D4D4D4',
@@ -122,9 +95,7 @@ if user.theme.colorscheme == 'darkplus' then
     red = '#F44747',
     grey = '#383838',
   }
-end
-
-if user.theme.colorscheme == 'onedarker' then
+elseif user.theme.colorscheme == 'onedarker' then
   colors = {
     bg = '#1E232A',
     fg = '#abb2bf',
@@ -136,6 +107,21 @@ if user.theme.colorscheme == 'onedarker' then
     violet = '#C678DD',
     magenta = '#D16D9E',
     blue = '#61AFEF',
+    red = '#e06c75',
+    grey = '#383838',
+  }
+else
+  colors = {
+    bg = '#282c34',
+    fg = '#abb2bf',
+    yellow = '#e5c07b',
+    cyan = '#56b6c2',
+    darkblue = '#223E55',
+    green = '#98c379',
+    orange = '#d19a66',
+    violet = '#c678dd',
+    magenta = '#D16D9E',
+    blue = '#61afef',
     red = '#e06c75',
     grey = '#383838',
   }
