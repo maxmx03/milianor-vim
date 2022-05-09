@@ -8,7 +8,7 @@ elseif theme.colorscheme == 'solarized' then
   require('theme.colorschemes.solarized')
 elseif theme.colorscheme == 'kanagawa' then
   require('theme.colorschemes.kanagawa')
-elseif theme.colorscheme == 'onedarkpro' then
+elseif theme.colorscheme == 'onedarker' then
   require('theme.colorschemes.onedarker')
 else
   require('theme.colorschemes.darkplus')
