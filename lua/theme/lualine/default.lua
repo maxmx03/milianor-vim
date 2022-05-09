@@ -1,7 +1,17 @@
-require('lualine').setup({
+local function set_theme()
+  if user.theme.colorscheme == 'doom-one' then
+    return 'onedarker'
+  end
+
+  return user.theme.colorscheme
+end
+
+local lualine = require('lualine')
+
+lualine.setup({
   options = {
     icons_enabled = true,
-    theme = user.theme.colorscheme,
+    theme = set_theme(),
     component_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
     disabled_filetypes = {},
