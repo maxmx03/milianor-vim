@@ -110,6 +110,23 @@ elseif user.theme.colorscheme == 'onedarker' then
     red = '#e06c75',
     grey = '#383838',
   }
+elseif user.theme.colorscheme == 'dracula' then
+  local dracula_colors = require('dracula').colors()
+
+  colors = {
+    bg = dracula_colors.bg,
+    fg = dracula_colors.fg,
+    yellow = dracula_colors.yellow,
+    cyan = dracula_colors.cyan,
+    darkblue = dracula_colors.selection,
+    green = dracula_colors.green,
+    orange = dracula_colors.orange,
+    violet = dracula_colors.purple,
+    magenta = dracula_colors.pink,
+    blue = dracula_colors.cyan,
+    red = dracula_colors.red,
+    grey = dracula_colors.menu,
+  }
 else
   colors = {
     bg = '#282c34',

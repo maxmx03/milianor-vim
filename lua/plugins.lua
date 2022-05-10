@@ -25,6 +25,7 @@ packer.startup(function(use)
     'ellisonleao/gruvbox.nvim',
     'olimorris/onedarkpro.nvim',
     'NTBBloodbath/doom-one.nvim',
+    'Mofiqul/dracula.nvim',
     {
       'weilbith/nvim-code-action-menu',
       cmd = 'CodeActionMenu',

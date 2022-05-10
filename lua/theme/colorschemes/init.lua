@@ -10,6 +10,10 @@ elseif theme.colorscheme == 'kanagawa' then
   require('theme.colorschemes.kanagawa')
 elseif theme.colorscheme == 'onedarker' then
   require('theme.colorschemes.onedarker')
+elseif theme.colorscheme == 'gruvbox' then
+  require('theme.colorschemes.gruvbox')
+elseif theme.colorscheme == 'dracula' then
+  require('theme.colorschemes.dracula')
 else
   require('theme.colorschemes.darkplus')
 end
