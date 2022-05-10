@@ -8,11 +8,8 @@ if not success then
   return
 end
 
--- You can place your custom config bellow or to go lua/user folder to customize
--- ex:
---
 -- lua/user/theme.lua
--- user.theme.colorscheme = 'dracula' -- tokyonight, onedarker, darkplus, solarized, kanagawa, gruvbox, doom-one, onedarkpro, dracula
+-- user.theme.colorscheme = 'kanagawa' -- tokyonight, onedarker, darkplus, solarized, kanagawa, gruvbox, doom-one, onedarkpro, dracula
 -- user.theme.transparent = false
 -- user.theme.lualine = 'bubbles' -- default, evil_lualine, bubbles, slanted
 -- user.theme.style = 'night' -- tokyonight: night, storm
@@ -20,13 +17,36 @@ end
 -- user.theme.italic_comments = true
 -- user.theme.italic_keywords = true
 -- user.theme.italic_functions = false
--- user.theme.italic_variables = f
+-- user.theme.italic_variables = false
+--
+-- lua/user/langs
+-- user.langs = 'all'
+--
+-- lua/user/formatting
+-- user.formating = {
+--   'prettier',
+--   'stylua',
+-- }
+--
+-- lua/user/diagnostics
+-- user.diagnostics = {
+-- 'eslint',
+-- }
 --
 -- lua/user/servers.lua
 -- user.servers = {
---   'pyright',
+--   'pylsp',
 --   'tsserver',
---   'sumneko_lua'
+--   'sumneko_lua',
+--   'prismals',
+--   'graphql',
+--   'cssls',
+--   'html',
+--   'vuels',
+--   'volar',
+--   'emmet_ls',
+--   'tailwindcss',
+--   'svelte',
 -- }
 
 require('theme.colorschemes.init')

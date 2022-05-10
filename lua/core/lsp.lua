@@ -33,41 +33,45 @@ table.insert(runtime_path, 'lua/?/init.lua')
 
 local servers = user.servers
 for _, lsp in pairs(servers) do
-  require('lspconfig')[lsp].setup({
+  local config = {
     on_attach = on_attach,
     capabilities = capabilities,
     flags = {
       -- This will be the default in neovim 0.7+
       debounce_text_changes = 150,
     },
-  })
-end
+  }
 
-lspconfig.sumneko_lua.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
-  flags = {
-    -- This will be the default in neovim 0.7+
-    debounce_text_changes = 150,
-  },
-  settings = {
-    Lua = {
-      runtime = {
-        version = 'LuaJIT',
-        path = runtime_path,
+  if lsp == 'sumneko_lua' then
+    config = {
+      on_attach = on_attach,
+      capabilities = capabilities,
+      flags = {
+        -- This will be the default in neovim 0.7+
+        debounce_text_changes = 150,
       },
-      diagnostics = {
-        globals = { 'vim' },
+      settings = {
+        Lua = {
+          runtime = {
+            version = 'LuaJIT',
+            path = runtime_path,
+          },
+          diagnostics = {
+            globals = { 'vim' },
+          },
+          workspace = {
+            library = vim.api.nvim_get_runtime_file('', true),
+          },
+          telemetry = {
+            enable = false,
+          },
+        },
       },
-      workspace = {
-        library = vim.api.nvim_get_runtime_file('', true),
-      },
-      telemetry = {
-        enable = false,
-      },
-    },
-  },
-})
+    }
+  end
+
+  lspconfig[lsp].setup(config)
+end
 
 dartls.setup({
   widget_guides = {
