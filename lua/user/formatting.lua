@@ -82,7 +82,7 @@ user.formating = {
   -- 'standardrb',
   -- 'stylelint',
   -- 'styler',
-  -- 'stylua',
+  'stylua',
   -- 'surface',
   -- 'swiftformat',
   -- 'taplo',
