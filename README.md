@@ -1,39 +1,49 @@
-# Milianor Vim
+# Milianor-vim
 
-What is MilianorVim? MilianorVim is a configuration for Neovim with alot of plugins, why use MilianorVim? 
-well, you dont need to config neovim or search for plugins, you know is alot of work to do, so you can just let me to do this for you.A
+## Preview
+
 <img src="./screenshots/1.png" />
-<hr />
 <img src="./screenshots/2.png" />
-<hr />
 <img src="./screenshots/3.png" />
+<img src="./screenshots/4.png" />
 
-### Wiki
-
-All the instructions and keymapping was moved to the [wiki](https://github.com/maxmx03/milianor-vim/wiki)
-
-### Quick Start
-
-linux/macos
-
+## Quick Start
 ```
-git clone https://github.com/maxmx03/milianor-vim ~/.config/nvim
-nvim
+git clone https://github.com/maxmx03/milianor-vim.git ~/.config/nvim
 ```
 
-windows
+## Wiki
 
-```
-git clone https://github.com/maxmx03/milianor-vim $env:LOCALAPPDATA\nvim
-nvim
-```
+For more instructions: [Wiki](https://github.com/maxmx03/milianor-vim/wiki)
 
-### Other tools to use alongside milianor-vim (optional)
+## Plugins
+[LSP](https://github.com/neovim/nvim-lspconfig)
+[LSP Installer](https://github.com/williamboman/nvim-lsp-installer)
+[LSP Signature](https://github.com/ray-x/lsp_signature.nvim)
+[Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+[Tree](https://github.com/kyazdani42/nvim-tree.lua)
+[Telescope](https://github.com/nvim-telescope/telescope.nvim)
+[Nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+[Friendly-Snippets]()https://github.com/rafamadriz/friendly-snippets
+[Diffview](https://github.com/sindrets/diffview.nvim)
+[Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+and more...
 
-- [Kitty](https://sw.kovidgoyal.net/kitty/)
-- [Alacrity](https://github.com/alacritty/alacritty)
-- [Fish](https://fishshell.com/)
-- [Tmux](https://github.com/tmux/tmux)
+## Available Themes
+[Tokyonight](https://github.com/folke/tokyonight.nvim)
+[Kanagawa](https://github.com/rebelot/kanagawa.nvim)
+[Solarized](https://github.com/maxmx03/solarized.nvim)
+[Gruvbox](https://github.com/morhetz/gruvbox)
+[Onedarkpro](https://github.com/olimorris/onedarkpro.nvim)
+[Onedarker by LunarVim ](https://github.com/LunarVim/onedarker.nvim)
+[DarkPlus by LunarVim ](https://github.com/LunarVim/darkplus.nvim)
+[Doom-one by Doom-nvim ](https://github.com/NTBBloodbath/doom-one.nvim)
+
+## Recommendations
+[Alacritty](https://github.com/alacritty/alacritty)
+[Kitty](https://github.com/kovidgoyal/kitty)
+[Fish](https://github.com/fish-shell/fish-shell)
+[Tmux](https://github.com/tmux/tmux)
 
 ### License
 

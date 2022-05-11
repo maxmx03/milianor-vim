@@ -1,4 +1,4 @@
-user.theme.colorscheme = 'onedarkpro' -- tokyonight, onedarker, darkplus, solarized, kanagawa, gruvbox, doom-one, onedarkpro
+user.theme.colorscheme = 'tokyonight' -- tokyonight, onedarker, darkplus, solarized, kanagawa, gruvbox, doom-one, onedarkpro
 user.theme.transparent = false
 user.theme.lualine = 'evil_lualine' -- default, evil_lualine, bubbles, slanted
 user.theme.style = 'night' -- tokyonight: night, storm
