@@ -6,7 +6,6 @@ packer.startup(function(use)
     'wbthomason/packer.nvim',
     'neovim/nvim-lspconfig',
     'windwp/nvim-ts-autotag',
-    'glepnir/dashboard-nvim',
     'rcarriga/nvim-notify',
     'williamboman/nvim-lsp-installer',
     'numToStr/Comment.nvim',
@@ -26,6 +25,7 @@ packer.startup(function(use)
     'olimorris/onedarkpro.nvim',
     'NTBBloodbath/doom-one.nvim',
     'Mofiqul/dracula.nvim',
+    'goolord/alpha-nvim',
     {
       'weilbith/nvim-code-action-menu',
       cmd = 'CodeActionMenu',

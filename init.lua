@@ -32,7 +32,7 @@ end
 -- user.diagnostics = {
 --   'eslint',
 -- }
---
+
 -- lua/user/servers.lua
 -- user.servers = {
 --   'pylsp',

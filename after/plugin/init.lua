@@ -5,12 +5,12 @@ if not packer_done then
 end
 
 local success, result = pcall(function()
+  require(plugins_folder .. 'alpha')
   require(plugins_folder .. 'autopairs')
   require(plugins_folder .. 'autotag')
   require(plugins_folder .. 'bufferline')
   require(plugins_folder .. 'cmp')
   require(plugins_folder .. 'colorizer')
-  require(plugins_folder .. 'dashboard')
   require(plugins_folder .. 'devicons')
   require(plugins_folder .. 'diffview')
   require(plugins_folder .. 'gitsigns')
