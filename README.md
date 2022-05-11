@@ -26,7 +26,7 @@ For more instructions: [Wiki](https://github.com/maxmx03/milianor-vim/wiki)
 - [Nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [Friendly-Snippets](https://github.com/rafamadriz/friendly-snippets)
 - [Diffview](https://github.com/sindrets/diffview.nvim)
--[Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+- [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - and more...
 
 ## Available Themes
