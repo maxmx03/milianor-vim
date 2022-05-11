@@ -6,58 +6,12 @@ end
 keymap('<F2>', ':update<cr>') -- save file
 keymap('<F3>', ':quit!<cr>') -- exit neovim
 
--- NVIM-TREE
-keymap('<space>n', ':NvimTreeToggle<cr>') -- open file explorer
-
--- TELESCOPE
-keymap('<space>ff', ':Telescope find_files<cr>') -- find files
-keymap('<space>fg', ':Telescope live_grep<cr>') -- find character
-keymap('<space>fb', ':Telescope buffers<cr>') -- find buffers
-keymap('<space>fh', ':Telescope help_tag<cr>') -- help tags
-
--- BUFFERLINE
-keymap('<space>]', ':BufferLineCycleNext<cr>') -- move to the next tab
-keymap('<space>[', ':BufferLineCyclePrev<cr>') -- move to previous tab
-keymap('<space>x', ':BufferLinePickClose<cr>') -- close the selected tab
-keymap('<space>l', ':BufferLineCloseLeft<cr>') -- close all left tabs
-keymap('<space>r', ':BufferLineCloseRight<cr>') -- close all right tabs
-
 -- LSP SAGA
-keymap('<space>sr', ':Lspsaga rename<cr>') -- rename character
-keymap('<space>sc', ':Lspsaga code_action<cr>') -- code action
 keymap('ca', ':Lspsaga code_action<cr>') -- code action
-keymap('<space>C', ':Lspsaga range_code_action<cr>') -- range code action
-keymap('<space>sh', ':Lspsaga signature_help<cr>') -- signature help
 keymap('K', ':Lspsaga hover_doc<cr>') -- hover doc
-keymap('<space>sl', ':Lspsaga show_line_diagnostics<cr>') -- show line diagnostic
-keymap('<space>s[', ':Lspsaga diagnostic_jump_next<cr>') -- jump next diagnostic
-keymap('<space>s]', ':Lspsaga diagnostic_jump_prev<cr>') -- jump prev diagnostic
 
 -- INTEGRATED TERMINAL
-keymap('<space>tt', ':ToggleTerm direction=float<cr>')
 keymap('<esc>', [[<C-\><C-n>]], 't', { noremap = true, silent = true }) -- exit the terminal
-
--- GIT
-keymap('<space>gs', ':Gitsigns stage_hunk<cr>') -- stage hunk
-keymap('<space>gr', ':Gitsigns reset_h  unk<cr>') -- reset hunk
-keymap('<space>gp', ':Gitsigns preview_hunk<cr>') -- preview hunk
-keymap('<space>gd', ':Gitsigns diffthis<cr>') -- toggle local diff
-keymap('<space>gD', ':DiffviewOpen<cr>') -- open project diff
-keymap('<space>gc', ':DiffviewClose<cr>') -- close project diff
-keymap('<space>gb', ':Gitsigns toggle_current_line_blame<cr>') -- toggle blame
-
--- VCOLOR
-keymap('<space>cr', ':VCoolor<cr>') -- hash color insertion
-keymap('<space>cg', ':VCoolIns r<cr>') -- rgb color insertion
-keymap('<space>ch', ':VCoolIns h<cr>') -- hsl color insertion
-keymap('<space>cb', ':VCoolIns ra<cr>') -- rgba color insertion
-
--- FLUTTER
-keymap('<space>mr', ':FlutterRun<cr>') -- flutter run
-keymap('<space>mR', ':FlutterHotRestart<cr>') -- flutter restart
-keymap('<space>mq', ':FlutterQuit<cr>') -- flutter quit
-keymap('<space>mv', ':FlutterVisualDebug<cr>') -- flutter visual debug
-keymap('<space>mo', ':FlutterOutlineToggle<cr') -- flutter ooutline debug
 
 -- COMMENT
 keymap(
@@ -67,3 +21,76 @@ keymap(
   { expr = true, noremap = true }
 )
 keymap('<space>cc', '<Plug>(comment_toggle_linewise_visual)', 'x')
+
+user.keymapping = {
+
+  -- NVIM-TREE
+  n = { ':NvimTreeToggle<cr> ', 'Open tree' },
+
+  -- TELESCOPE
+  f = {
+    name = 'TELESCOPE',
+    f = { ':Telescope find_files<cr>', 'Find file' },
+    g = { ':Telescope live_grep<cr>', 'Find character' },
+    b = { ':Telescope buffers<cr>', 'Find buffers' },
+    h = { ':Telescope help_tag<cr>', 'Help tags' },
+  },
+
+  -- BUFFERLINE
+  [']'] = { ':BufferLineCycleNext<cr>', 'Next tab' },
+  ['['] = { ':BufferLineCyclePrev<cr>', 'Previous tab' },
+  x = { ':BufferLinePickClose<cr>', 'Close tab' },
+  l = { ':BufferLineCloseLeft<cr>', 'Close all left tabs' },
+  r = { ':BufferLineCloseRight<cr>', 'Close all right tabs' },
+
+  -- LSP SAGA
+  s = {
+    name = 'LSP SAGA',
+    r = { ':Lspsaga rename<cr>', 'Rename character' },
+    c = { ':Lspsaga code_action<cr>', 'Code Action' },
+    C = { ':Lspsaga range_code_action<cr>', 'Range Code Action' },
+    k = { ':Lspsaga hover_doc<cr>', 'Hover Doc' },
+    h = { ':Lspsaga signature_help<cr>', 'Signature Help' },
+    l = { ':Lspsaga show_line_diagnostics<cr>', 'Show line diagnostic' },
+    [']'] = { ':Lspsaga diagnostic_jump_next<cr>', 'Next diagnostic' },
+    ['['] = { ':Lspsaga diagnostic_jump_prev<cr>', 'Prev diagnostic' },
+  },
+
+  -- INTEGRATED TERMINAL
+  t = {
+    name = 'INTEGRATED TERMINAL',
+    t = { ':ToggleTerm direction=float<cr>' },
+    x = { [[<C-\><C-n>]], 'Close terminal' },
+  },
+
+  -- GIT
+  g = {
+    name = 'GIT',
+    s = { ':Gitsigns stage_hunk<cr>', 'Stage hunk' },
+    r = { ':Gitsigns reset_h  unk<cr>', 'Reset hunk' },
+    p = { ':Gitsigns preview_hunk<cr>', 'Preview hunk' },
+    d = { ':Gitsigns diffthis<cr>', 'Toggle local diff' },
+    D = { ':DiffviewOpen<cr>', 'Open project diff' },
+    c = { ':DiffviewClose<cr>', 'Close project diff' },
+    b = { ':Gitsigns toggle_current_line_blame<cr>', 'Toggle blame' },
+  },
+
+  -- VCOLOR
+  c = {
+    name = 'VCOLOR',
+    r = { ':VCoolor<cr>', 'HASH color' },
+    g = { ':VCoolIns r<cr>', 'RGB color' },
+    h = { ':VCoolIns h<cr>', 'HSL color' },
+    b = { ':VCoolIns ra<cr>', 'RGBA color' },
+  },
+
+  -- FLUTTER
+  m = {
+    name = 'FLUTTER',
+    r = { ':FlutterRun<cr>', 'Flutter run' },
+    R = { ':FlutterHotRestart<cr>', 'Flutter restart' },
+    q = { ':FlutterQuit<cr>', 'Flutter quit' },
+    v = { ':FlutterVisualDebug<cr>', 'Flutter visual debug' },
+    o = { ':FlutterOutlineToggle<cr>', 'Flutter outline debug' },
+  },
+}

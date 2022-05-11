@@ -3,6 +3,7 @@ user.servers = {}
 user.theme = {}
 user.formating = {}
 user.diagnostics = {}
+user.keymapping = {}
 user.langs = 'all'
 
 require('user.theme')
