@@ -24,6 +24,9 @@ keymap('<space>cc', '<Plug>(comment_toggle_linewise_visual)', 'x')
 
 user.keymapping = {
 
+  -- ALPHA
+  a = { ':Alpha<cr>', 'Open startify' },
+
   -- NVIM-TREE
   n = { ':NvimTreeToggle<cr> ', 'Open tree' },
 
