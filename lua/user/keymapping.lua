@@ -60,7 +60,6 @@ user.keymapping = {
   t = {
     name = 'INTEGRATED TERMINAL',
     t = { ':ToggleTerm direction<cr>', 'Open Terminal' },
-    x = { [[<C-\><C-n>]], 'Close terminal' },
   },
 
   -- GIT
