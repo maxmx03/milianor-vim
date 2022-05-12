@@ -76,6 +76,10 @@ ins_left({
 ins_left({
   -- mode component
   function()
+    if user.theme.colorscheme ~= 'doom-one' then
+      return ''
+    end
+
     return ''
   end,
   color = function()
@@ -160,7 +164,7 @@ ins_left({
     return msg
   end,
   icon = ' LSP:',
-  color = { fg = '#ffffff', gui = 'bold' },
+  color = { fg = colors.fg, gui = 'bold' },
 })
 
 -- Add components to right sections
