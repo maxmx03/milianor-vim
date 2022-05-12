@@ -1,7 +1,7 @@
 user = {}
 user.servers = {}
 user.theme = {}
-user.formating = {}
+user.formatting = {}
 user.diagnostics = {}
 user.keymapping = {}
 user.langs = 'all'

@@ -23,14 +23,15 @@ end
 -- user.langs = 'all'
 
 -- lua/user/formatting
--- user.formating = {
+-- user.formatting = {
 --   'prettier',
 --   'stylua',
 -- }
-
+--
 -- lua/user/diagnostics
 -- user.diagnostics = {
 --   'eslint',
+--   'codespell',
 -- }
 
 -- lua/user/servers.lua

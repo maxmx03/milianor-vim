@@ -59,7 +59,7 @@ user.keymapping = {
   -- INTEGRATED TERMINAL
   t = {
     name = 'INTEGRATED TERMINAL',
-    t = { ':ToggleTerm direction=float<cr>' },
+    t = { ':ToggleTerm direction<cr>', 'Open Terminal' },
     x = { [[<C-\><C-n>]], 'Close terminal' },
   },
 
@@ -82,6 +82,17 @@ user.keymapping = {
     g = { ':VCoolIns r<cr>', 'RGB color' },
     h = { ':VCoolIns h<cr>', 'HSL color' },
     b = { ':VCoolIns ra<cr>', 'RGBA color' },
+  },
+
+  -- TROUBLE
+  e = {
+    name = 'TROUBLE',
+    e = { ':TroubleToggle<cr>', 'Toggle Trouble' },
+    w = { ':TroubleToggle workspace_diagnostics<cr>', 'Workspace diagnostics' },
+    d = { ':TroubleToggle document_diagnostics<cr>', 'Document diagnostics' },
+    q = { ':TroubleToggle quickfix<cr>', 'Quick fix' },
+    l = { ':TroubleToggle loclist<cr>', 'Loclist' },
+    R = { ':TroubleToggle lsp_references<cr>', 'Lsp references' },
   },
 
   -- FLUTTER

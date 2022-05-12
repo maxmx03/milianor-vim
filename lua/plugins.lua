@@ -16,6 +16,8 @@ packer.startup(function(use)
     'j-hui/fidget.nvim',
     'tami5/lspsaga.nvim',
     'folke/which-key.nvim',
+    'folke/trouble.nvim',
+    'goolord/alpha-nvim',
     'LunarVim/onedarker.nvim',
     'LunarVim/darkplus.nvim',
     'folke/tokyonight.nvim',
@@ -25,7 +27,6 @@ packer.startup(function(use)
     'olimorris/onedarkpro.nvim',
     'NTBBloodbath/doom-one.nvim',
     'Mofiqul/dracula.nvim',
-    'goolord/alpha-nvim',
     {
       'weilbith/nvim-code-action-menu',
       cmd = 'CodeActionMenu',
