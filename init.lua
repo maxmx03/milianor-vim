@@ -9,9 +9,9 @@ if not success then
 end
 
 -- lua/user/theme.lua
--- user.theme.colorscheme = 'kanagawa' -- tokyonight, onedarker, darkplus, solarized, kanagawa, gruvbox, doom-one, onedarkpro, dracula
+-- user.theme.colorscheme = 'kanagawa' -- tokyonight, solarized, kanagawa
 -- user.theme.transparent = false
--- user.theme.lualine = 'bubbles' -- default, evil_lualine, bubbles, slanted
+-- user.theme.lualine = 'evil_lualine' -- default, evil_lualine, bubbles, slanted
 -- user.theme.style = 'night' -- tokyonight: night, storm
 -- user.theme.sidebar = 'left'
 -- user.theme.italic_comments = true
@@ -27,13 +27,13 @@ end
 --   'prettier',
 --   'stylua',
 -- }
---
+
 -- lua/user/diagnostics
 -- user.diagnostics = {
 --   'eslint',
 --   'codespell',
 -- }
-
+--
 -- lua/user/servers.lua
 -- user.servers = {
 --   'pylsp',

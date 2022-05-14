@@ -3,9 +3,6 @@
 ## Preview
 
 <img src="./screenshots/1.png" />
-<img src="./screenshots/2.png" />
-<img src="./screenshots/3.png" />
-<img src="./screenshots/4.png" />
 
 ## Quick Start
 ```
@@ -34,11 +31,6 @@ For more instructions: [Wiki](https://github.com/maxmx03/milianor-vim/wiki)
 - [Tokyonight](https://github.com/folke/tokyonight.nvim)
 - [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
 - [Solarized](https://github.com/maxmx03/solarized.nvim)
-- [Gruvbox](https://github.com/morhetz/gruvbox)
-- [Onedarkpro](https://github.com/olimorris/onedarkpro.nvim)
-- [Onedarker by LunarVim ](https://github.com/LunarVim/onedarker.nvim)
-- [DarkPlus by LunarVim ](https://github.com/LunarVim/darkplus.nvim)
-- [Doom-one by Doom-nvim ](https://github.com/NTBBloodbath/doom-one.nvim)
 
 ## Recommendations
 - [Alacritty](https://github.com/alacritty/alacritty)

@@ -1,6 +1,21 @@
 local colors = {}
 
-if user.theme.colorscheme == 'tokyonight' then
+if user.theme.colorscheme == 'kanagawa' then
+  colors = {
+    bg = '#16161D',
+    fg = '#C8C093',
+    yellow = '#938056',
+    cyan = '#6A9589',
+    darkblue = '#7E9CD8',
+    green = '#98c379',
+    orange = '#FFA066',
+    violet = '#938AA9',
+    magenta = '#D16D9E',
+    blue = '#658594',
+    red = '#E82424',
+    grey = '#54546D',
+  }
+elseif user.theme.colorscheme == 'tokyonight' then
   colors = {
     bg = '#24283b',
     fg = '#c0caf5',
@@ -20,7 +35,7 @@ if user.theme.colorscheme == 'tokyonight' then
     colors.bg = '#1f2335'
     colors.fg = '#a9b1d6'
   end
-elseif user.theme.colorscheme == 'solarized' then
+else
   colors = {
     bg = '#073642',
     fg = '#eee8d5',
@@ -34,113 +49,6 @@ elseif user.theme.colorscheme == 'solarized' then
     blue = '#268bd2',
     red = '#dc322f',
     grey = '#536162',
-  }
-elseif user.theme.colorscheme == 'gruvbox' then
-  colors = {
-    bg = '#282828',
-    fg = '#fbf1c7',
-    yellow = '#d79921',
-    cyan = '#689d6a',
-    darkblue = '#223E55',
-    green = '#98C379',
-    orange = '#d65d0e',
-    violet = '#d3869b',
-    magenta = '#D16D9E',
-    blue = '#458588',
-    red = '#cc241d',
-    grey = '#282828',
-  }
-elseif user.theme.colorscheme == 'kanagawa' then
-  colors = {
-    bg = '#16161D',
-    fg = '#C8C093',
-    yellow = '#938056',
-    cyan = '#6A9589',
-    darkblue = '#7E9CD8',
-    green = '#98c379',
-    orange = '#FFA066',
-    violet = '#938AA9',
-    magenta = '#D16D9E',
-    blue = '#658594',
-    red = '#E82424',
-    grey = '#54546D',
-  }
-elseif user.theme.colorscheme == 'doom-one' then
-  colors = {
-    bg = '#282c34',
-    fg = '#bbc2cf',
-    yellow = '#ECBE7B',
-    cyan = '#46D9FF',
-    darkblue = '#4e4f67',
-    green = '#98be65',
-    orange = '#da8548',
-    violet = '#a9a1e1',
-    magenta = '#c678dd',
-    blue = '#51afef',
-    red = '#ff6c6b',
-    grey = '#1B2229',
-  }
-elseif user.theme.colorscheme == 'darkplus' then
-  colors = {
-    bg = '#1E1E1E',
-    fg = '#D4D4D4',
-    yellow = '#DCDCAA',
-    cyan = '#4EC9B0',
-    darkblue = '#223E55',
-    green = '#6A9955',
-    orange = '#CE9178',
-    violet = '#C586C0',
-    magenta = '#D16D9E',
-    blue = '#569CD6',
-    red = '#F44747',
-    grey = '#383838',
-  }
-elseif user.theme.colorscheme == 'onedarker' then
-  colors = {
-    bg = '#1E232A',
-    fg = '#abb2bf',
-    yellow = '#E5C07B',
-    cyan = '#56B6C2',
-    darkblue = '#223E55',
-    green = '#98C379',
-    orange = '#CE9178',
-    violet = '#C678DD',
-    magenta = '#D16D9E',
-    blue = '#61AFEF',
-    red = '#e06c75',
-    grey = '#383838',
-  }
-elseif user.theme.colorscheme == 'dracula' then
-  local dracula_colors = require('dracula').colors()
-
-  colors = {
-    bg = dracula_colors.bg,
-    fg = dracula_colors.fg,
-    yellow = dracula_colors.yellow,
-    cyan = dracula_colors.cyan,
-    darkblue = dracula_colors.selection,
-    green = dracula_colors.green,
-    orange = dracula_colors.orange,
-    violet = dracula_colors.purple,
-    magenta = dracula_colors.pink,
-    blue = dracula_colors.cyan,
-    red = dracula_colors.red,
-    grey = dracula_colors.menu,
-  }
-else
-  colors = {
-    bg = '#282c34',
-    fg = '#abb2bf',
-    yellow = '#e5c07b',
-    cyan = '#56b6c2',
-    darkblue = '#223E55',
-    green = '#98c379',
-    orange = '#d19a66',
-    violet = '#c678dd',
-    magenta = '#D16D9E',
-    blue = '#61afef',
-    red = '#e06c75',
-    grey = '#383838',
   }
 end
 

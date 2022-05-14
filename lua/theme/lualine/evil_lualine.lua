@@ -76,11 +76,7 @@ ins_left({
 ins_left({
   -- mode component
   function()
-    if user.theme.colorscheme ~= 'doom-one' then
-      return ''
-    end
-
-    return ''
+    return ''
   end,
   color = function()
     -- auto change color according to neovims mode
