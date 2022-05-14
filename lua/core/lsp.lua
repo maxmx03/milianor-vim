@@ -45,7 +45,25 @@ for _, lsp in pairs(servers) do
   if lsp == 'sumneko_lua' then
     local luadev = require('lua-dev')
 
-    config = luadev.setup({})
+    config = luadev.setup({
+      library = {
+        vimruntime = true, -- runtime path
+        types = true, -- full signature, docs and completion of vim.api, vim.treesitter, vim.lsp and others
+        plugins = true, -- installed opt or start plugins in packpath
+        -- you can also specify the list of plugins to make available as a workspace library
+        -- plugins = { "nvim-treesitter", "plenary.nvim", "telescope.nvim" },
+      },
+      runtime_path = false, -- enable this to get completion in require strings. Slow!
+      -- pass any additional options that will be merged in the final lsp config
+      lspconfig = {
+        on_attach = on_attach,
+        capabilities = capabilities,
+        flags = {
+          -- This will be the default in neovim 0.7+
+          debounce_text_changes = 150,
+        },
+      },
+    })
   end
 
   lspconfig[lsp].setup(config)
