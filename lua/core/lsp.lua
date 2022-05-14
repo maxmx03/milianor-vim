@@ -43,31 +43,9 @@ for _, lsp in pairs(servers) do
   }
 
   if lsp == 'sumneko_lua' then
-    config = {
-      on_attach = on_attach,
-      capabilities = capabilities,
-      flags = {
-        -- This will be the default in neovim 0.7+
-        debounce_text_changes = 150,
-      },
-      settings = {
-        Lua = {
-          runtime = {
-            version = 'LuaJIT',
-            path = runtime_path,
-          },
-          diagnostics = {
-            globals = { 'vim' },
-          },
-          workspace = {
-            library = vim.api.nvim_get_runtime_file('', true),
-          },
-          telemetry = {
-            enable = false,
-          },
-        },
-      },
-    }
+    local luadev = require('lua-dev')
+
+    config = luadev.setup({})
   end
 
   lspconfig[lsp].setup(config)

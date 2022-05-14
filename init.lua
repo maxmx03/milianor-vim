@@ -11,7 +11,7 @@ end
 -- lua/user/theme.lua
 -- user.theme.colorscheme = 'kanagawa' -- tokyonight, solarized, kanagawa
 -- user.theme.transparent = false
--- user.theme.lualine = 'evil_lualine' -- default, evil_lualine, bubbles, slanted
+-- user.theme.lualine = 'bubbles' -- default, evil_lualine, bubbles, slanted
 -- user.theme.style = 'night' -- tokyonight: night, storm
 -- user.theme.sidebar = 'left'
 -- user.theme.italic_comments = true
