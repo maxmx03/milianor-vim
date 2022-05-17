@@ -3,7 +3,7 @@
 -- MIT license, see LICENSE for more details.
 
 -- stylua: ignore
-local c = require('theme.lualine.colors')
+local c = require('theme.colors')
 
 local colors = {
   blue = c.blue,

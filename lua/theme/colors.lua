@@ -1,7 +1,5 @@
-local colors = {}
-
-if user.theme.colorscheme == 'kanagawa' then
-  colors = {
+local pallets = {
+  kanagawa = {
     bg = '#16161D',
     fg = '#C8C093',
     yellow = '#938056',
@@ -14,9 +12,8 @@ if user.theme.colorscheme == 'kanagawa' then
     blue = '#658594',
     red = '#E82424',
     grey = '#54546D',
-  }
-elseif user.theme.colorscheme == 'tokyonight' then
-  colors = {
+  },
+  tokyonight = {
     bg = '#24283b',
     fg = '#c0caf5',
     yellow = '#e0af68',
@@ -29,14 +26,8 @@ elseif user.theme.colorscheme == 'tokyonight' then
     blue = '#7aa2f7',
     red = '#f7768e',
     grey = '#394b70',
-  }
-
-  if user.theme.style == 'night' then
-    colors.bg = '#1f2335'
-    colors.fg = '#a9b1d6'
-  end
-else
-  colors = {
+  },
+  solarized = {
     bg = '#073642',
     fg = '#eee8d5',
     yellow = '#b58900',
@@ -49,7 +40,14 @@ else
     blue = '#268bd2',
     red = '#dc322f',
     grey = '#536162',
-  }
+  },
+}
+
+if user.theme.colorscheme == 'tokyonight' and user.theme.style == 'night' then
+  pallets[user.theme.colorscheme].bg = '#1f2335'
+  pallets[user.theme.colorscheme].fg = '#a9b1d6'
 end
+
+local colors = pallets[user.theme.colorscheme]
 
 return colors
