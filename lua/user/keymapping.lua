@@ -60,9 +60,9 @@ user.keymapping = {
   },
 
   -- INTEGRATED TERMINAL
-  t = {
+  i = {
     name = 'INTEGRATED TERMINAL',
-    t = { ':ToggleTerm direction<cr>', 'Open Terminal' },
+    i = { ':ToggleTerm direction<cr>', 'Open Terminal' },
   },
 
   -- GIT
@@ -95,6 +95,14 @@ user.keymapping = {
     q = { ':TroubleToggle quickfix<cr>', 'Quick fix' },
     l = { ':TroubleToggle loclist<cr>', 'Loclist' },
     R = { ':TroubleToggle lsp_references<cr>', 'Lsp references' },
+  },
+
+  t = {
+    name = 'TODO',
+    t = { ':TodoLocList<cr>', 'Location list to show all todos' },
+    q = { ':TodoQuickFix<cr>', 'Quickfix list to show all todos' },
+    e = { ':TodoTrouble<cr>', 'List all todos in trouble' },
+    f = { ':TodoTelescope<cr>', 'List all todos with Telescope' },
   },
 
   -- FLUTTER

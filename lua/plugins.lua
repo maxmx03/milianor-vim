@@ -18,6 +18,7 @@ packer.startup(function(use)
     'folke/which-key.nvim',
     'folke/trouble.nvim',
     'folke/lua-dev.nvim',
+    'folke/todo-comments.nvim',
     'goolord/alpha-nvim',
     'folke/tokyonight.nvim',
     'rebelot/kanagawa.nvim',
