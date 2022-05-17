@@ -4,7 +4,7 @@ user.theme = {}
 user.formatting = {}
 user.diagnostics = {}
 user.keymapping = {}
-user.langs = 'all'
+user.langs = nil
 
 require('user.theme')
 require('user.keymapping')
