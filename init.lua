@@ -25,7 +25,6 @@ end
 -- lua/user/formatting
 -- user.formatting = {
 --   'prettier',
---   'stylua',
 -- }
 
 -- lua/user/diagnostics

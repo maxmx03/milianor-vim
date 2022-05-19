@@ -30,7 +30,6 @@ user.keymapping = {
   -- NVIM-TREE
   n = { ':NvimTreeToggle<cr> ', 'Open tree' },
 
-  -- TELESCOPE
   f = {
     name = 'TELESCOPE',
     f = { ':Telescope find_files<cr>', 'Find file' },
@@ -46,7 +45,6 @@ user.keymapping = {
   l = { ':BufferLineCloseLeft<cr>', 'Close all left tabs' },
   r = { ':BufferLineCloseRight<cr>', 'Close all right tabs' },
 
-  -- LSP SAGA
   s = {
     name = 'LSP SAGA',
     r = { ':Lspsaga rename<cr>', 'Rename character' },
@@ -59,13 +57,11 @@ user.keymapping = {
     ['['] = { ':Lspsaga diagnostic_jump_prev<cr>', 'Prev diagnostic' },
   },
 
-  -- INTEGRATED TERMINAL
   i = {
     name = 'INTEGRATED TERMINAL',
     i = { ':ToggleTerm direction<cr>', 'Open Terminal' },
   },
 
-  -- GIT
   g = {
     name = 'GIT',
     s = { ':Gitsigns stage_hunk<cr>', 'Stage hunk' },
@@ -77,7 +73,6 @@ user.keymapping = {
     b = { ':Gitsigns toggle_current_line_blame<cr>', 'Toggle blame' },
   },
 
-  -- VCOLOR
   c = {
     name = 'VCOLOR',
     r = { ':VCoolor<cr>', 'HASH color' },
@@ -86,7 +81,6 @@ user.keymapping = {
     b = { ':VCoolIns ra<cr>', 'RGBA color' },
   },
 
-  -- TROUBLE
   e = {
     name = 'TROUBLE',
     e = { ':TroubleToggle<cr>', 'Toggle Trouble' },
@@ -105,8 +99,14 @@ user.keymapping = {
     f = { ':TodoTelescope<cr>', 'List all todos with Telescope' },
   },
 
-  -- FLUTTER
   m = {
+    name = 'MARKDOWN PREVIEW',
+    m = { ':MarkdownPreviewToggle', 'Toggle markdown preview' },
+    p = { ':MarkdownPreview<cr>', 'Open markdown preview' },
+    s = { ':MarkdownPreviewStop<cr>', 'Stop markdown preview' },
+  },
+
+  F = {
     name = 'FLUTTER',
     r = { ':FlutterRun<cr>', 'Flutter run' },
     R = { ':FlutterHotRestart<cr>', 'Flutter restart' },
