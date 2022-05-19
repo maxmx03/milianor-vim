@@ -20,6 +20,7 @@ packer.startup(function(use)
     'folke/lua-dev.nvim',
     'folke/todo-comments.nvim',
     'goolord/alpha-nvim',
+    'iamcco/markdown-preview.nvim',
     'folke/tokyonight.nvim',
     'rebelot/kanagawa.nvim',
     'maxmx03/solarized.nvim',
