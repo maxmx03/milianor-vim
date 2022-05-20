@@ -25,12 +25,13 @@ end
 -- lua/user/formatting
 -- user.formatting = {
 --   'prettier',
+--   'stylua',
 -- }
 
 -- lua/user/diagnostics
 -- user.diagnostics = {
 --   'eslint',
---   'codespell',
+--   'misspell',
 -- }
 
 -- lua/user/servers.lua
