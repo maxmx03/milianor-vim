@@ -101,7 +101,7 @@ user.keymapping = {
 
   m = {
     name = 'MARKDOWN PREVIEW',
-    m = { ':MarkdownPreviewToggle', 'Toggle markdown preview' },
+    m = { ':MarkdownPreviewToggle<cr>', 'Toggle markdown preview' },
     p = { ':MarkdownPreview<cr>', 'Open markdown preview' },
     s = { ':MarkdownPreviewStop<cr>', 'Stop markdown preview' },
   },
