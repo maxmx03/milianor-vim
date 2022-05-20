@@ -20,7 +20,6 @@ packer.startup(function(use)
     'folke/lua-dev.nvim',
     'folke/todo-comments.nvim',
     'goolord/alpha-nvim',
-    'iamcco/markdown-preview.nvim',
     'folke/tokyonight.nvim',
     'rebelot/kanagawa.nvim',
     'maxmx03/solarized.nvim',
@@ -31,6 +30,13 @@ packer.startup(function(use)
     {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate',
+    },
+    {
+      'iamcco/markdown-preview.nvim',
+      run = 'cd app && npm install', setup = function()
+        vim.g.mkdp_filetypes = { 'markdown' }
+      end,
+      ft = { 'markdown' }
     },
     {
       'KabbAmine/vCoolor.vim',
