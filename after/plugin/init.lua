@@ -28,6 +28,7 @@ local success, result = pcall(function()
   require(plugins_folder .. 'lightbulb')
   require(plugins_folder .. 'fidget')
   require(plugins_folder .. 'which-key')
+  require(plugins_folder .. 'winbar')
 end)
 
 if not success then
