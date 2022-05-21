@@ -23,6 +23,7 @@ packer.startup(function(use)
     'folke/tokyonight.nvim',
     'rebelot/kanagawa.nvim',
     'maxmx03/solarized.nvim',
+    'SmiteshP/nvim-gps',
     {
       'weilbith/nvim-code-action-menu',
       cmd = 'CodeActionMenu',
@@ -33,10 +34,11 @@ packer.startup(function(use)
     },
     {
       'iamcco/markdown-preview.nvim',
-      run = 'cd app && npm install', setup = function()
+      run = 'cd app && npm install',
+      setup = function()
         vim.g.mkdp_filetypes = { 'markdown' }
       end,
-      ft = { 'markdown' }
+      ft = { 'markdown' },
     },
     {
       'KabbAmine/vCoolor.vim',
