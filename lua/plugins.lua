@@ -24,6 +24,7 @@ packer.startup(function(use)
     'rebelot/kanagawa.nvim',
     'maxmx03/solarized.nvim',
     'SmiteshP/nvim-gps',
+    'justinmk/vim-sneak',
     {
       'weilbith/nvim-code-action-menu',
       cmd = 'CodeActionMenu',

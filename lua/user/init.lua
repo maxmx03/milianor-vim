@@ -5,6 +5,7 @@ user.formatting = {}
 user.diagnostics = {}
 user.keymapping = {}
 user.langs = nil
+user.luadev = false
 
 require('user.theme')
 require('user.keymapping')

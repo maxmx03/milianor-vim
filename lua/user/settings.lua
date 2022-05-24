@@ -8,7 +8,7 @@ vim.opt.smarttab = true -- inserts blanks on a <Tab> key (as per sw, ts and sts)
 vim.opt.tabstop = 2 -- size of a hard tabstop (ts).
 vim.opt.shiftwidth = 2 -- size of an indentation (sw).
 vim.opt.softtabstop = 0 -- number of spaces a <Tab> counts for. When 0, featuer is off (sts).
-vim.opt.expandtab = true -- always uses spaces instead of tab characters (et).
+vim.opt.expandtab = true -- always uses spaces ins;ead of tab characters (et).
 vim.opt.updatetime = 250 -- for lsp
 vim.opt.timeoutlen = 200 -- for which-key
 vim.opt.pumheight = 20
@@ -22,6 +22,8 @@ vim.g.python3_host_prog = '/usr/bin/python3.10'
 vim.o.termguicolors = true
 
 vim.cmd([[
+let g:sneak#prompt = "👣 "
+
 if has('python')
   set pyx=2
 elseif has('python3') 

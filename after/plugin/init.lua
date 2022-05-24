@@ -1,34 +1,38 @@
-local plugins_folder = 'core.'
-
 if not packer_done then
   return
 end
 
 local success, result = pcall(function()
-  require(plugins_folder .. 'alpha')
-  require(plugins_folder .. 'autopairs')
-  require(plugins_folder .. 'autotag')
-  require(plugins_folder .. 'bufferline')
-  require(plugins_folder .. 'cmp')
-  require(plugins_folder .. 'colorizer')
-  require(plugins_folder .. 'devicons')
-  require(plugins_folder .. 'diffview')
-  require(plugins_folder .. 'gitsigns')
-  require(plugins_folder .. 'lsp_installer')
-  require(plugins_folder .. 'lsp_signature')
-  require(plugins_folder .. 'lsp')
-  require(plugins_folder .. 'lualine')
-  require(plugins_folder .. 'trouble')
-  require(plugins_folder .. 'null-ls')
-  require(plugins_folder .. 'telescope')
-  require(plugins_folder .. 'todo_comments')
-  require(plugins_folder .. 'toggleterm')
-  require(plugins_folder .. 'tree')
-  require(plugins_folder .. 'treesitter')
-  require(plugins_folder .. 'lightbulb')
-  require(plugins_folder .. 'fidget')
-  require(plugins_folder .. 'which-key')
-  require(plugins_folder .. 'winbar')
+  local import = function(plugin)
+    local plugins_folder = 'core.'
+
+    require(plugins_folder .. plugin)
+  end
+
+  import('alpha')
+  import('autopairs')
+  import('autotag')
+  import('bufferline')
+  import('cmp')
+  import('colorizer')
+  import('devicons')
+  import('diffview')
+  import('gitsigns')
+  import('lsp_installer')
+  import('lsp_signature')
+  import('lsp')
+  import('lualine')
+  import('trouble')
+  import('null-ls')
+  import('telescope')
+  import('todo_comments')
+  import('toggleterm')
+  import('tree')
+  import('treesitter')
+  import('lightbulb')
+  import('fidget')
+  import('which-key')
+  import('winbar')
 end)
 
 if not success then

@@ -42,7 +42,7 @@ for _, lsp in pairs(servers) do
     },
   }
 
-  if lsp == 'sumneko_lua' then
+  if lsp == 'sumneko_lua' and user.luadev then
     local luadev = require('lua-dev')
 
     config = luadev.setup({

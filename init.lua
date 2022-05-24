@@ -9,6 +9,7 @@ if not success then
 end
 
 -- lua/user/theme.lua
+-- user.luadev = true
 -- user.theme.colorscheme = 'kanagawa' -- tokyonight, solarized, kanagawa
 -- user.theme.transparent = false
 -- user.theme.lualine = 'bubbles' -- default, evil_lualine, bubbles, slanted
@@ -27,14 +28,14 @@ end
 --   'prettier',
 --   'stylua',
 -- }
-
--- lua/user/diagnostics
+--
+-- -- lua/user/diagnostics
 -- user.diagnostics = {
 --   'eslint',
 --   'misspell',
 -- }
-
--- lua/user/servers.lua
+--
+-- -- lua/user/servers.lua
 -- user.servers = {
 --   'pylsp',
 --   'tsserver',
