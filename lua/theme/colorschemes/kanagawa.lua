@@ -1,6 +1,6 @@
 local kanagawa = require('kanagawa')
 local utils = require('utils')
-local theme = user.theme
+local theme = User.theme
 
 kanagawa.setup({
   undercurl = true, -- enable undercurls

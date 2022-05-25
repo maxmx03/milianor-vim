@@ -43,11 +43,11 @@ local pallets = {
   },
 }
 
-if user.theme.colorscheme == 'tokyonight' and user.theme.style == 'night' then
-  pallets[user.theme.colorscheme].bg = '#1f2335'
-  pallets[user.theme.colorscheme].fg = '#a9b1d6'
+if User.theme.colorscheme == 'tokyonight' and User.theme.style == 'night' then
+  pallets[User.theme.colorscheme].bg = '#1f2335'
+  pallets[User.theme.colorscheme].fg = '#a9b1d6'
 end
 
-local colors = pallets[user.theme.colorscheme]
+local colors = pallets[User.theme.colorscheme]
 
 return colors

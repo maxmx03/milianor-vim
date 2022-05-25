@@ -18,5 +18,5 @@ end
 
 null_ls.setup({
   debug = false,
-  sources = sources(user.formatting, user.diagnostics),
+  sources = sources(User.formatting, User.diagnostics),
 })

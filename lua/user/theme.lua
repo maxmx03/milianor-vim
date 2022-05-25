@@ -1,10 +1,10 @@
-user.theme.colorscheme = 'tokyonight' -- tokyonight, onedarker, darkplus, solarized, kanagawa, gruvbox, doom-one, onedarkpro
-user.theme.transparent = false
-user.theme.lualine = 'evil_lualine' -- default, evil_lualine, bubbles, slanted
-user.theme.style = 'night' -- tokyonight: night, storm
-user.theme.sidebar = 'left'
+User.theme.colorscheme = 'tokyonight' -- tokyonight, solarized, kanagawa
+User.theme.transparent = false
+User.theme.lualine = 'evil_lualine' -- default, evil_lualine, bubbles, slanted
+User.theme.style = 'night' -- tokyonight: night, storm
+User.theme.sidebar = 'left' -- right, left, bottom, top
 -- italic may not work on some colorscheme
-user.theme.italic_comments = true
-user.theme.italic_keywords = true
-user.theme.italic_functions = false
-user.theme.italic_variables = false
+User.theme.italic_comments = true
+User.theme.italic_keywords = true
+User.theme.italic_functions = false
+User.theme.italic_variables = false

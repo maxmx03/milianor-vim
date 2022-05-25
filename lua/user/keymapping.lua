@@ -22,7 +22,7 @@ keymap(
 )
 keymap('<space>cc', '<Plug>(comment_toggle_linewise_visual)', 'x')
 
-user.keymapping = {
+User.keymapping = {
 
   -- ALPHA
   a = { ':Alpha<cr>', 'Open startify' },

@@ -56,7 +56,7 @@ tree.setup({
     width = 30,
     height = 30,
     hide_root_folder = false,
-    side = user.theme.sidebar,
+    side = User.theme.sidebar,
     preserve_window_proportions = false,
     number = false,
     relativenumber = false,

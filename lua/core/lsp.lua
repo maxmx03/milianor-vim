@@ -31,7 +31,7 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 
-local servers = user.servers
+local servers = User.servers
 for _, lsp in pairs(servers) do
   local config = {
     on_attach = on_attach,
@@ -42,7 +42,7 @@ for _, lsp in pairs(servers) do
     },
   }
 
-  if lsp == 'sumneko_lua' and user.luadev then
+  if lsp == 'sumneko_lua' and User.luadev then
     local luadev = require('lua-dev')
 
     config = luadev.setup({

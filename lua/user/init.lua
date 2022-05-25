@@ -1,11 +1,11 @@
-user = {}
-user.servers = {}
-user.theme = {}
-user.formatting = {}
-user.diagnostics = {}
-user.keymapping = {}
-user.langs = nil
-user.luadev = false
+User = {}
+User.servers = {}
+User.theme = {}
+User.formatting = {}
+User.diagnostics = {}
+User.keymapping = {}
+User.langs = nil
+User.luadev = true
 
 require('user.theme')
 require('user.keymapping')

@@ -1,42 +1,47 @@
+Mvim = {} --{{{
+Mvim.errors = false
+Mvim.packer_bootstrap = nil
+
 local success = pcall(function()
-  require('plugins')
   require('user.init')
-  vim.notify = require('notify')
+  require('bootstrap')
+  require('plugins')
 end)
 
 if not success then
+  Mvim.errors = true
   return
-end
+end --}}}
 
 -- lua/user/theme.lua
--- user.luadev = true
--- user.theme.colorscheme = 'kanagawa' -- tokyonight, solarized, kanagawa
--- user.theme.transparent = false
--- user.theme.lualine = 'bubbles' -- default, evil_lualine, bubbles, slanted
--- user.theme.style = 'night' -- tokyonight: night, storm
--- user.theme.sidebar = 'left'
--- user.theme.italic_comments = true
--- user.theme.italic_keywords = true
--- user.theme.italic_functions = false
--- user.theme.italic_variables = false
+-- User.luadev = true
+-- User.theme.colorscheme = 'kanagawa' -- tokyonight, solarized, kanagawa
+-- User.theme.transparent = false
+-- User.theme.lualine = 'bubbles' -- default, evil_lualine, bubbles, slanted
+-- -- user.theme.style = 'night' -- tokyonight: night, storm
+-- User.theme.sidebar = 'left' -- left, right, bottom, top
+-- User.theme.italic_comments = true
+-- User.theme.italic_keywords = true
+-- User.theme.italic_functions = false
+-- User.theme.italic_variables = false
 
 -- lua/user/langs
 -- user.langs = 'all'
 
 -- lua/user/formatting
--- user.formatting = {
+-- User.formatting = {
 --   'prettier',
 --   'stylua',
 -- }
 --
 -- -- lua/user/diagnostics
--- user.diagnostics = {
+-- User.diagnostics = {
 --   'eslint',
 --   'misspell',
 -- }
 --
 -- -- lua/user/servers.lua
--- user.servers = {
+-- User.servers = {
 --   'pylsp',
 --   'tsserver',
 --   'sumneko_lua',
@@ -50,5 +55,3 @@ end
 --   'tailwindcss',
 --   'svelte',
 -- }
-
-require('theme.colorschemes.init')

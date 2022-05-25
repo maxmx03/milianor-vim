@@ -1,4 +1,3 @@
-require('bootstrap')
 local packer = require('packer')
 
 packer.startup(function(use)
@@ -93,7 +92,7 @@ packer.startup(function(use)
       },
     },
   })
-  if packer_bootstrap then
+  if Mvim.packer_bootstrap then
     require('packer').sync()
   end
 end)

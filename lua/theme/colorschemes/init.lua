@@ -1,3 +1,3 @@
-require('theme.colorschemes.' .. user.theme.colorscheme)
+require('theme.colorschemes.' .. User.theme.colorscheme)
 
-vim.cmd(string.format('colorscheme %s', user.theme.colorscheme))
+vim.cmd(string.format('colorscheme %s', User.theme.colorscheme))

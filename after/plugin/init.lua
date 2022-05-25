@@ -1,4 +1,4 @@
-if not packer_done then
+if Mvim.errors then
   return
 end
 
