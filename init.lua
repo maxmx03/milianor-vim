@@ -18,7 +18,7 @@ end
 -- User.theme.colorscheme = 'kanagawa' -- tokyonight, solarized, kanagawa
 -- User.theme.transparent = false
 -- User.theme.lualine = 'bubbles' -- default, evil_lualine, bubbles, slanted
--- -- user.theme.style = 'night' -- tokyonight: night, storm
+-- User.theme.style = 'night' -- tokyonight: night, storm
 -- User.theme.sidebar = 'left' -- left, right, bottom, top
 -- User.theme.italic_comments = true
 -- User.theme.italic_keywords = true
@@ -26,7 +26,35 @@ end
 -- User.theme.italic_variables = false
 
 -- TODO: lua/user/langs
--- user.langs = 'all'
+-- User.langs = {
+--   'bash',
+--   'c',
+--   'c_sharp',
+--   'cpp',
+--   'css',
+--   'dart',
+--   'fish',
+--   'go',
+--   'graphql',
+--   'html',
+--   'java',
+--   'javascript',
+--   'json',
+--   'kotlin',
+--   'lua',
+--   'markdown',
+--   'php',
+--   'prisma',
+--   'python',
+--   'regex',
+--   'scss',
+--   'svelte',
+--   'tsx',
+--   'typescript',
+--   'vim',
+--   'vue',
+--   'yaml',
+-- }
 
 -- TODO: lua/user/formatting
 -- User.formatting = {
@@ -37,9 +65,8 @@ end
 -- TODO: lua/user/diagnostics
 -- User.diagnostics = {
 --   'eslint',
---   'misspell',
 -- }
---
+
 -- TODO: lua/user/servers
 -- User.servers = {
 --   'pylsp',
