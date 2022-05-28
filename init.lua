@@ -1,4 +1,4 @@
-Mvim = {} --{{{
+Mvim = {}
 Mvim.errors = false
 Mvim.packer_bootstrap = nil
 
@@ -11,10 +11,10 @@ end)
 if not success then
   Mvim.errors = true
   return
-end --}}}
+end
 
--- lua/user/theme.lua
--- User.luadev = true
+-- TODO: lua/user/theme.lua
+-- User.luadev = false
 -- User.theme.colorscheme = 'kanagawa' -- tokyonight, solarized, kanagawa
 -- User.theme.transparent = false
 -- User.theme.lualine = 'bubbles' -- default, evil_lualine, bubbles, slanted
@@ -25,22 +25,22 @@ end --}}}
 -- User.theme.italic_functions = false
 -- User.theme.italic_variables = false
 
--- lua/user/langs
+-- TODO: lua/user/langs
 -- user.langs = 'all'
 
--- lua/user/formatting
+-- TODO: lua/user/formatting
 -- User.formatting = {
 --   'prettier',
 --   'stylua',
 -- }
---
--- -- lua/user/diagnostics
+
+-- TODO: lua/user/diagnostics
 -- User.diagnostics = {
 --   'eslint',
 --   'misspell',
 -- }
 --
--- -- lua/user/servers.lua
+-- TODO: lua/user/servers
 -- User.servers = {
 --   'pylsp',
 --   'tsserver',

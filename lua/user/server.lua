@@ -56,7 +56,6 @@ User.servers = {
   -- 'jsonls',
   -- 'jdtls',
   -- 'quick_lint_js',
-  -- 'tsserver',
   -- 'jsonnet_ls',
   -- 'julials',
   -- 'kotlin_language_server',
