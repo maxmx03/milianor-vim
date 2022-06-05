@@ -27,8 +27,8 @@ User.keymapping = {
   -- ALPHA
   a = { ':Alpha<cr>', 'Open startify' },
 
-  -- NVIM-TREE
-  n = { ':NvimTreeToggle<cr> ', 'Open tree' },
+  -- NEO-TREE
+  n = { ':Neotree filesystem toggle<cr> ', 'Open Neo-tree' },
 
   f = {
     name = 'TELESCOPE',
