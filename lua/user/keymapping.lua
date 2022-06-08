@@ -23,6 +23,9 @@ keymap(
 keymap('<space>cc', '<Plug>(comment_toggle_linewise_visual)', 'x')
 
 User.keymapping = {
+  w = { ':update<cr>', 'Save' },
+
+  q = { ':quit<cr>', 'Quit' },
 
   -- ALPHA
   a = { ':Alpha<cr>', 'Open startify' },
