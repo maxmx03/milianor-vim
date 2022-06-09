@@ -32,11 +32,12 @@ For more instructions: [Wiki](https://github.com/maxmx03/milianor-vim/wiki)
 - [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
 - [Solarized](https://github.com/maxmx03/solarized.nvim)
 
-## Recommendations
-- [Alacritty](https://github.com/alacritty/alacritty)
-- [Kitty](https://github.com/kovidgoyal/kitty)
-- [Fish](https://github.com/fish-shell/fish-shell)
-- [Tmux](https://github.com/tmux/tmux)
+## Other tools to use along with Neovim
+- [Alacritty](https://github.com/alacritty/alacritty) - OpenGl terminal emulator
+- [Kitty](https://github.com/kovidgoyal/kitty) - GPU based terminal emulator
+- [Hyper](https://hyper.is/) - Electron based terminal (recommend only for windows users)
+- [Fish](https://github.com/fish-shell/fish-shell) - Command line shell for linux, macos
+- [Tmux](https://github.com/tmux/tmux) - terminal multiplexer
 
 ### License
 
