@@ -6,6 +6,10 @@ User.diagnostics = {}
 User.keymapping = {}
 User.langs = nil
 User.luadev = true
+User.errors = true
+User.packer_bootstrap = nil
+User.plugins = nil
+User.lualine_colors = nil
 
 require('user.theme')
 require('user.keymapping')

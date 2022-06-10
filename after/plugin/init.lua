@@ -1,12 +1,9 @@
-if Mvim.errors then
-  return
-end
-
 local success, result = pcall(function()
   local import = function(plugin)
-    local plugins_folder = 'core.'
-
-    require(plugins_folder .. plugin)
+    if not User.errors then
+      local plugins_folder = 'core.'
+      require(plugins_folder .. plugin)
+    end
   end
 
   import('alpha')

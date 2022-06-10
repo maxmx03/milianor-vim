@@ -1,31 +1,32 @@
-Mvim = {}
-Mvim.errors = false
-Mvim.packer_bootstrap = nil
+require('user.init')
 
-local success = pcall(function()
-  require('user.init')
-  require('bootstrap')
-  require('plugins')
-end)
+-- TODO: Tutorial - complete the todolist bellow
 
-if not success then
-  Mvim.errors = true
-  return
-end
+-- TODO: Press space to see the keymapping or go to lua/user/keymapping.lua, press <space>ff to locate that file.
 
--- TODO: lua/user/theme.lua
+-- TODO: change theme
 -- User.luadev = false
--- User.theme.colorscheme = 'kanagawa' -- tokyonight, solarized, kanagawa
--- User.theme.transparent = false
+-- User.theme.colorscheme = 'kanagawa' -- tokyonight, solarized
 -- User.theme.lualine = 'bubbles' -- default, evil_lualine, bubbles, slanted
--- User.theme.style = 'night' -- tokyonight: night, storm
--- User.theme.sidebar = 'left' -- left, right, bottom, top
--- User.theme.italic_comments = true
--- User.theme.italic_keywords = true
--- User.theme.italic_functions = false
--- User.theme.italic_variables = false
+-- User.theme.sidebar = 'bottom' -- right, left, bottom, toplevel
 
--- TODO: lua/user/langs
+-- TODO: Change lualine colors, to see the available pallets to go lua/theme/colors.lua
+-- User.theme.lualine_colors = {
+--   bg = '#16161D',
+--   fg = '#C8C093',
+--   yellow = '#938056',
+--   cyan = '#6A9589',
+--   darkblue = '#7E9CD8',
+--   green = '#98c379',
+--   orange = '#FFA066',
+--   violet = '#938AA9',
+--   magenta = '#D16D9E',
+--   blue = '#658594',
+--   red = '#E82424',
+--   grey = '#54546D',
+-- }
+
+-- TODO: pick your programm langs to improve hignlighting
 -- User.langs = {
 --   'bash',
 --   'c',
@@ -55,25 +56,26 @@ end
 --   'vue',
 --   'yaml',
 -- }
-
--- TODO: lua/user/formatting
+--
+-- TODO: pick your formatters to use, to see more options go to lua/user/formatting.lua
 -- User.formatting = {
 --   'prettier',
 --   'stylua',
 -- }
 
--- TODO: lua/user/diagnostics
+-- TODO: pick your diagnostics to use, to see more options go to lua/user/diagnostics.lua
 -- User.diagnostics = {
 --   'eslint',
 -- }
 
--- TODO: lua/user/servers
+-- TODO: pick your servers to use, to see more options go to lua/user/server.lua
 -- User.servers = {
 --   'pylsp',
 --   'tsserver',
 --   'sumneko_lua',
 --   'prismals',
 --   'graphql',
+--   'jdtls',
 --   'cssls',
 --   'html',
 --   'vuels',
@@ -81,4 +83,10 @@ end
 --   'emmet_ls',
 --   'tailwindcss',
 --   'svelte',
+-- }
+
+-- TODO: Add more plugins, docs: https://github.com/wbthomason/packer.nvim
+-- User.plugins = {
+--   'justinmk/vim-sneak',
+--   'rebelot/kanagawa.nvim',
 -- }

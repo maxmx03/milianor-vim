@@ -27,10 +27,8 @@ User.keymapping = {
 
   q = { ':quit<cr>', 'Quit' },
 
-  -- ALPHA
   a = { ':Alpha<cr>', 'Open startify' },
 
-  -- NEO-TREE
   n = { ':Neotree filesystem toggle<cr> ', 'Open Neo-tree' },
 
   f = {
@@ -41,7 +39,6 @@ User.keymapping = {
     h = { ':Telescope help_tag<cr>', 'Help tags' },
   },
 
-  -- BUFFERLINE
   [']'] = { ':BufferLineCycleNext<cr>', 'Next tab' },
   ['['] = { ':BufferLineCyclePrev<cr>', 'Previous tab' },
   x = { ':BufferLinePickClose<cr>', 'Close tab' },
@@ -117,4 +114,23 @@ User.keymapping = {
     v = { ':FlutterVisualDebug<cr>', 'Flutter visual debug' },
     o = { ':FlutterOutlineToggle<cr>', 'Flutter outline debug' },
   },
+
+  p = {
+    name = 'PACKER',
+    p = { ':PackerSync<cr>', 'Perform `PackerUpdate` and then `PackerCompile`' },
+    s = { ':PackerStatus<cr>', 'See plugins status' },
+    u = { ':PackerUpdate<cr>', 'Clean, then update and install plugins' },
+    i = { ':PackerInstall<cr>', 'Clean, then install missing plugins' },
+    c = { ':PackerClean<cr>', 'Remove any disabled or unused plugins' },
+    C = { ':PackerCompile<cr>', 'Regenerate compiled loader file' }
+  },
+
+  L = {
+    name = 'LSP',
+    l = { ':LspInstallInfo<cr>', 'Show installed lsp servers' },
+    r = { ':LspRestart<r>', 'Restart Lsp' },
+    i = { ':LspInfo<cr>', 'Show Info' },
+    u = { ':LspUninstall', 'Uninstall lsp server' },
+    U = { ':LspUninstallAll<cr>', 'Uninstall all lsp servers' }
+  }
 }

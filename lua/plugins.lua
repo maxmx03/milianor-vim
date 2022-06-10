@@ -1,7 +1,7 @@
 local packer = require('packer')
 
 packer.startup(function(use)
-  use({
+  local core_plugins = {
     'wbthomason/packer.nvim',
     'neovim/nvim-lspconfig',
     'williamboman/nvim-lsp-installer',
@@ -20,10 +20,8 @@ packer.startup(function(use)
     'folke/todo-comments.nvim',
     'goolord/alpha-nvim',
     'folke/tokyonight.nvim',
-    'rebelot/kanagawa.nvim',
     'maxmx03/solarized.nvim',
     'SmiteshP/nvim-gps',
-    'justinmk/vim-sneak',
     {
       'weilbith/nvim-code-action-menu',
       cmd = 'CodeActionMenu',
@@ -96,10 +94,15 @@ packer.startup(function(use)
         'nvim-lua/plenary.nvim',
       },
     },
-  })
-  if Mvim.packer_bootstrap then
+  }
+
+  use(core_plugins)
+  use(User.plugins)
+
+  if User.packer_bootstrap then
     require('packer').sync()
   end
+
 end)
 
 vim.cmd([[

@@ -22,7 +22,6 @@ vim.g.python3_host_prog = '/usr/bin/python3.10'
 vim.o.termguicolors = true
 
 vim.cmd([[
-let g:sneak#prompt = "👣 "
 
 if has('python')
   set pyx=2
