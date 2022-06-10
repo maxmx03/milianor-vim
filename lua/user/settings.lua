@@ -18,11 +18,15 @@ vim.opt.undofile = true -- persist undo
 vim.opt.undodir = vim.fn.stdpath('cache') .. '/undo'
 vim.opt.clipboard = 'unnamedplus'
 vim.g.dashboard_default_executive = 'telescope'
-vim.g.python3_host_prog = '/usr/bin/python3.10'
 vim.o.termguicolors = true
 
-vim.cmd([[
+if string.find(vim.loop.os_uname().sysname, 'Windows') then
+  vim.g.python3_host_prog = '$HOME/scoop/apps/python/current/python.exe'
+else
+  vim.g.python3_host_prog = '/usr/bin/python3.10'
+end
 
+vim.cmd([[
 if has('python')
   set pyx=2
 elseif has('python3') 
