@@ -35,7 +35,6 @@ For more instructions: [Wiki](https://github.com/maxmx03/milianor-vim/wiki)
 ## Other tools to use along with Neovim
 - [Alacritty](https://github.com/alacritty/alacritty) - OpenGl terminal emulator
 - [Kitty](https://github.com/kovidgoyal/kitty) - GPU based terminal emulator
-- [Hyper](https://hyper.is/) - Electron based terminal (recommend only for windows users)
 - [Fish](https://github.com/fish-shell/fish-shell) - Command line shell for linux, macos
 - [Tmux](https://github.com/tmux/tmux) - terminal multiplexer
 
