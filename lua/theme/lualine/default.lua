@@ -1,9 +1,9 @@
-local lualine = require('lualine')
+local lualine = require 'lualine'
 
-lualine.setup({
+lualine.setup {
   options = {
     icons_enabled = true,
-    theme = User.theme.colorscheme,
+    theme = user.theme.colorscheme,
     component_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
     disabled_filetypes = {},
@@ -28,4 +28,4 @@ lualine.setup({
   },
   tabline = {},
   extensions = {},
-})
+}

@@ -1,17 +1,17 @@
-require('user.init')
+require 'user.init'
 
 -- TODO: Tutorial - complete the todolist bellow
 
 -- TODO: Press space to see the keymapping or go to lua/user/keymapping.lua, press <space>ff to locate that file.
 
 -- TODO: change theme
--- User.luadev = false
--- User.theme.colorscheme = 'kanagawa' -- tokyonight, solarized
--- User.theme.lualine = 'bubbles' -- default, evil_lualine, bubbles, slanted
--- User.theme.sidebar = 'bottom' -- right, left, bottom, toplevel
+-- user.luadev = false
+-- user.theme.colorscheme = 'kanagawa' -- tokyonight, solarized
+-- user.theme.lualine = 'bubbles' -- default, evil_lualine, bubbles, slanted
+-- user.theme.sidebar = 'bottom' -- right, left, bottom, toplevel
 
 -- TODO: Change lualine colors, to see the available pallets to go lua/theme/colors.lua
--- User.theme.lualine_colors = {
+-- user.theme.lualine_colors = {
 --   bg = '#16161D',
 --   fg = '#C8C093',
 --   yellow = '#938056',
@@ -27,7 +27,7 @@ require('user.init')
 -- }
 
 -- TODO: pick your programm langs to improve hignlighting
--- User.langs = {
+-- user.langs = {
 --   'bash',
 --   'c',
 --   'c_sharp',
@@ -56,26 +56,25 @@ require('user.init')
 --   'vue',
 --   'yaml',
 -- }
---
+
 -- TODO: pick your formatters to use, to see more options go to lua/user/formatting.lua
--- User.formatting = {
+-- user.formatting = {
 --   'prettier',
 --   'stylua',
 -- }
 
 -- TODO: pick your diagnostics to use, to see more options go to lua/user/diagnostics.lua
--- User.diagnostics = {
+-- user.diagnostics = {
 --   'eslint',
 -- }
 
 -- TODO: pick your servers to use, to see more options go to lua/user/server.lua
--- User.servers = {
+-- user.servers = {
 --   'pylsp',
 --   'tsserver',
 --   'sumneko_lua',
 --   'prismals',
 --   'graphql',
---   'jdtls',
 --   'cssls',
 --   'html',
 --   'vuels',
@@ -86,7 +85,7 @@ require('user.init')
 -- }
 
 -- TODO: Add more plugins, docs: https://github.com/wbthomason/packer.nvim
--- User.plugins = {
+-- user.plugins = {
 --   'justinmk/vim-sneak',
 --   'rebelot/kanagawa.nvim',
 -- }

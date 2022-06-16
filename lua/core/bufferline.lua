@@ -1,3 +1,3 @@
-local bufferline = require('bufferline')
+local bufferline = require 'bufferline'
 
 bufferline.setup()

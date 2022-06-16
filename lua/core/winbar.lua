@@ -1,5 +1,5 @@
 -- CREDITS: https://github.com/ChristianChiarulli
-local gps = require('nvim-gps')
+local gps = require 'nvim-gps'
 
 local icons = {
   kind = {
@@ -103,7 +103,7 @@ local icons = {
   },
 }
 
-gps.setup({
+gps.setup {
   icons = {
     ['class-name'] = '%#CmpItemKindClass#' .. icons.kind.Class .. '%*' .. ' ', -- Classes and class-like objects
     ['function-name'] = '%#CmpItemKindFunction#' .. icons.kind.Function .. '%*' .. ' ', -- Functions
@@ -131,14 +131,14 @@ gps.setup({
   depth = 0,
   depth_limit_indicator = '..',
   text_hl = 'LineNr',
-})
+}
 
 local function isempty(s)
   return s == nil or s == ''
 end
 
 local function filename()
-  local filename = vim.fn.expand('%:t')
+  local filename = vim.fn.expand '%:t'
   local extension = ''
   local file_icon = ''
   local file_icon_color = ''
@@ -146,7 +146,7 @@ local function filename()
   local default_file_icon_color = ''
 
   if not isempty(filename) then
-    extension = vim.fn.expand('%:e')
+    extension = vim.fn.expand '%:e'
 
     local default = false
 

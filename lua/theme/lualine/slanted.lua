@@ -1,4 +1,4 @@
-local c = require('theme.colors')
+local c = require 'theme.colors'
 
 local colors = {
   red = c.red,
@@ -53,11 +53,11 @@ local function search_result()
   if vim.v.hlsearch == 0 then
     return ''
   end
-  local last_search = vim.fn.getreg('/')
+  local last_search = vim.fn.getreg '/'
   if not last_search or last_search == '' then
     return ''
   end
-  local searchcount = vim.fn.searchcount({ maxcount = 9999 })
+  local searchcount = vim.fn.searchcount { maxcount = 9999 }
   return last_search .. '(' .. searchcount.current .. '/' .. searchcount.total .. ')'
 end
 
@@ -70,13 +70,13 @@ local function modified()
   return ''
 end
 
-require('lualine').setup({
+require('lualine').setup {
   options = {
     theme = theme,
     component_separators = '',
     section_separators = { left = '', right = '' },
   },
-  sections = process_sections({
+  sections = process_sections {
     lualine_a = { 'mode' },
     lualine_b = {
       'branch',
@@ -118,9 +118,9 @@ require('lualine').setup({
     lualine_x = {},
     lualine_y = { search_result, 'filetype' },
     lualine_z = { '%l:%c', '%p%%/%L' },
-  }),
+  },
   inactive_sections = {
     lualine_c = { '%f %y %m' },
     lualine_x = {},
   },
-})
+}

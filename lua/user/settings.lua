@@ -15,7 +15,7 @@ vim.opt.pumheight = 20
 vim.opt.foldmethod = 'marker'
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' } -- for cmp
 vim.opt.undofile = true -- persist undo
-vim.opt.undodir = vim.fn.stdpath('cache') .. '/undo'
+vim.opt.undodir = vim.fn.stdpath 'cache' .. '/undo'
 vim.opt.clipboard = 'unnamedplus'
 vim.g.dashboard_default_executive = 'telescope'
 vim.o.termguicolors = true
@@ -26,7 +26,7 @@ else
   vim.g.python3_host_prog = '/usr/bin/python3.10'
 end
 
-if vim.fn.has('wsl') == 1 then
+if vim.fn.has 'wsl' == 1 then
   vim.g.clipboard = {
     copy = {
       ['+'] = 'win32yank.exe -i --crlf',
@@ -39,10 +39,10 @@ if vim.fn.has('wsl') == 1 then
   }
 end
 
-vim.cmd([[
+vim.cmd [[
 if has('python')
   set pyx=2
 elseif has('python3') 
   set pyx=3
 endif
-]])
+]]

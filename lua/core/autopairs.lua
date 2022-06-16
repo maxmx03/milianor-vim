@@ -1,5 +1,5 @@
-local autopairs = require('nvim-autopairs')
+local autopairs = require 'nvim-autopairs'
 
-autopairs.setup({
+autopairs.setup {
   disable_filetype = { 'TelescopePrompt', 'vim' },
-})
+}

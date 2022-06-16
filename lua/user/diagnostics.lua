@@ -1,4 +1,4 @@
-User.diagnostics = {
+user.diagnostics = {
   -- 'actionlint',
   -- 'alex',
   -- 'ansiblelint',

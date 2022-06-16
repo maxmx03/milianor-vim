@@ -1,8 +1,8 @@
-local treesitter = require('nvim-treesitter.configs')
+local treesitter = require 'nvim-treesitter.configs'
 
-treesitter.setup({
+treesitter.setup {
   -- A list of parser names, or "all"
-  ensure_installed = User.langs,
+  ensure_installed = user.langs,
   -- Install languages synchronously (only applied to `ensure_installed`)
   sync_install = false,
   -- List of parsers to ignore installing
@@ -18,4 +18,4 @@ treesitter.setup({
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
-})
+}

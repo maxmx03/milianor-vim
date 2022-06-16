@@ -1,6 +1,6 @@
-local colorizer = require('colorizer')
+local colorizer = require 'colorizer'
 
-colorizer.setup({
+colorizer.setup {
   'css',
   'conf',
   'html',
@@ -16,4 +16,4 @@ colorizer.setup({
   'vue',
   'yaml',
   'vim',
-})
+}

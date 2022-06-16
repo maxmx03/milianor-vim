@@ -1,4 +1,4 @@
-local devicons = require('nvim-web-devicons')
+local devicons = require 'nvim-web-devicons'
 
 local function icon_config(icon, color, name)
   return {
@@ -25,7 +25,7 @@ local _, ts_color = devicons.get_icon_color('index.ts', 'ts')
 local _, html_color = devicons.get_icon_color('index.html', 'html')
 local _, css_color = devicons.get_icon_color('index.css', 'css')
 
-devicons.set_icon({
+devicons.set_icon {
   -- git
   ['.gitignore'] = icon_config(git_icon, git_color, 'git'),
   ['.gitkeep'] = icon_config(git_icon, git_color, 'git'),
@@ -52,6 +52,6 @@ devicons.set_icon({
   ['component.css'] = icon_config(angular_icon, css_color, 'css'),
   ['module.ts'] = icon_config(angular_icon, ts_color, 'typescript'),
   ['service.ts'] = icon_config(angular_icon, ts_color, 'javascript'),
-})
+}
 
-devicons.setup({})
+devicons.setup {}

@@ -1,4 +1,4 @@
-User.langs = {
+user.langs = {
   -- 'astro',
   -- 'bash',
   -- 'beancount',

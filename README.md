@@ -7,7 +7,7 @@
 ## Quick Start
 ```
 git clone https://github.com/maxmx03/milianor-vim.git ~/.config/nvim
-nvim
+nvim -c 'PackerSync'
 ```
 
 ## Wiki

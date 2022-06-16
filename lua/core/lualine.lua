@@ -1,1 +1,1 @@
-require('theme.lualine.' .. User.theme.lualine)
+require('theme.lualine.' .. user.theme.lualine)

@@ -1,4 +1,4 @@
-local null_ls = require('null-ls')
+local null_ls = require 'null-ls'
 
 local sources = function(formattings, diagnostics)
   local formatting = null_ls.builtins.formatting
@@ -16,7 +16,7 @@ local sources = function(formattings, diagnostics)
   return s
 end
 
-null_ls.setup({
+null_ls.setup {
   debug = false,
-  sources = sources(User.formatting, User.diagnostics),
-})
+  sources = sources(user.formatting, user.diagnostics),
+}

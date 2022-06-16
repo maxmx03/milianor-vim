@@ -1,6 +1,6 @@
 -- uncomment the server of your choice
 -- server list: https://github.com/williamboman/nvim-lsp-installer
-User.servers = {
+user.servers = {
   -- 'awk_ls',
   -- 'angularls',
   -- 'ansiblels',

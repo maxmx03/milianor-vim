@@ -1,4 +1,4 @@
-User.formatting = {
+user.formatting = {
   -- 'alejandra',
   -- 'asmfmt',
   -- 'astyle',

@@ -1,5 +1,5 @@
-local wk = require('which-key')
+local wk = require 'which-key'
 
-wk.setup({})
+wk.setup {}
 
-wk.register(User.keymapping, { prefix = '<space>' })
+wk.register(user.keymapping, { prefix = '<space>' })

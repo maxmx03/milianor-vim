@@ -1,3 +1,3 @@
-local lsp_signature = require('lsp_signature')
+local lsp_signature = require 'lsp_signature'
 
-lsp_signature.setup({})
+lsp_signature.setup {}

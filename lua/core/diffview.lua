@@ -1,3 +1,3 @@
-local diffview = require('diffview')
+local diffview = require 'diffview'
 
 diffview.setup()

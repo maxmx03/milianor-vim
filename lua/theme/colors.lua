@@ -85,15 +85,15 @@ local pallets = {
   },
 }
 
-if User.theme.colorscheme == 'tokyonight' and vim.g.tokyonight_style == 'night' then
-  pallets[User.theme.colorscheme].bg = '#1f2335'
-  pallets[User.theme.colorscheme].fg = '#a9b1d6'
+if user.theme.colorscheme == 'tokyonight' and vim.g.tokyonight_style == 'night' then
+  pallets[user.theme.colorscheme].bg = '#1f2335'
+  pallets[user.theme.colorscheme].fg = '#a9b1d6'
 end
 
-if pallets[User.theme.colorscheme] then
-  colors = pallets[User.theme.colorscheme]
-elseif User.theme.lualine_colors then
-  colors = User.theme.lualine_colors
+if pallets[user.theme.colorscheme] then
+  colors = pallets[user.theme.colorscheme]
+elseif user.theme.lualine_colors then
+  colors = user.theme.lualine_colors
 else
   colors = pallets['vscode']
 end

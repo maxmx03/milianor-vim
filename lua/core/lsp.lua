@@ -1,28 +1,28 @@
-local lspconfig = require('lspconfig')
-local dartls = require('flutter-tools')
+local lspconfig = require 'lspconfig'
+local dartls = require 'flutter-tools'
 
 local on_attach = function(_, bufnr)
   local signs = { Error = '', Warn = '', Hint = '', Info = '', Prefix = '' }
 
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-  vim.diagnostic.config({
+  vim.diagnostic.config {
     virtual_text = {
       prefix = signs.Prefix,
     },
-  })
+  }
 
   for type, icon in pairs(signs) do
     local hl = 'DiagnosticSign' .. type
     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
   end
 
-  vim.cmd([[
+  vim.cmd [[
     augroup LspFormatting
       autocmd! * <buffer>
 	  autocmd BufWritePre <buffer> lua vim.lsp.buf.format()
 	augroup END
-  ]])
+  ]]
 end
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -31,7 +31,7 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 
-local servers = User.servers
+local servers = user.servers
 for _, lsp in pairs(servers) do
   local config = {
     on_attach = on_attach,
@@ -42,10 +42,10 @@ for _, lsp in pairs(servers) do
     },
   }
 
-  if lsp == 'sumneko_lua' and User.luadev then
-    local luadev = require('lua-dev')
+  if lsp == 'sumneko_lua' and user.luadev then
+    local luadev = require 'lua-dev'
 
-    config = luadev.setup({
+    config = luadev.setup {
       library = {
         vimruntime = true, -- runtime path
         types = true, -- full signature, docs and completion of vim.api, vim.treesitter, vim.lsp and others
@@ -63,13 +63,13 @@ for _, lsp in pairs(servers) do
           debounce_text_changes = 150,
         },
       },
-    })
+    }
   end
 
   lspconfig[lsp].setup(config)
 end
 
-dartls.setup({
+dartls.setup {
   widget_guides = {
     enabled = true,
   },
@@ -80,4 +80,4 @@ dartls.setup({
       debounce_text_changes = 150,
     },
   },
-})
+}

@@ -1,3 +1,3 @@
-local toggleterm = require('toggleterm')
+local toggleterm = require 'toggleterm'
 
 toggleterm.setup()

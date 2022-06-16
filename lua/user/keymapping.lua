@@ -22,7 +22,7 @@ keymap(
 )
 keymap('<space>cc', '<Plug>(comment_toggle_linewise_visual)', 'x')
 
-User.keymapping = {
+user.keymapping = {
   w = { ':update<cr>', 'Save' },
 
   q = { ':quit<cr>', 'Quit' },
