@@ -122,7 +122,7 @@ User.keymapping = {
     u = { ':PackerUpdate<cr>', 'Clean, then update and install plugins' },
     i = { ':PackerInstall<cr>', 'Clean, then install missing plugins' },
     c = { ':PackerClean<cr>', 'Remove any disabled or unused plugins' },
-    C = { ':PackerCompile<cr>', 'Regenerate compiled loader file' }
+    C = { ':PackerCompile<cr>', 'Regenerate compiled loader file' },
   },
 
   L = {
@@ -131,6 +131,6 @@ User.keymapping = {
     r = { ':LspRestart<r>', 'Restart Lsp' },
     i = { ':LspInfo<cr>', 'Show Info' },
     u = { ':LspUninstall', 'Uninstall lsp server' },
-    U = { ':LspUninstallAll<cr>', 'Uninstall all lsp servers' }
-  }
+    U = { ':LspUninstallAll<cr>', 'Uninstall all lsp servers' },
+  },
 }
