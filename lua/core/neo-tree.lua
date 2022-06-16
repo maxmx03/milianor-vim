@@ -4,6 +4,15 @@ neotree.setup({
   window = {
     position = User.theme.sidebar,
   },
+  default_component_configs = {
+    icon = {
+      folder_closed = '',
+      folder_open = '',
+      folder_empty = 'ﰊ',
+      default = '',
+      highlight = 'NeoTreeFileIcon',
+    },
+  },
   filesystem = {
     filtered_items = {
       visible = false,

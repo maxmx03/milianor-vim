@@ -26,6 +26,19 @@ else
   vim.g.python3_host_prog = '/usr/bin/python3.10'
 end
 
+if vim.fn.has('wsl') == 1 then
+  vim.g.clipboard = {
+    copy = {
+      ['+'] = 'win32yank.exe -i --crlf',
+      ['*'] = 'win32yank.exe -i --crlf',
+    },
+    paste = {
+      ['+'] = 'win32yank.exe -o --lf',
+      ['*'] = 'win32yank.exe -o --lf',
+    },
+  }
+end
+
 vim.cmd([[
 if has('python')
   set pyx=2
