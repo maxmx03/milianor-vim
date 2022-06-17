@@ -1,7 +1,9 @@
 require 'plugins'
-require 'theme.colorschemes.init'
 
 pcall(function()
+  require 'theme.colorschemes.init'
+
+  require 'core.notify'
   require 'core.alpha'
   require 'core.autopairs'
   require 'core.autotag'
@@ -26,5 +28,4 @@ pcall(function()
   require 'core.fidget'
   require 'core.which-key'
   require 'core.winbar'
-  require 'core.notify'
 end)
