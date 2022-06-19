@@ -6,7 +6,7 @@ require 'user.init'
 
 -- TODO: change theme
 -- user.luadev = false
--- user.theme.colorscheme = 'kanagawa' -- tokyonight, solarized
+-- user.theme.colorscheme = 'kanagawa' -- solarized
 -- user.theme.lualine = 'bubbles' -- default, evil_lualine, bubbles, slanted
 -- user.theme.sidebar = 'bottom' -- right, left, bottom, toplevel
 

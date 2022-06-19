@@ -34,7 +34,6 @@ packer.startup(function(use)
     'folke/lua-dev.nvim',
     'folke/todo-comments.nvim',
     'goolord/alpha-nvim',
-    'folke/tokyonight.nvim',
     'maxmx03/solarized.nvim',
     'SmiteshP/nvim-gps',
     {

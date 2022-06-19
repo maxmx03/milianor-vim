@@ -1,8 +1,6 @@
 require 'plugins'
 
 pcall(function()
-  require 'theme.colorschemes.init'
-
   require 'core.notify'
   require 'core.alpha'
   require 'core.autopairs'
@@ -28,4 +26,6 @@ pcall(function()
   require 'core.fidget'
   require 'core.which-key'
   require 'core.winbar'
+
+  vim.cmd(string.format('colorscheme %s', user.theme.colorscheme))
 end)

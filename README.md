@@ -2,12 +2,10 @@
 
 ## [Preview](https://www.youtube.com/watch?v=eVKQ-6sXQzQ)
 
-<img src="./screenshots/1.png" />
-
 ## Quick Start
 ```
 git clone https://github.com/maxmx03/milianor-vim.git ~/.config/nvim
-nvim -c 'PackerSync'
+nvim
 ```
 
 ## Wiki
