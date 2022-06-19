@@ -26,8 +26,6 @@ For more instructions: [Wiki](https://github.com/maxmx03/milianor-vim/wiki)
 - and more...
 
 ## Available Themes
-- [Tokyonight](https://github.com/folke/tokyonight.nvim)
-- [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
 - [Solarized](https://github.com/maxmx03/solarized.nvim)
 
 ## Other tools to use along with Neovim
