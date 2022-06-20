@@ -88,4 +88,18 @@ require 'user.init'
 -- user.plugins = {
 --   'justinmk/vim-sneak',
 --   'rebelot/kanagawa.nvim',
+--   {
+--     'akinsho/flutter-tools.nvim',
+--     requires = { 'nvim-lua/plenary.nvim', 'thosakwe/vim-flutter' },
+--   },
+-- }
+
+-- TODO: Insert new keymapping
+-- user.keymapping['F'] = {
+--   name = 'FLUTTER',
+--   r = { ':FlutterRun<cr>', 'Flutter run' },
+--   R = { ':FlutterHotRestart<cr>', 'Flutter restart' },
+--   q = { ':FlutterQuit<cr>', 'Flutter quit' },
+--   v = { ':FlutterVisualDebug<cr>', 'Flutter visual debug' },
+--   o = { ':FlutterOutlineToggle<cr>', 'Flutter outline debug' },
 -- }

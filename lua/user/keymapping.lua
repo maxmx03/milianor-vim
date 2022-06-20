@@ -106,15 +106,6 @@ user.keymapping = {
     s = { ':MarkdownPreviewStop<cr>', 'Stop markdown preview' },
   },
 
-  F = {
-    name = 'FLUTTER',
-    r = { ':FlutterRun<cr>', 'Flutter run' },
-    R = { ':FlutterHotRestart<cr>', 'Flutter restart' },
-    q = { ':FlutterQuit<cr>', 'Flutter quit' },
-    v = { ':FlutterVisualDebug<cr>', 'Flutter visual debug' },
-    o = { ':FlutterOutlineToggle<cr>', 'Flutter outline debug' },
-  },
-
   p = {
     name = 'PACKER',
     p = { ':PackerSync<cr>', 'Perform `PackerUpdate` and then `PackerCompile`' },

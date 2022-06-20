@@ -1,5 +1,4 @@
 local lspconfig = require 'lspconfig'
-local dartls = require 'flutter-tools'
 
 local on_attach = function(_, bufnr)
   local signs = { Error = '', Warn = '', Hint = '', Info = '', Prefix = '' }
@@ -69,15 +68,19 @@ for _, lsp in pairs(servers) do
   lspconfig[lsp].setup(config)
 end
 
-dartls.setup {
-  widget_guides = {
-    enabled = true,
-  },
-  lsp = {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    flags = {
-      debounce_text_changes = 150,
+local success, dartls = pcall(require, 'flutter-tools')
+
+if success then
+  dartls.setup {
+    widget_guides = {
+      enabled = true,
     },
-  },
-}
+    lsp = {
+      on_attach = on_attach,
+      capabilities = capabilities,
+      flags = {
+        debounce_text_changes = 150,
+      },
+    },
+  }
+end
