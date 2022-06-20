@@ -1,6 +1,7 @@
 require 'plugins'
 
 local success = pcall(function()
+  require 'core.impatient'
   require 'core.notify'
   require 'core.alpha'
   require 'core.autopairs'
