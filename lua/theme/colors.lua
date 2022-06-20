@@ -105,11 +105,9 @@ if user.theme.colorscheme == 'tokyonight' and vim.g.tokyonight_style == 'night' 
 end
 
 if pallets[user.theme.colorscheme] then
-  colors = pallets[user.theme.colorscheme]
+  return pallets[user.theme.colorscheme]
 elseif user.theme.lualine_colors then
-  colors = user.theme.lualine_colors
+  return user.theme.lualine_colors
 else
-  colors = pallets['vscode']
+  return pallets['vscode']
 end
-
-return colors

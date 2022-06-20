@@ -26,10 +26,10 @@ local success = pcall(function()
   require 'core.fidget'
   require 'core.which-key'
   require 'core.winbar'
-
-  vim.cmd(string.format('colorscheme %s', user.theme.colorscheme))
 end)
 
 if not success then
   vim.cmd 'colorscheme slate'
+else
+  vim.cmd(string.format('colorscheme %s', user.theme.colorscheme))
 end
