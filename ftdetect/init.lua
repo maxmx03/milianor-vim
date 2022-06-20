@@ -1,6 +1,6 @@
 require 'plugins'
 
-pcall(function()
+local success = pcall(function()
   require 'core.notify'
   require 'core.alpha'
   require 'core.autopairs'
@@ -29,3 +29,7 @@ pcall(function()
 
   vim.cmd(string.format('colorscheme %s', user.theme.colorscheme))
 end)
+
+if not success then
+  vim.cmd 'colorscheme slate'
+end
