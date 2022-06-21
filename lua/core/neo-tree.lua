@@ -3,6 +3,9 @@ local neotree = require 'neo-tree'
 neotree.setup {
   window = {
     position = user.theme.sidebar,
+    mappings = {
+      ['<space>'] = '',
+    },
   },
   default_component_configs = {
     icon = {
