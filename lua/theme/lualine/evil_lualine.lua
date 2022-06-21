@@ -2,9 +2,8 @@
 -- Author: shadmansaleh
 -- Credit: glepnir
 -- Color table for highlights
--- stylua: ignore
-local lualine = require('lualine')
-local colors = require 'theme.colors'
+local lualine = require 'lualine'
+local colors = require 'theme.lualine.colors'
 
 local conditions = {
   buffer_not_empty = function()

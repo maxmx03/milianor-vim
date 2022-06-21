@@ -37,6 +37,7 @@ packer.startup(function(use)
     'maxmx03/solarized.nvim',
     'SmiteshP/nvim-gps',
     'lewis6991/impatient.nvim',
+    'p00f/nvim-ts-rainbow',
     {
       'weilbith/nvim-code-action-menu',
       cmd = 'CodeActionMenu',

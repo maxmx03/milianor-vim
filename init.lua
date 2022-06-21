@@ -9,8 +9,9 @@ require 'user.init'
 -- user.theme.colorscheme = 'kanagawa' -- solarized
 -- user.theme.lualine = 'bubbles' -- default, evil_lualine, bubbles, slanted
 -- user.theme.sidebar = 'bottom' -- right, left, bottom, toplevel
+-- user.theme.rainbow = true -- enable rainbow plugin (parentheses colors)
 
--- TODO: Change lualine colors, to see the available pallets to go lua/theme/colors.lua
+-- TODO: Change lualine colors, to see the available pallets to go lua/theme/lualine/colors.lua
 -- user.theme.lualine_colors = {
 --   bg = '#16161D',
 --   fg = '#C8C093',
@@ -24,6 +25,18 @@ require 'user.init'
 --   blue = '#658594',
 --   red = '#E82424',
 --   grey = '#54546D',
+-- }
+
+-- TODO: Change rainbow colors, to see the available pallets go to lua/theme/rainbow/colors.lua
+-- user.theme.rainbow_colors = {
+--   '#C8C093',
+--   '#938056',
+--   '#6A9589',
+--   '#98c379',
+--   '#FFA066',
+--   '#D16D9E',
+--   '#658594',
+--   '#E82424',
 -- }
 
 -- TODO: pick your programm langs to improve hignlighting

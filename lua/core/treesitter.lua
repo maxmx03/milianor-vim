@@ -1,4 +1,5 @@
 local treesitter = require 'nvim-treesitter.configs'
+local colors = require 'theme.rainbow.colors'
 
 treesitter.setup {
   -- A list of parser names, or "all"
@@ -17,5 +18,11 @@ treesitter.setup {
     -- Using this option may slow down your editor, and you may see some duplicate highlights.
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
+  },
+  rainbow = {
+    enable = user.theme.rainbow,
+    extended_mode = true,
+    max_file_lines = nil,
+    colors = colors,
   },
 }

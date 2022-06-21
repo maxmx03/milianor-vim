@@ -1,4 +1,4 @@
-local c = require 'theme.colors'
+local c = require 'theme.lualine.colors'
 
 local colors = {
   red = c.red,

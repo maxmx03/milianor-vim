@@ -1,9 +1,7 @@
 -- Bubbles config for lualine
 -- Author: lokesh-krishna
 -- MIT license, see LICENSE for more details.
-
--- stylua: ignore
-local c = require('theme.colors')
+local c = require 'theme.lualine.colors'
 
 local colors = {
   blue = c.blue,

@@ -17,7 +17,6 @@ local rubocop_color = '#C0C0C0'
 -- default icons
 local ruby_icon = devicons.get_icon_color('index.rb', 'rb')
 
-
 devicons.set_icon {
   -- git
   ['.gitignore'] = icon_config(git_icon, git_color, 'git'),

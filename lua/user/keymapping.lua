@@ -1,26 +1,25 @@
-local keymap = function(lhs, rhs, mode, opts)
-  vim.api.nvim_set_keymap(mode or 'n', lhs, rhs, opts or { noremap = true, silent = true })
-end
+local opts = { noremap = true, silent = true }
+local keymap = vim.api.nvim_set_keymap
 
 -- DEFAULT
-keymap('<F2>', ':update<cr>') -- save file
-keymap('<F3>', ':quit!<cr>') -- exit neovim
+keymap('n', '<F2>', ':update<cr>', opts) -- save file
+keymap('n', '<F3>', ':quit!<cr>', opts) -- exit neovim
 
 -- LSP SAGA
-keymap('ca', ':Lspsaga code_action<cr>') -- code action
-keymap('K', ':Lspsaga hover_doc<cr>') -- hover doc
+keymap('n', 'ca', ':Lspsaga code_action<cr>', opts) -- code action
+keymap('n', 'K', ':Lspsaga hover_doc<cr>', opts) -- hover doc
 
 -- INTEGRATED TERMINAL
-keymap('<esc>', [[<C-\><C-n>]], 't', { noremap = true, silent = true }) -- exit the terminal
+keymap('t', '<esc>', [[<C-\><C-n>]], opts) -- exit the terminal
 
 -- COMMENT
 keymap(
+  'n',
   '<space>cc',
   "v:count == 0 ? '<Plug>(comment_toggle_current_linewise)' : '<Plug>(comment_toggle_linewise_count)'",
-  nil,
   { expr = true, noremap = true }
 )
-keymap('<space>cc', '<Plug>(comment_toggle_linewise_visual)', 'x')
+keymap('x', '<space>cc', '<Plug>(comment_toggle_linewise_visual)', opts)
 
 user.keymapping = {
   w = { ':update<cr>', 'Save' },
