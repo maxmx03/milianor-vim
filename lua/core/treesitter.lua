@@ -21,6 +21,7 @@ treesitter.setup {
   },
   rainbow = {
     enable = user.theme.rainbow,
+    disable = { 'html' },
     extended_mode = true,
     max_file_lines = nil,
     colors = colors,
