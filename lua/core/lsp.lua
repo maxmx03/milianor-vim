@@ -1,20 +1,13 @@
 local lspconfig = require 'lspconfig'
 
 local on_attach = function(_, bufnr)
-  local signs = { Error = '', Warn = '', Hint = '', Info = '', Prefix = '' }
-
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   vim.diagnostic.config {
     virtual_text = {
-      prefix = signs.Prefix,
+      prefix = '',
     },
   }
-
-  for type, icon in pairs(signs) do
-    local hl = 'DiagnosticSign' .. type
-    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-  end
 
   vim.cmd [[
     augroup LspFormatting

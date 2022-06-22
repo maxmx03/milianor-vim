@@ -26,7 +26,6 @@ packer.startup(function(use)
     'numToStr/Comment.nvim',
     'ray-x/lsp_signature.nvim',
     'akinsho/toggleterm.nvim',
-    'kosayoda/nvim-lightbulb',
     'j-hui/fidget.nvim',
     'tami5/lspsaga.nvim',
     'folke/which-key.nvim',
