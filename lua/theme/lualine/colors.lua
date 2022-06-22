@@ -1,4 +1,4 @@
-local pallets = {
+local paletts = {
   tokyonight = {
     bg = '#24283b',
     fg = '#c0caf5',
@@ -100,14 +100,14 @@ local pallets = {
 }
 
 if user.theme.colorscheme == 'tokyonight' and vim.g.tokyonight_style == 'night' then
-  pallets[user.theme.colorscheme].bg = '#1f2335'
-  pallets[user.theme.colorscheme].fg = '#a9b1d6'
+  paletts[user.theme.colorscheme].bg = '#1f2335'
+  paletts[user.theme.colorscheme].fg = '#a9b1d6'
 end
 
 if user.theme.lualine_colors then
   return user.theme.lualine_colors
-elseif pallets[user.theme.colorscheme] then
-  return pallets[user.theme.colorscheme]
+elseif paletts[user.theme.colorscheme] then
+  return paletts[user.theme.colorscheme]
 else
-  return pallets['vscode']
+  return paletts['vscode']
 end

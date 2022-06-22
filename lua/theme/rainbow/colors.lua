@@ -1,4 +1,4 @@
-local pallets = {
+local paletts = {
   tokyonight = {
     '#c0caf5',
     '#e0af68',
@@ -65,8 +65,8 @@ local pallets = {
 
 if user.theme.rainbow_colors then
   return user.theme.rainbow_colors
-elseif pallets[user.theme.colorscheme] then
-  return pallets[user.theme.colorscheme]
+elseif paletts[user.theme.colorscheme] then
+  return paletts[user.theme.colorscheme]
 else
-  return pallets['vscode']
+  return paletts['vscode']
 end
