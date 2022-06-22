@@ -38,10 +38,6 @@ packer.startup(function(use)
     'lewis6991/impatient.nvim',
     'p00f/nvim-ts-rainbow',
     {
-      'weilbith/nvim-code-action-menu',
-      cmd = 'CodeActionMenu',
-    },
-    {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate',
     },
