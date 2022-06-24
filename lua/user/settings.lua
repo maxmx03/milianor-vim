@@ -1,6 +1,7 @@
 vim.opt.fileencoding = 'utf-8'
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.cursorline = true
 vim.opt.mouse = 'a'
 vim.opt.smartindent = true -- smart indentation, well smart is good right?
 vim.opt.autoindent = true -- copy indent from current line when starting a new line.
