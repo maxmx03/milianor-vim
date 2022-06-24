@@ -7,6 +7,7 @@ user.keymapping = {}
 user.langs = nil
 user.luadev = true
 user.plugins = nil
+user.auto_save = false
 
 require 'user.theme'
 require 'user.keymapping'

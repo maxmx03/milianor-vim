@@ -3,12 +3,22 @@ local lspconfig = require 'lspconfig'
 local on_attach = function(_, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-  vim.cmd [[
-    augroup LspFormatting
-      autocmd! * <buffer>
-	  autocmd BufWritePre <buffer> lua vim.lsp.buf.format()
-	augroup END
-  ]]
+  if user.auto_save then
+    vim.api.nvim_create_autocmd({ 'InsertLeave', 'TextChanged' }, {
+      pattern = '*.*',
+      callback = function()
+        vim.cmd 'lua vim.lsp.buf.format()'
+        vim.cmd 'update'
+      end,
+    })
+  else
+    vim.cmd [[
+      augroup LspFormatting
+        autocmd! * <buffer>
+        autocmd BufWritePre <buffer> lua vim.lsp.buf.format()
+      augroup END
+    ]]
+  end
 end
 
 vim.diagnostic.config {

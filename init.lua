@@ -11,6 +11,9 @@ require 'user.init'
 -- user.theme.sidebar = 'bottom' -- right, left, bottom, toplevel
 -- user.theme.rainbow = true -- enable rainbow plugin (parentheses colors)
 
+-- TODO: Enabled or disable Autosave
+-- user.auto_save = true
+
 -- TODO: Change lualine colors, to see the available pallets to go lua/theme/lualine/colors.lua
 -- user.theme.lualine_colors = {
 --   bg = '#16161D',
