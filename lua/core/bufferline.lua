@@ -1,3 +1,8 @@
 local bufferline = require 'bufferline'
 
-bufferline.setup()
+bufferline.setup {
+  options = {
+    indicator_icon = '',
+    separator_style = { '', '' },
+  },
+}
