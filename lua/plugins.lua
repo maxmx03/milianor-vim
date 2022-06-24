@@ -37,6 +37,7 @@ packer.startup(function(use)
     'SmiteshP/nvim-gps',
     'lewis6991/impatient.nvim',
     'p00f/nvim-ts-rainbow',
+    'lukas-reineke/indent-blankline.nvim',
     {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate',

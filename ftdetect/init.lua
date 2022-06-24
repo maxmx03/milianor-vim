@@ -12,6 +12,7 @@ local success = pcall(function()
   require 'core.devicons'
   require 'core.diffview'
   require 'core.gitsigns'
+  require 'core.indent_blankline'
   require 'core.lsp_installer'
   require 'core.lsp_signature'
   require 'core.lsp_saga'
