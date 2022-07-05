@@ -6,18 +6,17 @@ require 'user.init'
 
 -- TODO: change theme
 -- user.luadev = false
--- user.theme.colorscheme = 'kanagawa' -- solarized
--- user.theme.lualine = 'default' -- default, evil_lualine, bubbles, slanted
+-- user.theme.colorscheme = 'kanagawa'
+-- user.theme.lualine = 'evil_lualine' -- default, evil_lualine, bubbles, slanted
 -- user.theme.sidebar = 'bottom' -- right, left, bottom, toplevel
 
 -- TODO: Add more plugins, docs: https://github.com/wbthomason/packer.nvim
 -- user.plugins = {
--- 'justinmk/vim-sneak',
--- 'rebelot/kanagawa.nvim',
--- {
---   'akinsho/flutter-tools.nvim',
---   requires = { 'nvim-lua/plenary.nvim', 'thosakwe/vim-flutter' },
--- },
+--   'justinmk/vim-sneak',
+--   {
+--     'akinsho/flutter-tools.nvim',
+--     requires = { 'nvim-lua/plenary.nvim', 'thosakwe/vim-flutter' },
+--   },
 -- }
 
 -- TODO: Insert new keymapping
@@ -47,59 +46,59 @@ require 'user.init'
 -- }
 
 -- TODO: pick your programm langs to improve hignlighting
-user.langs = {
-  'bash',
-  'c',
-  'c_sharp',
-  'cpp',
-  'css',
-  'dart',
-  'fish',
-  'go',
-  'graphql',
-  'html',
-  'java',
-  'javascript',
-  'json',
-  'kotlin',
-  'lua',
-  'markdown',
-  'php',
-  'prisma',
-  'python',
-  'regex',
-  'scss',
-  'svelte',
-  'tsx',
-  'typescript',
-  'vim',
-  'vue',
-  'yaml',
-}
+-- user.langs = {
+--   'bash',
+--   'c',
+--   'c_sharp',
+--   'cpp',
+--   'css',
+--   'dart',
+--   'fish',
+--   'go',
+--   'graphql',
+--   'html',
+--   'java',
+--   'javascript',
+--   'json',
+--   'kotlin',
+--   'lua',
+--   'markdown',
+--   'php',
+--   'prisma',
+--   'python',
+--   'regex',
+--   'scss',
+--   'svelte',
+--   'tsx',
+--   'typescript',
+--   'vim',
+--   'vue',
+--   'yaml',
+-- }
 
 -- TODO: pick your formatters to use, to see more options go to lua/user/formatting.lua
-user.formatting = {
-  'prettier',
-  'stylua',
-}
+-- user.formatting = {
+--   'prettier',
+--   'stylua',
+-- }
 
 -- TODO: pick your diagnostics to use, to see more options go to lua/user/diagnostics.lua
-user.diagnostics = {
-  'eslint',
-}
+-- user.diagnostics = {
+--   'eslint',
+-- }
 
 -- TODO: pick your servers to use, to see more options go to lua/user/server.lua
-user.servers = {
-  'pylsp',
-  'tsserver',
-  'sumneko_lua',
-  'prismals',
-  'graphql',
-  'cssls',
-  'html',
-  'vuels',
-  'volar',
-  'emmet_ls',
-  'tailwindcss',
-  'svelte',
-}
+-- user.servers = {
+--   'pylsp',
+--   'tsserver',
+--   'sumneko_lua',
+--   'prismals',
+--   'graphql',
+--   'cssls',
+--   'html',
+--   'vuels',
+--   'volar',
+--   'emmet_ls',
+--   'tailwindcss',
+--   'svelte',
+-- }

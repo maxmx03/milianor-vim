@@ -24,7 +24,7 @@ packer.startup {
       'folke/trouble.nvim',
       'folke/lua-dev.nvim',
       'folke/todo-comments.nvim',
-      'maxmx03/solarized.nvim',
+      'rebelot/kanagawa.nvim',
       'SmiteshP/nvim-gps',
       'lewis6991/impatient.nvim',
       'p00f/nvim-ts-rainbow',

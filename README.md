@@ -25,8 +25,8 @@ For more instructions: [Wiki](https://github.com/maxmx03/milianor-vim/wiki)
 - [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - and more...
 
-## Available Themes
-- [Solarized](https://github.com/maxmx03/solarized.nvim)
+## Default Theme
+- [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
 
 ## Other tools to use along with Neovim
 - [Alacritty](https://github.com/alacritty/alacritty) - OpenGl terminal emulator
