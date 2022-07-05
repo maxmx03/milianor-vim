@@ -3,7 +3,6 @@ require 'plugins'
 local success = pcall(function()
   require 'core.impatient'
   require 'core.notify'
-  require 'core.alpha'
   require 'core.autopairs'
   require 'core.autotag'
   require 'core.bufferline'
@@ -22,16 +21,17 @@ local success = pcall(function()
   require 'core.null-ls'
   require 'core.telescope'
   require 'core.todo_comments'
+  require 'core.dashboard'
   require 'core.toggleterm'
-  require 'core.neo-tree'
+  require 'core.nvim-tree'
   require 'core.treesitter'
   require 'core.fidget'
   require 'core.which-key'
   require 'core.winbar'
+
+  vim.cmd(string.format('colorscheme %s', user.theme.colorscheme))
 end)
 
 if not success then
   vim.cmd 'colorscheme slate'
-else
-  vim.cmd(string.format('colorscheme %s', user.theme.colorscheme))
 end

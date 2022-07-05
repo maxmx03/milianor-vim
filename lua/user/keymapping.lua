@@ -3,7 +3,7 @@ local keymap = vim.api.nvim_set_keymap
 
 -- DEFAULT
 keymap('n', '<F2>', ':update<cr>', opts) -- save file
-keymap('n', '<F3>', ':quit!<cr>', opts) -- exit neovim
+keymap('n', '<F3>', ':quitall<cr>', opts) -- exit neovim
 
 -- LSP SAGA
 keymap('n', 'ca', ':Lspsaga code_action<cr>', opts) -- code action
@@ -26,9 +26,9 @@ user.keymapping = {
 
   q = { ':quit<cr>', 'Quit' },
 
-  a = { ':Alpha<cr>', 'Open startify' },
+  a = { ':Dashboard<cr>', 'Open Dashboard' },
 
-  n = { ':Neotree filesystem toggle<cr> ', 'Open Neo-tree' },
+  n = { ':NvimTreeToggle<cr> ', 'Open Neo-tree' },
 
   f = {
     name = 'TELESCOPE',
