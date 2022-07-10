@@ -1,7 +1,6 @@
 user = {}
-user.auto_save = false
 user.luadev = true
-user.plugins = nil
+user.plugins = {}
 
 require 'user.theme'
 require 'user.keymapping'

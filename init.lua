@@ -1,4 +1,3 @@
-require 'plugins'
 require 'user.init'
 
 -- user.theme.colorscheme = 'kanagawa'
@@ -26,6 +25,7 @@ user.langs = {
   -- 'javascript',
   -- 'typescript',
   -- 'tsx',
+  -- 'lua',
 }
 
 user.servers = {
@@ -33,10 +33,12 @@ user.servers = {
   -- 'cssls',
   -- 'html',
   -- 'emmet_ls',
+  -- 'sumneko_lua',
 }
 
 user.formattings = {
-  -- 'prettier'
+  -- 'prettier',
+  -- 'stylua',
 }
 
 user.completions = {
@@ -50,3 +52,4 @@ user.code_actions = {
 user.hovers = {
   -- 'dictionary',
 }
+

@@ -95,7 +95,7 @@ packer.startup {
 
     use(core_plugins)
 
-    if user.plugins then
+    if user and user.plugins then
       use(user.plugins)
     end
 

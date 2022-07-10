@@ -1,3 +1,4 @@
+require 'plugins'
 
 local success = pcall(function()
   require 'core.impatient'
