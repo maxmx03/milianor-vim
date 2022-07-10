@@ -3,7 +3,7 @@ require 'user.init'
 -- TODO: Change Theme
 -- user.theme.colorscheme = 'kanagawa'
 -- user.theme.sidebar = 'left'
--- user.theme.lualine = 'default'
+user.theme.lualine = 'bubbles'
 -- user.theme.lualine_colors = {
 --   bg = '#16161D',
 --   fg = '#C8C093',

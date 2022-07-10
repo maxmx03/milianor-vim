@@ -1,32 +1,20 @@
--- Bubbles config for lualine
--- Author: lokesh-krishna
--- MIT license, see LICENSE for more details.
-local c = require 'theme.lualine.colors'
-
-local colors = {
-  blue = c.blue,
-  cyan = c.cyan,
-  black = c.bg,
-  white = c.fg,
-  violet = c.violet,
-  grey = c.grey,
-}
+local colors = require 'theme.lualine.colors'
 
 local bubbles_theme = {
   normal = {
-    a = { fg = colors.black, bg = colors.violet },
-    b = { fg = colors.white, bg = colors.grey },
-    c = { fg = colors.black, bg = colors.black },
+    a = { fg = colors.bg, bg = colors.violet },
+    b = { fg = colors.fg, bg = colors.grey },
+    c = { fg = colors.bg, bg = colors.bg },
   },
 
-  insert = { a = { fg = colors.black, bg = colors.blue } },
-  visual = { a = { fg = colors.black, bg = colors.cyan } },
-  replace = { a = { fg = colors.black, bg = colors.red } },
+  insert = { a = { fg = colors.bg, bg = colors.blue } },
+  visual = { a = { fg = colors.bg, bg = colors.cyan } },
+  replace = { a = { fg = colors.bg, bg = colors.red } },
 
   inactive = {
-    a = { fg = colors.white, bg = colors.black },
-    b = { fg = colors.white, bg = colors.black },
-    c = { fg = colors.black, bg = colors.black },
+    a = { fg = colors.fg, bg = colors.bg },
+    b = { fg = colors.fg, bg = colors.bg },
+    c = { fg = colors.bg, bg = colors.bg },
   },
 }
 

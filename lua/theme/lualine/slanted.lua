@@ -1,28 +1,15 @@
-local c = require 'theme.lualine.colors'
-
-local colors = {
-  fg = c.fg,
-  bg = c.bg,
-  black = c.bg,
-  white = c.fg,
-  red = c.red,
-  blue = c.blue,
-  green = c.green,
-  purple = c.violet,
-  orange = c.orange,
-  gray = c.grey,
-}
+local colors = require 'theme.lualine.colors'
 
 local theme = {
   normal = {
-    a = { fg = colors.black, bg = colors.purple },
+    a = { fg = colors.bg, bg = colors.violet },
     b = { fg = colors.fg, bg = colors.bg },
     c = { fg = colors.fg, bg = colors.bg },
-    z = { fg = colors.white, bg = colors.gray },
+    z = { fg = colors.fg, bg = colors.grey },
   },
-  insert = { a = { fg = colors.black, bg = colors.blue } },
-  visual = { a = { fg = colors.black, bg = colors.orange } },
-  replace = { a = { fg = colors.black, bg = colors.green } },
+  insert = { a = { fg = colors.bg, bg = colors.blue } },
+  visual = { a = { fg = colors.bg, bg = colors.orange } },
+  replace = { a = { fg = colors.bg, bg = colors.green } },
 }
 
 local empty = require('lualine.component'):extend()
@@ -38,7 +25,7 @@ local function process_sections(sections)
   for name, section in pairs(sections) do
     local left = name:sub(9, 10) < 'x'
     for pos = 1, name ~= 'lualine_z' and #section or #section - 1 do
-      table.insert(section, pos * 2, { empty, color = { fg = colors.white, bg = colors.bg } })
+      table.insert(section, pos * 2, { empty, color = { fg = colors.fg, bg = colors.bg } })
     end
     for id, comp in ipairs(section) do
       if type(comp) ~= 'table' then
@@ -81,19 +68,19 @@ require('lualine').setup {
   sections = process_sections {
     lualine_a = { 'mode' },
     lualine_b = {
-      { 'branch', color = { fg = colors.black, bg = colors.green } },
+      { 'branch', color = { fg = colors.bg, bg = colors.green } },
       'diff',
       {
         'diagnostics',
         source = { 'nvim' },
         sections = { 'error' },
-        diagnostics_color = { error = { bg = colors.red, fg = colors.black } },
+        diagnostics_color = { error = { bg = colors.red, fg = colors.bg } },
       },
       {
         'diagnostics',
         source = { 'nvim' },
         sections = { 'warn' },
-        diagnostics_color = { warn = { bg = colors.orange, fg = colors.black } },
+        diagnostics_color = { warn = { bg = colors.orange, fg = colors.bg } },
       },
       { 'filename', file_status = false, path = 1 },
       { modified, color = { bg = colors.red } },
@@ -136,7 +123,7 @@ require('lualine').setup {
           end
           return msg
         end,
-        color = { fg = colors.fg, bg = colors.gray },
+        color = { fg = colors.fg, bg = colors.grey },
       },
     },
     lualine_z = { '%p%%/%L' },
