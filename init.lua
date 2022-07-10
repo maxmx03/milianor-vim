@@ -1,5 +1,6 @@
 require 'user.init'
 
+-- TODO: Change Theme
 -- user.theme.colorscheme = 'kanagawa'
 -- user.theme.sidebar = 'left'
 -- user.theme.lualine = 'default'
@@ -18,6 +19,7 @@ require 'user.init'
 --   grey = '#54546D',
 -- }
 
+-- TODO: Syntax Highlight, Lsp servers, formats, diagnostics, completions, code actions
 user.langs = {
   -- 'css',
   -- 'json',
@@ -53,3 +55,21 @@ user.hovers = {
   -- 'dictionary',
 }
 
+-- TODO: Install more plugins
+-- user.plugins = {
+--   'justinmk/vim-sneak',
+--   {
+--     'akinsho/flutter-tools.nvim',
+--     requires = { 'nvim-lua/plenary.nvim', 'thosakwe/vim-flutter' },
+--   },
+-- }
+
+-- TODO: Insert new keymapping
+-- user.keymapping['F'] = {
+--   name = 'FLUTTER',
+--   r = { ':FlutterRun<cr>', 'Flutter run' },
+--   R = { ':FlutterHotRestart<cr>', 'Flutter restart' },
+--   q = { ':FlutterQuit<cr>', 'Flutter quit' },
+--   v = { ':FlutterVisualDebug<cr>', 'Flutter visual debug' },
+--   o = { ':FlutterOutlineToggle<cr>', 'Flutter outline debug' },
+-- }
