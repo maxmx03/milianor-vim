@@ -27,9 +27,9 @@ packer.startup {
       'rebelot/kanagawa.nvim',
       'SmiteshP/nvim-gps',
       'lewis6991/impatient.nvim',
-      'p00f/nvim-ts-rainbow',
       'lukas-reineke/indent-blankline.nvim',
       'glepnir/dashboard-nvim',
+      'phaazon/hop.nvim',
       {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
@@ -95,7 +95,7 @@ packer.startup {
 
     use(core_plugins)
 
-    if user and user.plugins then
+    if user.plugins ~= nil then
       use(user.plugins)
     end
 

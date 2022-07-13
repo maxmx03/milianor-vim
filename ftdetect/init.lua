@@ -19,6 +19,7 @@ local success = pcall(function()
   require 'core.lualine'
   require 'core.trouble'
   require 'core.null-ls'
+  require 'core.hop'
   require 'core.telescope'
   require 'core.todo_comments'
   require 'core.dashboard'

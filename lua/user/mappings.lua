@@ -9,6 +9,10 @@ vim.keymap.set('n', '<F3>', ':quitall<cr>', opts) -- save file
 -- INTEGRATED TERMINAL
 vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts) -- exit the terminal
 
+-- HOP
+vim.keymap.set('n', 's', ':HopPattern<cr>', opts)
+vim.keymap.set('n', 'f', ':HopWord<cr>', opts)
+
 -- COMMENT
 vim.keymap.set(
   'n',
@@ -49,8 +53,8 @@ user.keymapping = {
     k = { ':Lspsaga hover_doc<cr>', 'Hover Doc' },
     h = { ':Lspsaga signature_help<cr>', 'Signature Help' },
     l = { ':Lspsaga show_line_diagnostics<cr>', 'Show line diagnostic' },
-    d = { ':Lspsaga preview_definition', 'Preview Definition' },
-    f = { ':Lspsaga lsp_finder', 'Findern' },
+    d = { ':Lspsaga preview_definition<cr>', 'Preview Definition' },
+    f = { ':Lspsaga lsp_finder<cr>', 'Finder' },
     [']'] = { ':Lspsaga diagnostic_jump_next<cr>', 'Next diagnostic' },
     ['['] = { ':Lspsaga diagnostic_jump_prev<cr>', 'Prev diagnostic' },
   },

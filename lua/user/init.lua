@@ -1,9 +1,9 @@
 user = {}
 user.luadev = true
-user.plugins = {}
+user.plugins = nil
 
 require 'user.theme'
-require 'user.keymapping'
+require 'user.mappings'
 require 'user.settings'
 require 'user.autocmd'
 require 'user.langs'

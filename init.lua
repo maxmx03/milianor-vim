@@ -35,7 +35,7 @@ user.servers = {
   -- 'cssls',
   -- 'html',
   -- 'emmet_ls',
-  -- 'sumneko_lua',
+  'sumneko_lua',
 }
 
 user.formattings = {
@@ -44,11 +44,11 @@ user.formattings = {
 }
 
 user.completions = {
-  -- 'spell'.
+  -- 'spell',
 }
 
 user.code_actions = {
-  -- 'eslint'
+  -- 'eslint',
 }
 
 user.hovers = {
