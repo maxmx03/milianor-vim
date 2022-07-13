@@ -1,25 +1,22 @@
 local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
 
--- DEFAULT
-keymap('n', '<F2>', ':update<cr>', opts) -- save file
-keymap('n', '<F3>', ':quitall<cr>', opts) -- exit neovim
+-- SAVE
+vim.keymap.set('n', '<F2>', ':update<cr>', opts) -- save file
 
--- LSP SAGA
-keymap('n', 'ca', ':Lspsaga code_action<cr>', opts) -- code action
-keymap('n', 'K', ':Lspsaga hover_doc<cr>', opts) -- hover doc
+-- EXIT NEOVIM
+vim.keymap.set('n', '<F3>', ':quitall<cr>', opts) -- save file
 
 -- INTEGRATED TERMINAL
-keymap('t', '<esc>', [[<C-\><C-n>]], opts) -- exit the terminal
+vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts) -- exit the terminal
 
 -- COMMENT
-keymap(
+vim.keymap.set(
   'n',
   '<space>cc',
   "v:count == 0 ? '<Plug>(comment_toggle_current_linewise)' : '<Plug>(comment_toggle_linewise_count)'",
   { expr = true, noremap = true }
 )
-keymap('x', '<space>cc', '<Plug>(comment_toggle_linewise_visual)', opts)
+vim.keymap.set('x', '<space>cc', '<Plug>(comment_toggle_linewise_visual)', opts)
 
 user.keymapping = {
   w = { ':update<cr>', 'Save' },
@@ -41,8 +38,8 @@ user.keymapping = {
   [']'] = { ':BufferLineCycleNext<cr>', 'Next tab' },
   ['['] = { ':BufferLineCyclePrev<cr>', 'Previous tab' },
   x = { ':BufferLinePickClose<cr>', 'Close tab' },
-  l = { ':BufferLineCloseLeft<cr>', 'Close all left tabs' },
-  r = { ':BufferLineCloseRight<cr>', 'Close all right tabs' },
+  ['l'] = { ':BufferLineCloseLeft<cr>', 'Close all left tabs' },
+  ['r'] = { ':BufferLineCloseRight<cr>', 'Close all right tabs' },
 
   s = {
     name = 'LSP SAGA',
@@ -52,6 +49,8 @@ user.keymapping = {
     k = { ':Lspsaga hover_doc<cr>', 'Hover Doc' },
     h = { ':Lspsaga signature_help<cr>', 'Signature Help' },
     l = { ':Lspsaga show_line_diagnostics<cr>', 'Show line diagnostic' },
+    d = { ':Lspsaga preview_definition', 'Preview Definition' },
+    f = { ':Lspsaga lsp_finder', 'Findern' },
     [']'] = { ':Lspsaga diagnostic_jump_next<cr>', 'Next diagnostic' },
     ['['] = { ':Lspsaga diagnostic_jump_prev<cr>', 'Prev diagnostic' },
   },

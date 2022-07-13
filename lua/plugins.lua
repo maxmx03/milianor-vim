@@ -19,7 +19,7 @@ packer.startup {
       'ray-x/lsp_signature.nvim',
       'akinsho/toggleterm.nvim',
       'j-hui/fidget.nvim',
-      'tami5/lspsaga.nvim',
+      'glepnir/lspsaga.nvim',
       'folke/which-key.nvim',
       'folke/trouble.nvim',
       'folke/lua-dev.nvim',

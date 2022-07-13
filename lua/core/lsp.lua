@@ -11,12 +11,6 @@ local on_attach = function(_, bufnr)
   ]]
 end
 
-vim.diagnostic.config {
-  virtual_text = {
-    prefix = '',
-  },
-}
-
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 local lsp_flags = {
   debounce_text_changes = 150,
@@ -65,3 +59,14 @@ if success then
     },
   }
 end
+
+vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
+vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
+vim.fn.sign_define('DiagnosticSignInfo', { text = '', texthl = 'DiagnosticSignInfo' })
+vim.fn.sign_define('DiagnosticSignHint', { text = '', texthl = 'DiagnosticSignHint' })
+
+vim.diagnostic.config {
+  virtual_text = {
+    prefix = '',
+  },
+}

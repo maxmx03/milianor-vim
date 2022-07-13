@@ -18,7 +18,7 @@ vim.opt.completeopt = { 'menu', 'menuone', 'noselect' } -- for cmp
 vim.opt.undofile = true -- persist undo
 vim.opt.undodir = vim.fn.stdpath 'cache' .. '/undo'
 vim.opt.clipboard = 'unnamedplus'
-vim.opt.whichwrap:append("<,>,[,],h,l")
+vim.opt.whichwrap:append '<,>,[,],h,l'
 vim.g.dashboard_default_executive = 'telescope'
 vim.o.termguicolors = true
 
