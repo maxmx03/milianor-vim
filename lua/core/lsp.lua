@@ -3,12 +3,10 @@ local lspconfig = require 'lspconfig'
 local on_attach = function(_, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-  vim.cmd [[
-    augroup LspFormatting
-      autocmd! * <buffer>
-      autocmd BufWritePre <buffer> lua vim.lsp.buf.format()
-    augroup END
-  ]]
+  vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
+    pattern = '*',
+    command = 'lua vim.lsp.buf.format()'
+  })
 end
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())

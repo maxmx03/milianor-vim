@@ -7,7 +7,7 @@ nvim_tree.setup {
   },
   filters = {
     dotfiles = false,
-    custom = { 'node_modules' },
+    custom = { '^.git$', 'node_modules' },
     exclude = {},
   },
   actions = {

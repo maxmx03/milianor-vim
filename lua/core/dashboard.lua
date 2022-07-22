@@ -46,13 +46,13 @@ dashboard.custom_center = {
 
 local neovim_welcome = '🎉 Have fun with neovim'
 local neovim_info = ''
-  .. 'Neovim  v'
-  .. vim.version().major
-  .. '.'
-  .. vim.version().minor
-  .. '.'
-  .. vim.version().patch
-  .. '   '
-  .. os.date '%d/%m/%Y'
+    .. 'Neovim  v'
+    .. vim.version().major
+    .. '.'
+    .. vim.version().minor
+    .. '.'
+    .. vim.version().patch
+    .. '   '
+    .. os.date '%d/%m/%Y'
 
 dashboard.custom_footer = { neovim_welcome, neovim_info }
