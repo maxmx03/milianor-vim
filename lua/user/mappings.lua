@@ -14,13 +14,13 @@ vim.keymap.set('n', 's', ':HopPattern<cr>', opts)
 vim.keymap.set('n', 'f', ':HopWord<cr>', opts)
 
 -- COMMENT
+vim.keymap.set('n', '<space>/', "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
 vim.keymap.set(
-  'n',
-  '<space>cc',
-  "v:count == 0 ? '<Plug>(comment_toggle_current_linewise)' : '<Plug>(comment_toggle_linewise_count)'",
-  { expr = true, noremap = true }
+  'x',
+  '<space>/',
+  '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>',
+  opts
 )
-vim.keymap.set('x', '<space>cc', '<Plug>(comment_toggle_linewise_visual)', opts)
 
 user.keymapping = {
   w = { ':update<cr>', 'Save' },
