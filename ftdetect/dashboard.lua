@@ -26,7 +26,7 @@ dashboard.custom_center = {
     icon = '  ',
     desc = 'File Browser                            ',
     action = 'NvimTreeToggle',
-    shortcut = 'SPC n  ',
+    shortcut = 'SPC e  ',
   },
   {
     icon = '  ',
