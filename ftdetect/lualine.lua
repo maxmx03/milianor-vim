@@ -1,3 +1,3 @@
 local user = require 'user.config'
 
-require('theme.lualine.' .. user.lualine)
+require('core.lualine.' .. user.lualine)

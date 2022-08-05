@@ -4,7 +4,7 @@ if not success then
   return
 end
 
-local colors = require 'theme.lualine.colors'
+local colors = require 'core.lualine.colors'
 local user = require 'user.config'
 
 local conditions = {

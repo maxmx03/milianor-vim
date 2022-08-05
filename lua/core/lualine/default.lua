@@ -4,10 +4,12 @@ if not success then
   return
 end
 
+local user = require 'user.config'
+
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = user.theme.colorscheme,
+    theme = user.colorscheme,
     component_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
     disabled_filetypes = {},
