@@ -1,4 +1,4 @@
-local success, lspconfig = pcall(require, 'lspconfig')
+local success, lsp = pcall(require, 'lspconfig')
 
 if not success then
   return
@@ -7,7 +7,7 @@ end
 local user = require 'user.config'
 local icons = require 'core.icons'
 
-local on_attach = function(_, bufnr)
+local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
@@ -30,13 +30,13 @@ local on_attach = function(_, bufnr)
 end
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-local lsp_flags = {
-  debounce_text_changes = 150,
-}
+
 local config = {
   on_attach = on_attach,
+  flags = {
+    debouce_text_changes = 150,
+  },
   capabilities = capabilities,
-  flags = lsp_flags,
 }
 
 for _, server in pairs(user.servers) do
@@ -52,13 +52,15 @@ for _, server in pairs(user.servers) do
       runtime_path = false,
       lspconfig = {
         on_attach = on_attach,
+        flags = {
+          debouce_text_changes = 150,
+        },
         capabilities = capabilities,
-        flags = lsp_flags,
       },
     }
   end
 
-  lspconfig[server].setup(config)
+  lsp[server].setup(config)
 end
 
 vim.fn.sign_define('DiagnosticSignError', { text = icons.diagnostics.Error, texthl = 'DiagnosticSignError' })

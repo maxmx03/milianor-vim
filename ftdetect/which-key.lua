@@ -6,6 +6,8 @@ end
 
 local user = require 'user.config'
 
-wk.setup {}
+wk.setup {
+  ignore_missing = true,
+}
 
 wk.register(user.keymappings, { prefix = '<space>' })
