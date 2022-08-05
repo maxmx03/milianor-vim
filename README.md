@@ -8,24 +8,20 @@ git clone https://github.com/maxmx03/milianor-vim.git ~/.config/nvim
 nvim
 ```
 
-## Wiki
+## Requirements
+[neovim-nightly](https://github.com/neovim/neovim/releases/nightly)
+[nerd-font](https://www.nerdfonts.com/font-downloads)
+[codicons (optional)](https://github.com/microsoft/vscode-codicons/blob/main/dist/codicon.ttf)
+[Noto-Emoji (optional)](https://github.com/googlefonts/noto-emoji/blob/main/fonts/NotoColorEmoji.ttf)
 
-For more instructions: [Wiki](https://github.com/maxmx03/milianor-vim/wiki)
+## Codicon
+Codicon may not work in your terminal. Try use kitty terminal to get it work. <br />
+Place line below in your kitty config file.
+```
+symbol_map U+f101-U+f208 nonicon regular
+```
 
-## Plugins
-- [LSP](https://github.com/neovim/nvim-lspconfig)
-- [LSP Installer](https://github.com/williamboman/nvim-lsp-installer)
-- [LSP Signature](https://github.com/ray-x/lsp_signature.nvim)
-- [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [Tree](https://github.com/kyazdani42/nvim-tree.lua)
-- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-- [Nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-- [Friendly-Snippets](https://github.com/rafamadriz/friendly-snippets)
-- [Diffview](https://github.com/sindrets/diffview.nvim)
-- [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
-- and more...
-
-## Default Theme
+## Milianor-vim main theme
 - [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
 
 ## Other tools to use along with Neovim
@@ -33,6 +29,9 @@ For more instructions: [Wiki](https://github.com/maxmx03/milianor-vim/wiki)
 - [Kitty](https://github.com/kovidgoyal/kitty) - GPU based terminal emulator
 - [Fish](https://github.com/fish-shell/fish-shell) - Command line shell for linux, macos
 - [Tmux](https://github.com/tmux/tmux) - terminal multiplexer
+
+## My dotfiles
+[milianor-dotfiles](https://github.com/maxmx03/milianor-dotfiles)
 
 ### License
 
