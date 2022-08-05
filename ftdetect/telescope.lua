@@ -8,7 +8,7 @@ local icons = require 'core.icons'
 
 telescope.setup {
   defaults = {
-    file_ignore_patterns = { 'node_modules', '.git', '.next', 'build', 'dist' },
+    file_ignore_patterns = { '^node_modules$', '^.git$', '^.next$', '^build$', '^dist$' },
     prompt_prefix = icons.ui.Telescope,
     selection_caret = ' ',
   },
