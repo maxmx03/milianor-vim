@@ -31,7 +31,7 @@ vim.keymap.set(
 -- BUFFERLINE
 vim.keymap.set('n', '<C-Right>', ':BufferLineCycleNext<cr>', opts)
 vim.keymap.set('n', '<C-Left>', ':BufferLineCyclePrev<cr>', opts)
-vim.keymap.set('n', '<C-X>', ':BufferLinePickClose<cr>', opts)
+vim.keymap.set('n', '<C-c>', ':BufferLinePickClose<cr>', opts)
 vim.keymap.set('n', '<C-x>', ':bd<cr>', opts)
 
 user.keymappings = {
