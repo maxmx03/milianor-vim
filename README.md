@@ -9,10 +9,10 @@ nvim
 ```
 
 ## Requirements
-[neovim-nightly](https://github.com/neovim/neovim/releases/nightly)
-[nerd-font](https://www.nerdfonts.com/font-downloads)
-[codicons (optional)](https://github.com/microsoft/vscode-codicons/blob/main/dist/codicon.ttf)
-[Noto-Emoji (optional)](https://github.com/googlefonts/noto-emoji/blob/main/fonts/NotoColorEmoji.ttf)
+- [neovim-nightly](https://github.com/neovim/neovim/releases/nightly)
+- [nerd-font](https://www.nerdfonts.com/font-downloads)
+- [codicons (optional)](https://github.com/microsoft/vscode-codicons/blob/main/dist/codicon.ttf)
+- [Noto-Emoji (optional)](https://github.com/googlefonts/noto-emoji/blob/main/fonts/NotoColorEmoji.ttf)
 
 ## Codicon
 Codicon may not work in your terminal. Try use kitty terminal to get it work. <br />
