@@ -1,13 +1,19 @@
 local opts = { noremap = true, silent = true }
+local user = require 'user.config'
 
--- SAVE
-vim.keymap.set('n', '<F2>', ':update<cr>', opts) -- save file
+-- SAVE NEOVIM
+vim.keymap.set('n', '<F2>', ':Dashboard<cr>', opts) -- save file
 
--- EXIT NEOVIM
-vim.keymap.set('n', '<F3>', ':quitall<cr>', opts) -- save file
+-- QUIT ALL
+vim.keymap.set('n', '<F3>', ':quitall<cr>', opts)
+
+-- LAB
+vim.keymap.set('n', '<F4>', ':Lab code stop<cr>', opts)
+vim.keymap.set('n', '<F5>', ':Lab code run<cr>', opts)
+vim.keymap.set('n', '<F6>', ':Lab code panel<cr>', opts)
 
 -- INTEGRATED TERMINAL
-vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts) -- exit the terminal
+vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
 
 -- HOP
 vim.keymap.set('n', 's', ':HopPattern<cr>', opts)
@@ -22,28 +28,28 @@ vim.keymap.set(
   opts
 )
 
-user.keymapping = {
+-- BUFFERLINE
+vim.keymap.set('n', '<C-Right>', ':BufferLineCycleNext<cr>', opts)
+vim.keymap.set('n', '<C-Left>', ':BufferLineCyclePrev<cr>', opts)
+vim.keymap.set('n', '<C-X>', ':BufferLinePickClose<cr>', opts)
+vim.keymap.set('n', '<C-x>', ':bd<cr>', opts)
+
+user.keymappings = {
   w = { ':update<cr>', 'Save' },
 
-  q = { ':quit<cr>', 'Quit' },
+  q = { ':lua require"user.config".smart_quit()<cr>', 'Quit' },
 
   a = { ':Dashboard<cr>', 'Open Dashboard' },
 
-  n = { ':NvimTreeToggle<cr> ', 'Open Neo-tree' },
+  e = { ':NvimTreeToggle<cr> ', 'Open Neo-tree' },
 
   f = {
     name = 'TELESCOPE',
-    f = { ':Telescope find_files<cr>', 'Find file' },
-    g = { ':Telescope live_grep<cr>', 'Find character' },
-    b = { ':Telescope buffers<cr>', 'Find buffers' },
-    h = { ':Telescope help_tag<cr>', 'Help tags' },
+    f = { ':Telescope find_files theme=dropdown<cr>', 'Find file' },
+    g = { ':Telescope live_grep theme=dropdown<cr>', 'Find character' },
+    b = { ':Telescope buffers theme=dropdown<cr>', 'Find buffers' },
+    h = { ':Telescope help_tag theme=dropdown<cr>', 'Help tags' },
   },
-
-  [']'] = { ':BufferLineCycleNext<cr>', 'Next tab' },
-  ['['] = { ':BufferLineCyclePrev<cr>', 'Previous tab' },
-  x = { ':BufferLinePickClose<cr>', 'Close tab' },
-  ['l'] = { ':BufferLineCloseLeft<cr>', 'Close all left tabs' },
-  ['r'] = { ':BufferLineCloseRight<cr>', 'Close all right tabs' },
 
   s = {
     name = 'LSP SAGA',
@@ -75,15 +81,7 @@ user.keymapping = {
     b = { ':Gitsigns toggle_current_line_blame<cr>', 'Toggle blame' },
   },
 
-  c = {
-    name = 'VCOLOR',
-    r = { ':VCoolor<cr>', 'HASH color' },
-    g = { ':VCoolIns r<cr>', 'RGB color' },
-    h = { ':VCoolIns h<cr>', 'HSL color' },
-    b = { ':VCoolIns ra<cr>', 'RGBA color' },
-  },
-
-  e = {
+  t = {
     name = 'TROUBLE',
     e = { ':TroubleToggle<cr>', 'Toggle Trouble' },
     w = { ':TroubleToggle workspace_diagnostics<cr>', 'Workspace diagnostics' },
@@ -93,7 +91,7 @@ user.keymapping = {
     R = { ':TroubleToggle lsp_references<cr>', 'Lsp references' },
   },
 
-  t = {
+  T = {
     name = 'TODO',
     t = { ':TodoLocList<cr>', 'Location list to show all todos' },
     q = { ':TodoQuickFix<cr>', 'Quickfix list to show all todos' },

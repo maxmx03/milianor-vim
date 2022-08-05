@@ -1,3 +1,9 @@
+local success, lualine = pcall(require, 'lualine')
+
+if not success then
+  return
+end
+
 local colors = require 'theme.lualine.colors'
 
 local theme = {
@@ -59,7 +65,7 @@ local function modified()
   return ''
 end
 
-require('lualine').setup {
+lualine.setup {
   options = {
     theme = theme,
     component_separators = '',

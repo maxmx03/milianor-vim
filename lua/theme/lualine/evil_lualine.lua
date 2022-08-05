@@ -1,5 +1,11 @@
-local lualine = require 'lualine'
+local success, lualine = pcall(require, 'lualine')
+
+if not success then
+  return
+end
+
 local colors = require 'theme.lualine.colors'
+local user = require 'user.config'
 
 local conditions = {
   buffer_not_empty = function()
@@ -71,7 +77,7 @@ ins_left {
 ins_left {
   -- mode component
   function()
-    if user.theme.colorscheme ~= 'doom-one' then
+    if user.colorscheme ~= 'doom-one' then
       return ''
     end
 

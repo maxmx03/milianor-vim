@@ -1,10 +1,15 @@
-require 'user.init'
+require 'plugins'
+require 'user'
+local user = require 'user.config'
+
+--TODO: enable autosave, <space>l to format
+-- user.auto_save = true
 
 -- TODO: Change Theme
--- user.theme.colorscheme = 'kanagawa'
--- user.theme.sidebar = 'left'
--- user.theme.lualine = 'bubbles'
--- user.theme.lualine_colors = {
+-- user.colorscheme = 'kanagawa'
+-- user.sidebar = 'left'
+-- user.lualine = 'bubbles'
+-- user.lualine_colors = {
 --   bg = '#16161D',
 --   fg = '#C8C093',
 --   yellow = '#938056',
@@ -28,6 +33,7 @@ user.langs = {
   -- 'typescript',
   -- 'tsx',
   -- 'lua',
+  -- 'vim',
 }
 
 user.servers = {
@@ -36,11 +42,12 @@ user.servers = {
   -- 'html',
   -- 'emmet_ls',
   'sumneko_lua',
+  -- 'vimls',
 }
 
 user.formattings = {
   -- 'prettier',
-  -- 'stylua',
+  'stylua',
 }
 
 user.completions = {
@@ -57,19 +64,14 @@ user.hovers = {
 
 -- TODO: Install more plugins
 -- user.plugins = {
---   'justinmk/vim-sneak',
---   {
---     'akinsho/flutter-tools.nvim',
---     requires = { 'nvim-lua/plenary.nvim', 'thosakwe/vim-flutter' },
---   },
+--    'KabbAmine/vCoolor.vim',
 -- }
 
 -- TODO: Insert new keymapping
--- user.keymapping['F'] = {
---   name = 'FLUTTER',
---   r = { ':FlutterRun<cr>', 'Flutter run' },
---   R = { ':FlutterHotRestart<cr>', 'Flutter restart' },
---   q = { ':FlutterQuit<cr>', 'Flutter quit' },
---   v = { ':FlutterVisualDebug<cr>', 'Flutter visual debug' },
---   o = { ':FlutterOutlineToggle<cr>', 'Flutter outline debug' },
+-- user.keymappings['c'] = {
+--   name = 'VCOLOR',
+--   r = { ':VCoolor<cr>', 'HASH color' },
+--   g = { ':VCoolIns r<cr>', 'RGB color' },
+--   h = { ':VCoolIns h<cr>', 'HSL color' },
+--   b = { ':VCoolIns ra<cr>', 'RGBA color' },
 -- }

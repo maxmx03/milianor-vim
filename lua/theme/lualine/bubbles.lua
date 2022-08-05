@@ -1,3 +1,9 @@
+local success, lualine = pcall(require, 'lualine')
+
+if not success then
+  return
+end
+
 local colors = require 'theme.lualine.colors'
 
 local bubbles_theme = {
@@ -18,7 +24,7 @@ local bubbles_theme = {
   },
 }
 
-require('lualine').setup {
+lualine.setup {
   options = {
     theme = bubbles_theme,
     component_separators = '|',
