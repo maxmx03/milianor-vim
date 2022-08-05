@@ -19,14 +19,14 @@ local on_attach = function(_, bufnr)
       buffer = bufnr,
       command = 'update',
     })
+  else
+    vim.cmd [[
+      augroup LspFormatting
+        autocmd! * <buffer>
+        autocmd BufWritePre <buffer> lua vim.lsp.buf.format()
+      augroup END
+    ]]
   end
-
-  vim.cmd [[
-    augroup LspFormatting
-      autocmd! * <buffer>
-      autocmd BufWritePre <buffer> lua vim.lsp.buf.format()
-    augroup END
-  ]]
 end
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())

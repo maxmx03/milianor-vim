@@ -98,6 +98,9 @@ packer.startup {
     -- PERFORMANCE
     use 'lewis6991/impatient.nvim'
 
+    -- SESSION
+    use 'rmagatti/auto-session'
+
     if user.plugins ~= nil then
       use(user.plugins)
     end
@@ -115,12 +118,9 @@ packer.startup {
   },
 }
 
-vim.api.nvim_exec(
-  [[
+vim.cmd [[
   augroup packer_ide_config
     autocmd!
     autocmd BufWritePost plugins.lua source <afile> | PackerSync
   augroup end
-]],
-  false
-)
+]]

@@ -21,6 +21,7 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.whichwrap:append '<,>,[,],h,l'
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
+vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal'
 vim.o.termguicolors = true
 
 if vim.fn.has 'wsl' == 1 then

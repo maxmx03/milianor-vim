@@ -41,13 +41,13 @@ user.servers = {
   -- 'cssls',
   -- 'html',
   -- 'emmet_ls',
-  'sumneko_lua',
+  -- 'sumneko_lua',
   -- 'vimls',
 }
 
 user.formattings = {
   -- 'prettier',
-  'stylua',
+  -- 'stylua',
 }
 
 user.completions = {

@@ -4,4 +4,9 @@ if not success then
   return
 end
 
-toggleterm.setup {}
+toggleterm.setup {
+  direction = 'float',
+  float_opts = {
+    border = 'rounded',
+  },
+}
