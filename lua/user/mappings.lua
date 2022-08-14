@@ -20,13 +20,8 @@ vim.keymap.set('n', 's', ':HopPattern<cr>', opts)
 vim.keymap.set('n', 'f', ':HopWord<cr>', opts)
 
 -- COMMENT
-vim.keymap.set('n', '<space>/', "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
-vim.keymap.set(
-  'x',
-  '<space>/',
-  '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>',
-  opts
-)
+vim.keymap.set('n', '<space>/', "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
+vim.keymap.set('x', '<space>/', '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', opts)
 
 -- BUFFERLINE
 vim.keymap.set('n', '<C-Right>', ':BufferLineCycleNext<cr>', opts)
