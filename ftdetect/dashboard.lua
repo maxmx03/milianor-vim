@@ -44,7 +44,7 @@ dashboard.custom_center = {
     icon = '  ',
     desc = 'Exit                                    ',
     action = 'qa',
-    shortcut = 'F3    ',
+    shortcut = 'F3     ',
   },
 }
 

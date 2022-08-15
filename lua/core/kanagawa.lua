@@ -1,9 +1,3 @@
-local user = require 'user.config'
-
-if user.colorscheme ~= 'kanagawa' then
-  return
-end
-
 local success, kanagawa = pcall(require, 'kanagawa')
 
 if not success then
@@ -17,6 +11,8 @@ if colors == nil then
 
   return
 end
+
+local user = require 'user.config'
 
 local transparent = user.transparency
 

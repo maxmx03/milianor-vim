@@ -1,9 +1,11 @@
 local fn = vim.fn
 local install_path = fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
 
+local packer_bootstrap = nil
+
 if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap =
-  fn.system { 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path }
+    fn.system { 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path }
   vim.cmd [[packadd packer.nvim]]
 end
 
@@ -27,7 +29,8 @@ packer.startup {
 
     -- LSP
     use 'neovim/nvim-lspconfig'
-    use 'williamboman/nvim-lsp-installer'
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
     use 'glepnir/lspsaga.nvim'
     use 'ray-x/lsp_signature.nvim'
     use { 'iamcco/markdown-preview.nvim', run = 'cd app && npm install' }

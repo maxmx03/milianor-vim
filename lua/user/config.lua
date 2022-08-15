@@ -41,9 +41,20 @@ function config.smart_quit()
   local modified = vim.api.nvim_buf_get_option(bufnr, 'modified')
 
   if modified then
-    vim.ui.input({ prompt = 'You have unsaved changes. Want to save? (y/n)' }, function(input)
-      if input == 'y' then
-        vim.cmd 'w!'
+    vim.ui.select({ 'save', 'save quit', 'quit' }, {
+      prompt = 'You have unsaved changes.',
+      format_item = function(item)
+        return "I'd like to choose " .. item
+      end,
+    }, function(choice)
+      if choice == 'save' then
+        vim.cmd 'update'
+      elseif choice == 'save quit' then
+        vim.cmd 'wq'
+      elseif choice == 'quit' then
+        vim.cmd 'q!'
+      else
+        vim.cmd 'update'
       end
     end)
   else
