@@ -101,6 +101,13 @@ user.keymappings = {
     s = { ':MarkdownPreviewStop<cr>', 'Stop markdown preview' },
   },
 
+  M = {
+    name = 'Mason',
+    m = { ':Mason<cr>', 'Open mason' },
+    l = { ':MasonLog<cr>', 'Open log' },
+    u = { ':MasonUninstallAll<cr>', 'Uninstall all lsp servers' },
+  },
+
   p = {
     name = 'PACKER',
     p = { ':PackerSync<cr>', 'Perform `PackerUpdate` and then `PackerCompile`' },
@@ -113,10 +120,7 @@ user.keymappings = {
 
   L = {
     name = 'LSP',
-    l = { ':LspInstallInfo<cr>', 'Show installed lsp servers' },
     r = { ':LspRestart<r>', 'Restart Lsp' },
     i = { ':LspInfo<cr>', 'Show Info' },
-    u = { ':LspUninstall', 'Uninstall lsp server' },
-    U = { ':LspUninstallAll<cr>', 'Uninstall all lsp servers' },
   },
 }
