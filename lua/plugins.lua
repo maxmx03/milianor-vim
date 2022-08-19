@@ -93,7 +93,7 @@ packer.startup {
     use 'j-hui/fidget.nvim'
     use 'SmiteshP/nvim-gps'
     use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
-    -- use 'stevearc/dressing.nvim'
+    use 'stevearc/dressing.nvim'
 
     -- MOTION
     use 'phaazon/hop.nvim'
