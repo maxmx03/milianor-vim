@@ -46,7 +46,15 @@ user.servers = {
 }
 
 user.formattings = {
-  -- 'prettier',
+  -- {
+  --   name = 'prettier',
+  --   config = {
+  --     extra_args = {
+  --       '--single-quote',
+  --       '--semi=false',
+  --     },
+  --   },
+  -- },
   -- 'stylua',
 }
 

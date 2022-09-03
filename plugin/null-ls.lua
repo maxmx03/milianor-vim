@@ -8,8 +8,12 @@ local user = require 'user.config'
 
 local function map(builtins, sources, callback)
   if sources then
-    for _, source in ipairs(sources) do
-      callback(builtins[source])
+    for _, source in pairs(sources) do
+      if type(source) == 'table' then
+        callback(builtins[source.name].with(source.config))
+      else
+        callback(builtins[source])
+      end
     end
   end
 end
