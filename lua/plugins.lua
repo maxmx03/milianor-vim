@@ -34,7 +34,7 @@ packer.startup {
     use 'glepnir/lspsaga.nvim'
     use 'ray-x/lsp_signature.nvim'
     use { 'iamcco/markdown-preview.nvim', run = 'cd app && npm install' }
-    use { 'onsails/lspkind-nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
+    use { 'onsails/lspkind-nvim', requires = { 'kyazdani42/nvim-web-devicons' } }
 
     -- AUTOCOMPLETION / SNIPPETS / AI
     use {
@@ -92,7 +92,7 @@ packer.startup {
     use 'glepnir/dashboard-nvim'
     use 'j-hui/fidget.nvim'
     use 'SmiteshP/nvim-gps'
-    use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
+    use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons' } }
     use 'stevearc/dressing.nvim'
 
     -- MOTION
