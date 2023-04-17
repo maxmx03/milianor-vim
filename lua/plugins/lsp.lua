@@ -8,20 +8,14 @@ return {
       'WhoIsSethDaniel/mason-tool-installer.nvim',
     },
     config = function()
-      require('mason').setup()
-      require('mason-lspconfig').setup {
-        automatic_installation = true,
-      }
+      local mason = require 'mason'
+      local masonlspconfig = require 'mason-lspconfig'
       local formatters = require 'milianor.formatters'
-
-      require('mason-tool-installer').setup {
-        ensure_installed = formatters,
-        auto_update = true,
-        run_on_start = true,
-      }
-      require('neodev').setup()
-
+      local masontool = require 'mason-tool-installer'
+      local neodev = require 'neodev'
       local lsp = require 'lspconfig'
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+      local servers = require 'milianor.servers'
 
       local signs = { Error = ' ', Warn = ' ', Hint = ' ', Info = ' ' }
 
@@ -41,14 +35,37 @@ return {
         callback = function(ev)
           vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
           local opts = { buffer = ev.buf }
+          local minimap = require 'mini.map'
+          local wk = require 'which-key'
 
           vim.keymap.set('n', '<S-f>', vim.lsp.buf.format, opts)
+
+          minimap.open()
+          wk.register({
+            l = {
+              name = 'LSP',
+              d = { '<cmd>lua vim.lsp.buf.definition()<cr>', 'Definition' },
+              h = { '<cmd>lua vim.lsp.buf.hover()<cr>', 'Hover' },
+              s = { '<cmd>Telescope lsp_document_symbols<cr>', 'Document Symbols' },
+              r = { '<cmd>lua vim.lsp.buf.rename()<cr>', 'Rename' },
+              c = { '<cmd>lua vim.lsp.buf.code_action()<cr>', 'Code action' },
+              f = { '<cmd>lua vim.lsp.buf.format()<cr>', 'Format file' },
+              e = { '<cmd>lua vim.diagnostic.open_float()<cr>', 'Show diagnostic' },
+            },
+          }, { prefix = '<space>' })
         end,
       })
 
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-      local servers = require 'milianor.servers'
+      mason.setup()
+      masonlspconfig.setup {
+        automatic_installation = true,
+      }
+      masontool.setup {
+        ensure_installed = formatters,
+        auto_update = true,
+        run_on_start = true,
+      }
+      neodev.setup()
 
       for _, server in ipairs(servers) do
         if server == 'lua_ls' then
@@ -65,7 +82,7 @@ return {
         else
           lsp[server].setup {
             capabilities = capabilities,
-            }
+          }
         end
       end
     end,

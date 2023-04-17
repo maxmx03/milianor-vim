@@ -32,6 +32,21 @@ return {
       name = 'Open Tree',
       action = 'NvimTreeOpen',
     },
+    {
+      section = 'Explore',
+      name = 'Plugin Manager',
+      action = 'Lazy',
+    },
+    {
+      section = 'Explore',
+      name = 'Package Manager',
+      action = 'Mason',
+    },
+    {
+      section = 'Action',
+      name = 'Quit',
+      action = 'quit',
+    },
   },
   footer = footer,
 }
