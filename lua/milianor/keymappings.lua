@@ -1,7 +1,7 @@
 local opts = { noremap = true, silent = true }
 local map = vim.keymap.set
 
-map('n', '<C-x>', ':bd<cr>', opts)
+map('n', '<C-x>', '<cmd>lua require("mini.bufremove").delete()<cr>', opts)
 map('n', '<C-Left>', "<cmd>lua require('mini.bracketed').buffer('backward')<cr>", opts)
 map('n', '<C-Right>', "<cmd>lua require('mini.bracketed').buffer('forward')<cr>", opts)
 map('v', '/', '<Plug>(comment_toggle_linewise_visual)', opts)
@@ -47,6 +47,6 @@ return {
     p = { "<cmd>lua require('mini.bracketed').buffer('backward')<cr>", 'Move to Prev buffer' },
     f = { "<cmd>lua require('mini.bracketed').buffer('first')<cr>", 'Move to First buffer' },
     l = { "<cmd>lua require('mini.bracketed').buffer('last')<cr>", 'Move to Last buffer' },
-    x = { '<cmd>bd<cr>', 'Exit buffer' },
+    x = { "<cmd>lua require('mini.bufremove').delete()<cr>", 'Exit buffer' },
   },
 }

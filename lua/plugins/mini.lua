@@ -6,6 +6,7 @@ return {
         'ai',
         'align',
         'bracketed',
+        'bufremove',
         'cursorword',
         'indentscope',
         'jump2d',
