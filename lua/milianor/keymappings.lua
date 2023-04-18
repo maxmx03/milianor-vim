@@ -13,17 +13,16 @@ map('n', '<F7>', ':Inspect<cr>', opts)
 map('n', '<F8>', ':InspectTree<cr>', opts)
 
 return {
-  w = { '<cmd>update<cr>', 'Save' },
-  q = { '<cmd>quit<cr>', 'Close' },
-  Q = { '<cmd>quitall<cr>', 'Quit' },
-  e = { '<cmd>NvimTreeToggle<cr>', 'Open File Tree' },
-  f = { '<cmd>Telescope find_files<cr>', 'Find Files' },
-  u = { '<cmd>Lazy sync<cr>', 'Lazy sync' },
-  z = { '<cmd>ZenMode<cr>', 'Zen Mode' },
-  ['/'] = { '<Plug>(comment_toggle_linewise_current)', 'Comment toggle current line' },
-  [';'] = { "<cmd>lua require('mini.starter').open()<cr>", 'Open Starter' },
+  w = { '<cmd>update<cr>', '󰏫 Save' },
+  q = { '<cmd>quit<cr>', ' Close' },
+  Q = { '<cmd>quitall<cr>', '󰩈 Quit Neovim' },
+  e = { '<cmd>NvimTreeToggle<cr>', '󰙅 Open File Tree' },
+  f = { '<cmd>Telescope find_files<cr>', ' Find Files' },
+  z = { '<cmd>ZenMode<cr>', '󱥸 Zen Mode' },
+  ['/'] = { '<Plug>(comment_toggle_linewise_current)', ' Comment toggle current line' },
+  [';'] = { "<cmd>lua require('mini.starter').open()<cr>", ' Open Starter' },
   s = {
-    name = 'Search',
+    name = ' Search',
     f = { '<cmd>Telescope find_files<cr>', 'Search files' },
     w = { '<cmd>Telescope live_grep<cr>', 'Search words' },
     b = { '<cmd>Telescope buffers<cr>', 'Search buffers' },
@@ -33,7 +32,7 @@ return {
     k = { '<cmd>Telescope keymaps<cr>', 'Search keymaps' },
   },
   g = {
-    name = 'Git',
+    name = ' Git',
     d = { '<cmd>Gitsigns diffthis<cr>', 'Open Diff' },
     p = { '<cmd>Gitsigns preview_hunk_inline<cr>', 'Open Inline Diff' },
     C = { '<cmd>Telescope git_commits<cr>', 'Commits' },
@@ -42,11 +41,26 @@ return {
     S = { '<cmd>Telescope git_stash<cr>', 'Stash' },
   },
   b = {
-    name = 'Buffer',
+    name = ' Buffer',
     b = { "<cmd>lua require('mini.bracketed').buffer('forward')<cr>", 'Move to Next buffer' },
     p = { "<cmd>lua require('mini.bracketed').buffer('backward')<cr>", 'Move to Prev buffer' },
     f = { "<cmd>lua require('mini.bracketed').buffer('first')<cr>", 'Move to First buffer' },
     l = { "<cmd>lua require('mini.bracketed').buffer('last')<cr>", 'Move to Last buffer' },
     x = { "<cmd>lua require('mini.bufremove').delete()<cr>", 'Exit buffer' },
+  },
+  p = {
+    name = ' Plugins',
+    p = { '<cmd>Lazy home<cr>', 'Open Lazy' },
+    P = { '<cmd>Lazy profile<cr>', 'Open Profile' },
+    u = { '<cmd>Lazy update<cr>', 'Update Plugins' },
+    c = { '<cmd>Lazy clean', 'Clean Plugins' },
+    s = { '<cmd>Lazy sync<cr>', 'Sync Plugins' },
+  },
+  m = {
+    name = ' Package manager',
+    m = { '<cmd>Mason<cr>', ' Open Mason' },
+    u = { '<cmd>MasonUpdate<cr>', 'Update Mason' },
+    t = { '<cmd>MasonToolsUpdate<cr>', 'Update Mason Tools' },
+    a = { '<cmd>MasonUninstallAll', 'Uninstall all packages' },
   },
 }

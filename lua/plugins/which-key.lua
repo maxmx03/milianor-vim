@@ -6,7 +6,11 @@ return {
       local keymappings = require 'milianor.keymappings'
 
       wk.register(keymappings, { prefix = '<space>' })
-      wk.setup()
+      wk.setup {
+        icons = {
+          group = '',
+        },
+      }
     end,
   },
 }

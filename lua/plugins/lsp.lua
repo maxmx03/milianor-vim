@@ -43,7 +43,7 @@ return {
           minimap.open()
           wk.register({
             l = {
-              name = 'LSP',
+              name = '󰒋 LSP',
               d = { '<cmd>lua vim.lsp.buf.definition()<cr>', 'Definition' },
               h = { '<cmd>lua vim.lsp.buf.hover()<cr>', 'Hover' },
               s = { '<cmd>Telescope lsp_document_symbols<cr>', 'Document Symbols' },
