@@ -38,7 +38,7 @@ return {
             TelescopeResultsNormal = { bg = c.float_bg },
             TelescopePreviewNormal = { bg = c.bg },
             TelescopePromptBorder = { fg = c.float_bg, bg = c.float_bg },
-            TelescopeTitle = { fg = c.purple, bg = c.blended_purple },
+            TelescopeTitle = { fg = c.fg, bg = c.comment },
             TelescopePromptPrefix = { fg = c.purple },
             CmpItemKindBorder = { fg = c.float_bg, bg = c.float_bg },
           }
