@@ -5,7 +5,7 @@ return {
   'html',
   'cssls',
   'cssmodules_ls',
-  'pyright',
+  'pylsp',
   'emmet_ls',
   'vimls',
 }

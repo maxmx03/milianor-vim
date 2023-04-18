@@ -34,11 +34,6 @@ return {
         }
       end
 
-      local dracula = require 'dracula'
-      local colors = dracula.colors
-
-      vim.api.nvim_set_hl(0, 'CmpItemKindBorder', { fg = colors.float_bg, bg = colors.float_bg })
-
       cmp.setup {
         formatting = {
           fields = { 'kind', 'abbr', 'menu' },
