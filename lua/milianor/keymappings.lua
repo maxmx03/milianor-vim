@@ -14,7 +14,7 @@ map('n', '<F8>', ':InspectTree<cr>', opts)
 
 return {
   w = { '<cmd>update<cr>', '󰏫 Save' },
-  q = { '<cmd>quit<cr>', ' Close' },
+  q = { '<cmd>lua smart_quit()<cr>', ' Close' },
   Q = { '<cmd>quitall<cr>', '󰩈 Quit Neovim' },
   e = { '<cmd>NvimTreeToggle<cr>', '󰙅 Open File Tree' },
   f = { '<cmd>Telescope find_files<cr>', ' Find Files' },
