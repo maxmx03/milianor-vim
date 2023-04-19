@@ -32,3 +32,16 @@ function _G.preview_markdown()
     )
   end
 end
+
+function _G.navic_attach(client, bufnr)
+  vim.g.navic_silence = false
+  local symbols_supported = client.supports_method 'textDocument/documentSymbol'
+
+  if not symbols_supported then
+    return
+  end
+
+  local navic = require 'nvim-navic'
+
+  navic.attach(client, bufnr)
+end
