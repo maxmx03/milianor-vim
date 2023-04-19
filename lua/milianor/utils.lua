@@ -21,6 +21,14 @@ function _G.smart_quit()
   end
 end
 
+_G.preview_markdown_dont_show_again = false
+
 function _G.preview_markdown()
-  open_ui({ 'yes', 'no' }, 'Preview Markdown?', { 'MarkdownPreview', '' })
+  if not _G.preview_markdown_dont_show_again then
+    open_ui(
+      { 'yes', 'no', "no, don't show again" },
+      'Preview Markdown?',
+      { 'MarkdownPreview', '', 'lua _G.preview_markdown_dont_show_again = true' }
+    )
+  end
 end
