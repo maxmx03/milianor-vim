@@ -19,6 +19,7 @@ return {
   e = { '<cmd>NvimTreeToggle<cr>', '󰙅 Open File Tree' },
   f = { '<cmd>Telescope find_files<cr>', ' Find Files' },
   z = { '<cmd>ZenMode<cr>', '󱥸 Zen Mode' },
+  t = { '<cmd>ToggleTerm<cr>', 'Open Terminal' },
   ['/'] = { '<Plug>(comment_toggle_linewise_current)', ' Comment toggle current line' },
   [';'] = { "<cmd>lua require('mini.starter').open()<cr>", ' Open Starter' },
   s = {

@@ -14,6 +14,7 @@ A Neovim configuration focused on productivity and ease of use.
 - [Nerdfonts](https://www.nerdfonts.com/font-downloads)
 - [codicons (optional)](https://github.com/microsoft/vscode-codicons/blob/main/dist/codicon.ttf)
 - [NotoEmoji](https://github.com/googlefonts/noto-emoji/blob/main/fonts/NotoColorEmoji.ttf)
+- [LazyGit (optional)](https://github.com/jesseduffield/lazygit)
 
 Make sure to install these dependencies before starting Neovim.
 

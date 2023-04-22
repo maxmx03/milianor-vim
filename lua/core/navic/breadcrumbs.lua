@@ -75,7 +75,36 @@ local get_gps = function()
 end
 
 local excludes = function()
-  return vim.tbl_contains({}, vim.bo.filetype)
+  local files = {
+    'starter',
+    'help',
+    'startify',
+    'dashboard',
+    'lazy',
+    'neo-tree',
+    'neogitstatus',
+    'NvimTree',
+    'Trouble',
+    'alpha',
+    'lir',
+    'Outline',
+    'spectre_panel',
+    'toggleterm',
+    'DressingSelect',
+    'Jaq',
+    'harpoon',
+    'dap-repl',
+    'dap-terminal',
+    'dapui_console',
+    'dapui_hover',
+    'lab',
+    'notify',
+    'noice',
+    'neotest-summary',
+    '',
+  }
+
+  return vim.tbl_contains(files, vim.bo.filetype)
 end
 
 M.get_winbar = function()
