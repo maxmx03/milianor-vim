@@ -40,6 +40,11 @@ return {
     s = { '<cmd>Telescope git_status<cr>', 'Status' },
     S = { '<cmd>Telescope git_stash<cr>', 'Stash' },
   },
+  G = {
+    name = ' LazyGit',
+    g = { '<cmd>LazyGitCurrentFile<cr>', 'Open Lazygit' },
+    c = { '<cmd>LazyGitConfig<cr>', 'Open Configuration file' },
+  },
   b = {
     name = ' Buffer',
     b = { "<cmd>lua require('mini.bracketed').buffer('forward')<cr>", 'Move to Next buffer' },
