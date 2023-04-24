@@ -6,8 +6,14 @@ vim.api.nvim_create_autocmd({ 'InsertLeave', 'TextChanged' }, {
 vim.api.nvim_create_autocmd('BufWinEnter', {
   pattern = '*.md',
   callback = function()
+    local utils = require 'milianor.utils'
+
+    if not utils then
+      return
+    end
+
     vim.cmd 'set colorcolumn=100'
-    preview_markdown()
+    utils:preview_markdown()
   end,
 })
 

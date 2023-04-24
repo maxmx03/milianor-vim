@@ -14,12 +14,12 @@ map('n', '<F8>', ':InspectTree<cr>', opts)
 
 return {
   w = { '<cmd>update<cr>', '󰏫 Save' },
-  q = { '<cmd>lua smart_quit()<cr>', ' Close' },
+  q = { '<cmd>lua require("milianor.utils"):smart_quit()<cr>', ' Close' },
   Q = { '<cmd>quitall<cr>', '󰩈 Quit Neovim' },
   e = { '<cmd>NvimTreeToggle<cr>', '󰙅 Open File Tree' },
   f = { '<cmd>Telescope find_files<cr>', ' Find Files' },
   z = { '<cmd>ZenMode<cr>', '󱥸 Zen Mode' },
-  t = { '<cmd>ToggleTerm<cr>', 'Open Terminal' },
+  t = { '<cmd>ToggleTerm<cr>', ' Open Terminal' },
   ['/'] = { '<Plug>(comment_toggle_linewise_current)', ' Comment toggle current line' },
   [';'] = { "<cmd>lua require('mini.starter').open()<cr>", ' Open Starter' },
   s = {

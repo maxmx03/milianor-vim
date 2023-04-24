@@ -34,18 +34,17 @@ return {
         group = vim.api.nvim_create_augroup('UserLspConfig', {}),
         callback = function(ev)
           vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
-          local opts = { buffer = ev.buf }
+          local bufnr = ev.buf
           local client = vim.lsp.get_client_by_id(ev.data.client_id)
           local minimap = require 'mini.map'
           local wk = require 'which-key'
+          local navic = require 'core.navic'
 
-          vim.keymap.set('n', '<S-f>', vim.lsp.buf.format, opts)
-
-          _G.navic_attach(client, ev.buf)
+          navic.attach(client, bufnr)
           minimap.open()
           wk.register({
             l = {
-              name = 'LSP',
+              name = '󰀸 LSP',
               d = { '<cmd>lua vim.lsp.buf.definition()<cr>', 'Definition' },
               h = { '<cmd>lua vim.lsp.buf.hover()<cr>', 'Hover' },
               s = { '<cmd>Telescope lsp_document_symbols<cr>', 'Document Symbols' },
