@@ -47,7 +47,7 @@ return {
               name = '󰀸 LSP',
               d = { '<cmd>lua vim.lsp.buf.definition()<cr>', 'Definition' },
               h = { '<cmd>lua vim.lsp.buf.hover()<cr>', 'Hover' },
-              s = { '<cmd>Telescope lsp_document_symbols<cr>', 'Document Symbols' },
+              s = { '<cmd>Telescope lsp_document_symbols theme=dropdown<cr>', 'Document Symbols' },
               r = { '<cmd>lua vim.lsp.buf.rename()<cr>', 'Rename' },
               c = { '<cmd>lua vim.lsp.buf.code_action()<cr>', 'Code action' },
               f = { '<cmd>lua vim.lsp.buf.format()<cr>', 'Format file' },
