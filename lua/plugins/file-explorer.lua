@@ -20,6 +20,9 @@ return {
         on_attach = 'default',
         remove_keymaps = false,
         select_prompts = false,
+        filters = {
+          dotfiles = true,
+        },
         view = {
           centralize_selection = false,
           cursorline = true,
@@ -140,13 +143,6 @@ return {
             warning = '',
             error = '',
           },
-        },
-        filters = {
-          dotfiles = false,
-          git_clean = false,
-          no_buffer = false,
-          custom = {},
-          exclude = {},
         },
         filesystem_watchers = {
           enable = true,
