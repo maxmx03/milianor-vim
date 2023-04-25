@@ -11,6 +11,7 @@ map('n', 'ss', ':split<cr>', opts)
 map('n', 'sv', ':vsplit<cr>', opts)
 map('n', '<F7>', ':Inspect<cr>', opts)
 map('n', '<F8>', ':InspectTree<cr>', opts)
+map('n', '<Enter>', ':HopWord<cr>')
 
 return {
   w = { '<cmd>update<cr>', '󰏫 Save' },
@@ -68,5 +69,19 @@ return {
     u = { '<cmd>MasonUpdate<cr>', 'Update Mason' },
     t = { '<cmd>MasonToolsUpdate<cr>', 'Update Mason Tools' },
     a = { '<cmd>MasonUninstallAll', 'Uninstall all packages' },
+  },
+  h = {
+    name = '󰤇 Hop',
+    w = { '<cmd>HopWord<cr>', 'Hop Word' },
+    W = { '<cmd>HopWordCurrentLine<cr>', 'Hop Word Current Line' },
+    a = { '<cmd>HopAnywhere<cr>', 'Hop Anywhere' },
+    A = { '<cmd>HopAnywhereCurrentLine<cr>', 'Hop Anywhere Current Line' },
+    c = { '<cmd>HopChar2<cr>', 'Hop Char' },
+    C = { '<cmd>HopChar2CurrentLine<cr>', 'Hop Char Current Line' },
+    p = { '<cmd>HopPattern<cr>', 'Hop Pattern' },
+    P = { '<cmd>HopPatternCurrentLine<cr>', 'Hop Pattern Current Line' },
+    l = { '<cmd>HopLineStart<cr>', 'Hop Line Start' },
+    L = { '<cmd>HopLine<cr>', 'Hop Line' },
+    v = { '<cmd>HopVertical<cr>', 'Hop Vertical' },
   },
 }

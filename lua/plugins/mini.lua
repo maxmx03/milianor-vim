@@ -5,11 +5,11 @@ return {
       local modules = {
         'ai',
         'align',
+        -- 'animate',
         'bracketed',
         'bufremove',
         'cursorword',
         'indentscope',
-        'jump2d',
         'map',
         'move',
         {
