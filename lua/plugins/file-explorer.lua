@@ -21,7 +21,7 @@ return {
         remove_keymaps = false,
         select_prompts = false,
         filters = {
-          dotfiles = true,
+          dotfiles = false,
         },
         view = {
           centralize_selection = false,
