@@ -34,13 +34,13 @@ return {
             CmpItemKindEvent = { reverse = true },
             CmpItemKindOperator = { reverse = true },
             CmpItemKindTypeParameter = { reverse = true },
-            TelescopeResultsBorder = { fg = c.float_bg, bg = c.float_bg },
-            TelescopeResultsNormal = { bg = c.float_bg },
+            TelescopeResultsBorder = { fg = c.bgdark, bg = c.bgdark },
+            TelescopeResultsNormal = { bg = c.bgdark },
             TelescopePreviewNormal = { bg = c.bg },
-            TelescopePromptBorder = { fg = c.float_bg, bg = c.float_bg },
+            TelescopePromptBorder = { fg = c.bgdark, bg = c.bgdark },
             TelescopeTitle = { fg = c.fg, bg = c.comment },
             TelescopePromptPrefix = { fg = c.purple },
-            CmpItemKindBorder = { fg = c.float_bg, bg = c.float_bg },
+            CmpItemKindBorder = { fg = c.bgdark, bg = c.bgdark },
           }
         end,
       }
