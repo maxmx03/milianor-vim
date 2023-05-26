@@ -4,7 +4,7 @@ return {
     config = function()
       local navic = require 'nvim-navic'
       local breadcrumbs = require 'core.navic.breadcrumbs'
-      local icons = require 'core.navic.icons'.kind
+      local icons = require('core.navic.icons').kind
 
       breadcrumbs.create_winbar()
 
