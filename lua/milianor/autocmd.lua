@@ -1,8 +1,3 @@
-vim.api.nvim_create_autocmd({ 'InsertLeave', 'TextChanged' }, {
-  pattern = '*.*',
-  command = 'update',
-})
-
 vim.api.nvim_create_autocmd('BufWinEnter', {
   pattern = '*.md',
   callback = function()
@@ -12,8 +7,7 @@ vim.api.nvim_create_autocmd('BufWinEnter', {
       return
     end
 
-    vim.cmd 'set colorcolumn=100'
-    utils:preview_markdown()
+    vim.cmd 'set colorcolumn=80'
   end,
 })
 

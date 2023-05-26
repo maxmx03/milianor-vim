@@ -22,7 +22,7 @@ return {
   z = { '<cmd>ZenMode<cr>', '󱥸 Zen Mode' },
   t = { '<cmd>ToggleTerm<cr>', ' Open Terminal' },
   ['/'] = { '<Plug>(comment_toggle_linewise_current)', ' Comment toggle current line' },
-  [';'] = { "<cmd>lua require('mini.starter').open()<cr>", ' Open Starter' },
+  [';'] = { '<cmd>Dashboard<cr>', ' Open Dashboard' },
   s = {
     name = ' Search',
     f = { '<cmd>Telescope find_files<cr>', 'Search files' },
@@ -32,6 +32,7 @@ return {
     H = { '<cmd>Telescope highlights<cr>', 'Search highlights' },
     c = { '<cmd>Telescope commands<cr>', 'Search commands' },
     k = { '<cmd>Telescope keymaps<cr>', 'Search keymaps' },
+    p = { '<cmd>Telescope projects<cr>', 'Search Projects' },
   },
   g = {
     name = ' Git',
@@ -56,15 +57,15 @@ return {
     x = { "<cmd>lua require('mini.bufremove').delete()<cr>", 'Exit buffer' },
   },
   p = {
-    name = ' Plugin manager',
+    name = ' Plugins',
     p = { '<cmd>Lazy home<cr>', 'Open Lazy' },
     P = { '<cmd>Lazy profile<cr>', 'Open Profile' },
     u = { '<cmd>Lazy update<cr>', 'Update Plugins' },
     c = { '<cmd>Lazy clean', 'Clean Plugins' },
     s = { '<cmd>Lazy sync<cr>', 'Sync Plugins' },
   },
-  m = {
-    name = ' Package manager',
+  M = {
+    name = ' Package manager',
     m = { '<cmd>Mason<cr>', 'Open Mason' },
     u = { '<cmd>MasonUpdate<cr>', 'Update Mason' },
     t = { '<cmd>MasonToolsUpdate<cr>', 'Update Mason Tools' },
@@ -83,5 +84,11 @@ return {
     l = { '<cmd>HopLineStart<cr>', 'Hop Line Start' },
     L = { '<cmd>HopLine<cr>', 'Hop Line' },
     v = { '<cmd>HopVertical<cr>', 'Hop Vertical' },
+  },
+  m = {
+    name = ' Markdown',
+    m = { '<cmd>MarkdownPreview<cr>', 'Open Markdown Preview' },
+    s = { '<cmd>MarkdownPreviewStop<cr>', 'Stop Markdown Preview' },
+    t = { '<cmd>MarkdownPreviewToggle<cr>', 'Toggle Markdown Preview' },
   },
 }

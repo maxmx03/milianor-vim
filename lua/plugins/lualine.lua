@@ -6,7 +6,7 @@ return {
 
       lualine.setup {
         options = {
-          theme = 'dracula',
+          theme = 'onedark',
           disabled_filetypes = {
             'NvimTree',
             'starter',

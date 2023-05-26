@@ -1,2 +1,3 @@
-*.json
-lua/plugins/draculapro.lua
+lazy-lock.json
+.luarc.json
+.luarc.json

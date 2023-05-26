@@ -1,11 +1,13 @@
 return {
   'lua_ls',
   'tsserver',
-  'jdtls',
   'html',
   'cssls',
   'cssmodules_ls',
-  'pylsp',
+  'pyright',
   'emmet_ls',
   'vimls',
+  'clangd',
+  'bashls',
+  'marksman',
 }

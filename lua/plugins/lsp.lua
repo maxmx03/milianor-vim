@@ -11,6 +11,8 @@ return {
       local mason = require 'mason'
       local masonlspconfig = require 'mason-lspconfig'
       local formatters = require 'milianor.formatters'
+      local linters = require 'milianor.linters'
+      local packages = formatters + linters
       local masontool = require 'mason-tool-installer'
       local neodev = require 'neodev'
       local lsp = require 'lspconfig'
@@ -36,12 +38,10 @@ return {
           vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
           local bufnr = ev.buf
           local client = vim.lsp.get_client_by_id(ev.data.client_id)
-          local minimap = require 'mini.map'
           local wk = require 'which-key'
           local navic = require 'core.navic'
 
           navic.attach(client, bufnr)
-          minimap.open()
           wk.register({
             l = {
               name = '󰀸 LSP',
@@ -62,7 +62,7 @@ return {
         automatic_installation = true,
       }
       masontool.setup {
-        ensure_installed = formatters,
+        ensure_installed = packages,
         auto_update = true,
         run_on_start = true,
       }
