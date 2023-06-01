@@ -6,6 +6,7 @@ return {
     config = function()
       require('onedarkpro').setup {
         colors = {
+          bglight = '#3a404c',
           bgdark = '#1e2127',
           bgdarker = '#1a1e22',
         },
@@ -60,6 +61,7 @@ return {
           DashboardShotCut = { fg = '${purple}' },
           ColorColumn = { fg = '${float_bg}', bg = '${float_bg}' },
           NvimTreeNormal = { bg = '${float_bg}' },
+          NvimTreeNormalNC = { link = 'NvimTreeNormal' },
           NvimTreeWinSeparator = { fg = '${float_bg}', bg = '${float_bg}' },
           ['@function.builtin'] = { link = '@function' },
           PMenuSel = { fg = '${blue}', reverse = true },
