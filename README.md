@@ -2,6 +2,8 @@
 
 A Neovim configuration focused on productivity and ease of use.
 
+![screenshot](https://github.com/maxmx03/milianor-vim/assets/50273941/4d026bb8-bae5-443f-b976-a8a8a609e052)
+
 ## Quick Start
 
 1.  Clone the repository:
