@@ -3,6 +3,7 @@ return {
     'olimorris/onedarkpro.nvim',
     lazy = false,
     priority = 1000,
+    commit = '89b919f6904e441bf450cf0ae0c40c4410a2d875',
     config = function()
       require('onedarkpro').setup {
         colors = {
