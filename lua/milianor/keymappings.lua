@@ -91,4 +91,10 @@ return {
     s = { '<cmd>MarkdownPreviewStop<cr>', 'Stop Markdown Preview' },
     t = { '<cmd>MarkdownPreviewToggle<cr>', 'Toggle Markdown Preview' },
   },
+  T = {
+    name = ' Terminal',
+    v = { '<cmd>ToggleTerm direction=vertical<cr>', 'Open Terminal Vertically' },
+    h = { '<cmd>ToggleTerm direction=horizontal<cr>', 'Open Terminal Horizontally' },
+    t = { '<cmd>ToggleTerm direction=tab<cr>', 'Open Terminal Tab' },
+  },
 }
